@@ -14,7 +14,7 @@ Professor: Luigi
 
 -Como usar: ...
 
--Colaboradores: Bruno Dos Santos Lopes,
+-Colaboradores: Bruno Dos Santos Lopes, Nicolas Silva de Paula Gonçalves
 
 -Comentários: ...
 
