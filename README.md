@@ -1,4 +1,4 @@
-<Projeto_Stream>
+Projeto_Stream
 ================================================
 
 Projeto final relacionado à disciplina de Programação de Desenvolvimento de Software(PDS)II.
