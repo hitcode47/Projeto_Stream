@@ -11,7 +11,7 @@ O que é?:
  * software gerenciador de reprodutor de músicas. 
 
 Qual seu status?: 
- * Elaboração conceituado do projeto e divisão de demandas
+ * Elaboração conceitual do projeto e divisão de demandas
 
 Tecnologias utilizadas: 
  * Visual Stúdio Code;
