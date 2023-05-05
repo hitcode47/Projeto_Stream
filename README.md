@@ -1,4 +1,4 @@
-#Projeto_Stream
+h1<Projeto_Stream>/h1
 ================================================
 
 Projeto final relacionado à disciplina de Programação de Desenvolvimento de Software(PDS)II.
@@ -7,19 +7,21 @@ Professor: Luigi
 
 **Dados do Projeto:**
 
-> O que é?: software gerenciador de reprodutor de músicas. 
+O que é?: 
+ * software gerenciador de reprodutor de músicas. 
 
-> Qual seu status?: Elaboração conceituado do projeto e divisão de demandas
+Qual seu status?: 
+ * Elaboração conceituado do projeto e divisão de demandas
 
-> Tecnologias utilizadas: 
-        Visual Stúdio Code;
-        Github;
+Tecnologias utilizadas: 
+ * Visual Stúdio Code;
+ * Github;
 
-> Como usar: ...
+Como usar: ...
 
-> Colaboradores: 
-        Bruno Dos Santos Lopes;
-        Nicolas Silva de Paula Gonçalves;
+Colaboradores: 
+ * Bruno Dos Santos Lopes;
+ * Nicolas Silva de Paula Gonçalves;
 
-> Comentários: ...
+Comentários: ...
 
