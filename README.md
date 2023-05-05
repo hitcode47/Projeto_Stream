@@ -1,4 +1,4 @@
-h1<Projeto_Stream>/h1
+<Projeto_Stream>
 ================================================
 
 Projeto final relacionado à disciplina de Programação de Desenvolvimento de Software(PDS)II.
