@@ -22,6 +22,6 @@ Como usar: ...
 Colaboradores: 
  * Bruno Dos Santos Lopes;
  * Nicolas Silva de Paula Gonçalves;
+ * Diego Felipe Machado Silva;
 
 Comentários: ...
-
