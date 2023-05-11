@@ -33,5 +33,4 @@ Use storys
  * Como o usuário deseja postar suas próprias musicas, quero que seja possível inserir musicas e excluir musicas da plataforma para que criar a oportunidade de algumas pessoas mostrem seus talentos na área musical.
  * Como o usuário deseja pesquisar por músicas, quero criar uma barra de pesquisa, para seja possível achar rapidamente a musica procurada.
  * Como o usuário deseja dar um feedback sobre a música a qual ele escutou, quero que seja possível curtir/descurtir o título em questão.
- 
-
+ * Como o usuario deseja cirar/logar uma conta, quero criar um bacom de dados com o perfil de cada usuario para seja possivel a organização da plataforma. 
