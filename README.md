@@ -36,8 +36,9 @@ Use storys
        * Reproduzir as musicas escolhidas;
        
  * Como o usuário quer ter uma ideia de quais musicas estão sendo mais escutas no momento, quero construir uma lista que compile as 10 musicas mais escultadas em um período de 24 horas, para que seja possível desfrutar de musicas em conjunto com outras pessoas.
-       * b
-       * b
+       * A música deverá ter um contador de visualizações por acesso.
+       * A cada 24h, deverá ter uma atualização das 10 músicas mais ouvidas até aquele momento.
+       * A música deve possuir uma relação/exibição da quantidade de acessos por tempo, para ver o engajamento.
        * b
        * b
        * b
