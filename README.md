@@ -73,19 +73,6 @@ Use storys
        * Cadastrar o usuario;
        * Enviar uma mensagem de confirmação para o email informado;
 
- * Como o usuário deseja alocar músicas na plataforma, quero criar um ponto de acesso a uma API de reprodução de áudio para que o usuário possa acessar músicas via web.
-       
-       * Adicionar Músicas na plataforma;
-       * Excluir Músicas da plataforma;
-
- * Como o usuário deseja reproduzir músicas na plataforma, quero criar meios de navegação por entre as músicas, para que o usuário possa escolher ouvir a música que quiser. 
- 
-       * Reproduzir música;
-       * Pausar música;
-       * Avançar;
-       * Voltar;
-       * Próxima música;
-       * Música anterior;
 
 
 Cartão CRC:
