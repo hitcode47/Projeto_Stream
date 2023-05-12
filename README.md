@@ -35,7 +35,7 @@ Use storys
        * Incluir musicas a playlist;
        * Excluir musicas a playlist;
        * Nomear a playlist;
-       * Reproduzir as musicas escolhidas;
+      
        
  * Como o usuário quer ter uma ideia de quais musicas estão sendo mais escutas no momento, quero construir uma lista que compile as 10 musicas mais escultadas em um período de 24 horas, para que seja possível desfrutar de musicas em conjunto com outras pessoas;
  
@@ -72,6 +72,13 @@ Use storys
        * O usuário deve informar um email;
        * Cadastrar o usuario;
        * Enviar uma mensagem de confirmação para o email informado;
+
+ * Como o usuário deve realizar operações básicas na plataforma, deve haver uma interface de acões interativas para que ele possa pular ou voltar músicas, além de ver informações. 
+
+       * Reproduzir as musicas escolhidas;
+       * Pular para próxima músicar;
+       * Pular para música anterior;
+       * Acessar informações;
 
 Cartão CRC:
  * Classe usuario;
