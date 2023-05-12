@@ -79,6 +79,7 @@ Use storys
        * Excluir Músicas da plataforma;
 
  * Como o usuário deseja reproduzir músicas na plataforma, quero criar meios de navegação por entre as músicas, para que o usuário possa escolher ouvir a música que quiser. 
+ 
        * Reproduzir música;
        * Pausar música;
        * Avançar;
