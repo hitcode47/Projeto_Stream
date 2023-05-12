@@ -24,6 +24,7 @@ Colaboradores:
  * Nicolas Silva de Paula Gonçalves;
  * Diego Felipe Machado Silva;
  * Breno Ribeiro Rodrigues;
+ * Dantom Dimitri Guedes
 
 Comentários: ...
 
