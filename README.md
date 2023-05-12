@@ -73,8 +73,6 @@ Use storys
        * Cadastrar o usuario;
        * Enviar uma mensagem de confirmação para o email informado;
 
-
-
 Cartão CRC:
  * Classe usuario;
     Reponsabilidaes:
