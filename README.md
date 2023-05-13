@@ -76,18 +76,18 @@ Use storys
  * Como o usuário deve realizar operações básicas na plataforma, deve haver uma interface de acões interativas para que ele possa pular ou voltar músicas, além de ver informações. 
 
        * Reproduzir as musicas escolhidas;
-       * Pular para próxima músicar;
+       * Pular para próxima música;
        * Pular para música anterior;
        * Acessar informações;
 
-Cartão CRC:
- * Classe usuario;
-    Reponsabilidaes:
-    
-    Colaboração:
-    
- * Classe usuario;
-    Reponsabilidaes:
-    
-    Colaboração:
+ * Classes Obtitas:
+
+       * Usuário;
+       * Música;
+       * Playlist;
+       * Feedback;
+       * Cadastro;
+
+
+
      
