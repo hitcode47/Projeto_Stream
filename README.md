@@ -40,9 +40,9 @@ Use storys
  * Como o usuário quer ter uma ideia de quais musicas estão sendo mais escutas no momento, quero construir uma lista que compile as 10 musicas mais escultadas em um período de 24 horas, para que seja possível desfrutar de musicas em conjunto com outras pessoas;
  
        * A música deverá ter um contador de visualizações por acesso;
-       * A cada 24h, deverá ter uma atualização das 10 músicas mais ouvidas até aquele momento;
+       * A cada 24h, o programa deve atualizar com relação na quantidade de visualização.
        * A música deve possuir uma relação/exibição da quantidade de acessos por tempo, para ver o engajamento;
-       
+       * 
        
  * Como o usuário deseja postar suas próprias musicas, quero que seja possível inserir musicas e excluir musicas da plataforma para que criar a oportunidade de algumas pessoas mostrem seus talentos na área musical.
  
