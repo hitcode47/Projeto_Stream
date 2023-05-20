@@ -72,3 +72,20 @@
       ]
     }
   ]
+[
+  {
+    "name": "Reprodução ",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Play",
+      "Pausar ",
+      "Pular",
+      "Velocidade "
+    ],
+    "collaborators": [
+      "Musicas "
+    ]
+  }
+]
