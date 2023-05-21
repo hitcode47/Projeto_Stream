@@ -11,13 +11,14 @@
         "Criar Primeira Playlist",
         "Criar Novas Playlists",
         "Incluir e excluir Músicas em um diretório",
-        ""
+        "Gerenciar configurações da conta",
+        "Compartilhar playlist com outros usuários"
       ],
       "collaborators": [
         "playlist",
         "músicas",
         "Cadastro",
-        ""
+      
       ]
     },
     {
@@ -40,17 +41,18 @@
     },
     {
       "name": "Cadastro",
-      "superclasses": "",
-      "subclasses": "",
+      "superclasses": "Abrir Conta",
+      "subclasses": "Cadastro do cliente",
       "type": 1,
       "responsibilities": [
         "Colher informações para contato e acesso",
         "Realizar processo de confirmação por email",
         "Abrir guia de login",
-        ""
+        "Armazenar informações do usuário",
+        "Validar dados inseridos"
       ],
       "collaborators": [
-        ""
+        "Usuário"
       ]
     },
     {
@@ -67,7 +69,7 @@
       ],
       "collaborators": [
         "Músicas",
-        "Cadastro",
+        "Usuário",
         ""
       ]
     }
@@ -82,7 +84,8 @@
       "Play",
       "Pausar ",
       "Pular",
-      "Velocidade "
+      "Velocidade ",
+      "voltar música"
     ],
     "collaborators": [
       "Musicas "
