@@ -92,3 +92,23 @@
     ]
   }
 ]
+[
+  {
+    "name": "Pesquisa",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+    "Pesquisar músicas",
+    "Pesquisar artistas",
+    "Pesquisar playlists",
+    "Filtrar resultados de busca",
+    "Exibir resultados relevantes"
+  ],
+    "collaborators": [
+    "Usuário",
+    "Música",
+    "Playlist",
+    ]
+  }
+]
