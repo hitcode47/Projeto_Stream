@@ -70,7 +70,7 @@
       "collaborators": [
         "Músicas",
         "Usuário",
-        ""
+        
       ]
     }
   ]
