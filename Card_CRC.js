@@ -1,5 +1,4 @@
-//Cartões CRC:
-// Importar os dados a seguir no seguinte link: https://echeung.me/crcmaker/
+
 
 [
   {
