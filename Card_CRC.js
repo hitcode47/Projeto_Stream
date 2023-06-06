@@ -21,6 +21,43 @@
       
       ]
     },
+
+    {
+      "name": "Cadastro",
+      "superclasses": "Abrir Conta",
+      "subclasses": "Cadastro do cliente",
+      "type": 1,
+      "responsibilities": [
+        "Colher informações para contato e acesso",
+        "Realizar processo de confirmação por email",
+        "Abrir guia de login",
+        "Armazenar informações do usuário",
+        "Validar dados inseridos"
+      ],
+      "collaborators": [
+        "Usuário"
+      ]
+    },
+    [
+  {
+    "name": "Pesquisa",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+    "Pesquisar músicas",
+    "Pesquisar artistas",
+    "Pesquisar playlists",
+    "Filtrar resultados de busca",
+    "Exibir resultados relevantes"
+  ],
+    "collaborators": [
+    "Usuário",
+    "Música",
+    "Playlist",
+    ]
+  }
+],
     {
       "name": "Música",
       "superclasses": "",
@@ -39,22 +76,7 @@
         ""
       ]
     },
-    {
-      "name": "Cadastro",
-      "superclasses": "Abrir Conta",
-      "subclasses": "Cadastro do cliente",
-      "type": 1,
-      "responsibilities": [
-        "Colher informações para contato e acesso",
-        "Realizar processo de confirmação por email",
-        "Abrir guia de login",
-        "Armazenar informações do usuário",
-        "Validar dados inseridos"
-      ],
-      "collaborators": [
-        "Usuário"
-      ]
-    },
+    
     {
       "name": "Feedback",
       "superclasses": "",
@@ -89,26 +111,6 @@
     ],
     "collaborators": [
       "Musicas "
-    ]
-  }
-]
-[
-  {
-    "name": "Pesquisa",
-    "superclasses": "",
-    "subclasses": "",
-    "type": 1,
-    "responsibilities": [
-    "Pesquisar músicas",
-    "Pesquisar artistas",
-    "Pesquisar playlists",
-    "Filtrar resultados de busca",
-    "Exibir resultados relevantes"
-  ],
-    "collaborators": [
-    "Usuário",
-    "Música",
-    "Playlist",
     ]
   }
 ]
