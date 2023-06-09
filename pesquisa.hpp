@@ -12,9 +12,12 @@ namespace Pesquisa {
     public:
         Pesquisar(std::string palavra);
         void Encontrar();
+        
+
     private:
     std::string _palavra;  
     std::vector<std::string> _resultados;
+    std::string _linha; 
     };
     
 }
