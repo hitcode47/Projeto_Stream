@@ -6,7 +6,8 @@
 #include <fstream>
 #include <vector>
 #include <cctype>
-#include <algorithm>
+#include <map>
+
 namespace Pesquisa {
     class Pesquisar {
     public:
@@ -18,6 +19,9 @@ namespace Pesquisa {
     std::string _palavra;  
     std::vector<std::string> _resultados;
     std::string _linha; 
+
+
+    std::map<double, std::string> _encontrado;
     };
     
 }

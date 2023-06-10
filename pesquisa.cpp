@@ -43,9 +43,40 @@ void Pesquisa::Pesquisar::Encontrar() {
         std::cout << "Nenhum resultado encontrado para: " << _copia << std::endl;
     }
     else{
-        std::cout << "Voce deseja:" << std::endl;
-         for (auto resultado : _resultados) {
-            std::cout << resultado << std::endl;
-        }
+        std::cout << "Voce deseja: " << std::endl;
+         for (int i=0; i<_resultados.size(); i++){
+            std::cout << "("<< (i+1) << ") " << _resultados[i] << std::endl;
+
+            _encontrado[i+1] = _resultados[i];
+         }
     }
+    int opcao;
+    bool encontrado = false;
+
+std::cout << "Digite o numero desejado" << std::endl;
+while(encontrado == false){
+    std::string opcao_string;
+    std::getline(std::cin, opcao_string); // lê a string.
+
+    // Verificar se a entrada é um número inteiro
+    try {
+        opcao = std::stoi(opcao_string);
+    } 
+    
+    catch (...) {
+        std::cout << "Entrada invalida. Digite o numero desejado." << std::endl;
+        continue;
+    }
+    for (auto it = _encontrado.begin(); it != _encontrado.end(); it++){
+        if(opcao == it->first){
+            std::cout << "Voce escolheu: " << it->second << std::endl;
+            encontrado = true;
+            break;
+        }
+        
+    }
+
+    }
+
+
 }
