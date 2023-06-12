@@ -12,7 +12,7 @@ void login() {
         bool loginBemSucedido = false;
 
         while (!loginBemSucedido) {
-            std::cout << "Digite aqui o nome de usuário: ";
+            std::cout << "Digite aqui o nome de usuario: ";
             getline(std::cin, usuario);
             std::cout << std::endl;
 
@@ -32,6 +32,7 @@ void login() {
 
                 if (senha == testesenha) {
                     std::cout << "LOGIN BEM SUCEDIDO!" << std::endl;
+                    std::cout << std::endl;
                     loginBemSucedido = true;
                 } 
                 else {
@@ -39,7 +40,7 @@ void login() {
                 }
             }
             else {
-                std::cout << "Nome de usuário não encontrado!" << std::endl;
+                std::cout << "Nome de usuario nao encontrado!" << std::endl;
             }
             confirma.clear();
             confirma.seekg(0, std::ios::beg);
@@ -56,7 +57,7 @@ void login() {
 void sign_up() {
     std::string usuario, senha, senhac;
     
-    std::cout << "Digite aqui o nome de usuário: ";
+    std::cout << "Digite aqui o nome de usuario: ";
     getline(std::cin, usuario);
     std::cout << std::endl;
     
@@ -65,8 +66,8 @@ void sign_up() {
         std::string teste;
         while (getline(usuariosarq1, teste)) {
             if (teste == usuario) {
-                std::cout << "Usuário já existente!" << std::endl;
-                std::cout << "Digite outro nome de usuário: ";
+                std::cout << "Usuario ja existente!" << std::endl;
+                std::cout << "Digite outro nome de usuario: ";
                 getline(std::cin, usuario);
                 std::cout << std::endl;
                 
@@ -94,8 +95,8 @@ void sign_up() {
     usuariosarq2 << usuario << "\n" << senha << "\n";
     usuariosarq2.close();
     
-    std::cout << std::endl;
     std::cout << "USUARIO CRIADO COM SUCESSO!" << std::endl;
+    std::cout << std::endl;
 };
 
 
@@ -116,11 +117,11 @@ void menu(){
   
     std::cout<<"Entre agora no melhor app de musica"<<std::endl;
     std::cout << std::endl;
-    std::cout<<"Escolha uma opção: "<<std::endl;
+    std::cout<<"Escolha uma opcao: "<<std::endl;
     std::cout<<"1. Sign_up: "<<std::endl;
     std::cout<<"2. login: "<<std::endl;
     
-     int opcao=0;
+    int opcao=0;
     std::cin>>opcao;
     std::cin.ignore();
 
@@ -135,7 +136,7 @@ int main(){
     
     exibirlogo();
     menu();
-  
+    
     return 0;}
 
 
