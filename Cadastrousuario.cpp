@@ -119,15 +119,8 @@ void menu(){
     std::cout<<"Escolha uma opção: "<<std::endl;
     std::cout<<"1. Sign_up: "<<std::endl;
     std::cout<<"2. login: "<<std::endl;
-
-};
-
-int main(){
     
-    
-    exibirlogo();
-    menu();
-    int opcao=0;
+     int opcao=0;
     std::cin>>opcao;
     std::cin.ignore();
 
@@ -135,9 +128,14 @@ int main(){
        sign_up();
     else if(opcao==2)
        login();
+
+};
+
+int main(){
     
-    
-    
+    exibirlogo();
+    menu();
+  
     return 0;}
 
 
