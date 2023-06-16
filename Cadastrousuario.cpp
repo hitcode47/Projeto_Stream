@@ -2,7 +2,9 @@
 #include <fstream>
 #include <string>
 
-void login() {
+
+
+void LoginManager::login() {
     std::string usuario, senha, testeusuario, testesenha;
     
     std::ifstream confirma("usuariosenha.txt");
@@ -51,10 +53,12 @@ void login() {
     else {
         std::cout << "Erro ao abrir o arquivo!" << std::endl;
     }
-}
+};
 
 
-void sign_up() {
+
+
+void SignupManager::sign_up() {
     std::string usuario, senha, senhac;
     
     std::cout << "Digite aqui o nome de usuario: ";
@@ -102,41 +106,48 @@ void sign_up() {
 
 
 
-
-void exibirlogo(){
-
+void Iniciar::exibirlogo() {
     std::cout << "===============================" << std::endl;
     std::cout << "           PANCADAO            " << std::endl;
     std::cout << "===============================" << std::endl;
     std::cout << std::endl;
     std::cout << std::endl;
+}
 
-};
-
-void menu(){
-  
-    std::cout<<"Entre agora no melhor app de musica"<<std::endl;
+void Iniciar::menu() {
+    std::cout << "Entre agora no melhor app de musica" << std::endl;
     std::cout << std::endl;
-    std::cout<<"Escolha uma opcao: "<<std::endl;
-    std::cout<<"1. Sign_up: "<<std::endl;
-    std::cout<<"2. login: "<<std::endl;
-    
-    int opcao=0;
-    std::cin>>opcao;
+    std::cout << "Escolha uma opcao: " << std::endl;
+    std::cout << "1. Sign_up" << std::endl;
+    std::cout << "2. Login" << std::endl;
+
+    int opcao = 0;
+    std::cin >> opcao;
     std::cin.ignore();
 
-    if(opcao==1)
-       sign_up();
-    else if(opcao==2)
-       login();
+    if (opcao == 1) {
+        SignupManager signupManager;
+        signupManager.sign_up();
+    }
+    else if (opcao == 2) {
+        LoginManager loginManager;
+        loginManager.login();
+    }
+}
 
+void Iniciar::run() {
+    exibirlogo();
+    menu();
 };
+
 
 int main(){
     
-    exibirlogo();
-    menu();
+    Iniciar app;
     
-    return 0;}
+    app.run();
+    
+    return 0;
+}
 
 
