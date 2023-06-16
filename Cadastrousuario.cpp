@@ -1,3 +1,4 @@
+#include "cadastroususario.hpp"
 #include <iostream>
 #include <fstream>
 #include <string>
