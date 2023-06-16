@@ -123,7 +123,17 @@ void Iniciar::menu() {
     std::cout << "2. Login" << std::endl;
 
     int opcao = 0;
-    std::cin >> opcao;
+    while (true) {
+        if (!(std::cin >> opcao) || (opcao != 1 && opcao != 2)) {
+            std::cout << "Opcao invalida!!"<< std::endl;
+            std::cout << "Digite (1) para sign_up ou (2) para login: "<< std::endl;
+
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        } else {
+            break;
+        }
+    }
     std::cin.ignore();
 
     if (opcao == 1) {
