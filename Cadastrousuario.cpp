@@ -2,8 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
-
+#include <limits>
+#include <algorithm>
 
 void Login::login() {
     std::string usuario, senha, testeusuario, testesenha;
