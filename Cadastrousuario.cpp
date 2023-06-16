@@ -5,7 +5,7 @@
 
 
 
-void LoginManager::login() {
+void Login::login() {
     std::string usuario, senha, testeusuario, testesenha;
     
     std::ifstream confirma("usuariosenha.txt");
@@ -59,7 +59,7 @@ void LoginManager::login() {
 
 
 
-void SignupManager::sign_up() {
+void Signup::sign_up() {
     std::string usuario, senha, senhac;
     
     std::cout << "Digite aqui o nome de usuario: ";
@@ -127,12 +127,12 @@ void Iniciar::menu() {
     std::cin.ignore();
 
     if (opcao == 1) {
-        SignupManager signupManager;
-        signupManager.sign_up();
+        Signup fazer;
+        fazer.sign_up();
     }
     else if (opcao == 2) {
-        LoginManager loginManager;
-        loginManager.login();
+        Login fazer;
+        fazer.login();
     }
 }
 
