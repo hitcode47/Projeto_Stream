@@ -7,7 +7,7 @@
 #include <string>
 
  
-class LoginManager {
+class Login {
     
 public:
     void login();
@@ -15,7 +15,7 @@ public:
 
 
 
-class SignupManager {
+class Signup {
 public:
     void sign_up();
 };
