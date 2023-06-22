@@ -5,6 +5,11 @@
 #include <limits>
 #include <algorithm>
 
+
+/* Este método é responsável por realizar o login de um usuário. 
+Ele solicita o nome de usuário e a senha, 
+lê as informações do arquivo "usuariosenha.txt" e verifica se as credenciais estão corretas.*/
+
 void Login::login() {
     std::string usuario, senha, testeusuario, testesenha;
     
@@ -15,6 +20,7 @@ void Login::login() {
         bool loginBemSucedido = false;
 
         while (!loginBemSucedido) {
+            usuarioEncontrado = false;
             std::cout << "Digite aqui o nome de usuario: ";
             getline(std::cin, usuario);
             std::cout << std::endl;
@@ -58,6 +64,11 @@ void Login::login() {
 
 
 
+
+
+/*Este método permite que um novo usuário crie uma conta. 
+Ele solicita um nome de usuário e uma senha, 
+verifica se o usuário já existe no arquivo "usuariosenha.txt" e, em seguida, armazena as informações no arquivo, caso sejam válidas.*/
 
 void Signup::sign_up() {
     std::string usuario, senha, senhac;
@@ -107,6 +118,9 @@ void Signup::sign_up() {
 
 
 
+/*Este método inicia o aplicativo. 
+Ele chama o método exibirlogo() para exibir o logotipo*/ 
+
 void Iniciar::exibirlogo() {
     std::cout << "===============================" << std::endl;
     std::cout << "           PANCADAO            " << std::endl;
@@ -115,14 +129,24 @@ void Iniciar::exibirlogo() {
     std::cout << std::endl;
 }
 
+
+
+
+/*Este método exibe um menu para o usuário, 
+onde ele pode escolher entre fazer o login (utilizando a classe Login) 
+ou realizar o cadastro (utilizando a classe Signup).*/
+
 void Iniciar::menu() {
     std::cout << "Entre agora no melhor app de musica" << std::endl;
     std::cout << std::endl;
-    std::cout << "Escolha uma opcao: " << std::endl;
+    std::cout << "Digite 1 ou 2 para escolher uma opcao: " << std::endl;
     std::cout << "1. Sign_up" << std::endl;
     std::cout << "2. Login" << std::endl;
+   
 
-    int opcao = 0;
+
+
+   int opcao = 0;
     while (true) {
         if (!(std::cin >> opcao) || (opcao != 1 && opcao != 2)) {
             std::cout << "Opcao invalida!!"<< std::endl;
@@ -136,6 +160,7 @@ void Iniciar::menu() {
     }
     std::cin.ignore();
 
+
     if (opcao == 1) {
         Signup fazer;
         fazer.sign_up();
@@ -144,7 +169,16 @@ void Iniciar::menu() {
         Login fazer;
         fazer.login();
     }
+
 }
+
+
+
+/*Este método inicia o aplicativo. 
+Ele chama o método exibirlogo() 
+para exibir o logotipo e, em seguida,
+chama o método menu() para exibir o menu principal.
+*/
 
 void Iniciar::run() {
     exibirlogo();
