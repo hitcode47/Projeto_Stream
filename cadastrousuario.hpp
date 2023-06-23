@@ -20,6 +20,10 @@ public:
     void sign_up();
 };
 
+class ChangeUsername {
+public:
+void change_username();
+};
 
 
 class Iniciar {
@@ -29,4 +33,4 @@ public:
     void run();
 };
 
-#endif
+#endif // CADASTROUSUARIO_HPP
