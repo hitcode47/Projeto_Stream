@@ -4,7 +4,7 @@
 #include <string>
 #include <limits>
 #include <algorithm>
-
+#include <vector>
 
 /* Este método é responsável por realizar o login de um usuário. 
 Ele solicita o nome de usuário e a senha, 
@@ -117,6 +117,72 @@ void Signup::sign_up() {
 
 
 
+/*Permite que o usuário altere o nome de usuário. 
+Solicita o nome de usuário atual e a senha atual, verifica se as credenciais estão corretas, 
+solicita o novo nome de usuário e atualiza as informações no arquivo "usuariosenha.txt".*/
+
+void ChangeUsername::change_username() {
+        std::string usuario, senha, novoUsuario;
+        
+        std::cout << "Digite o nome de usuario atual: ";
+        getline(std::cin, usuario);
+        std::cout << std::endl;
+
+        std::cout << "Digite a senha atual: ";
+        getline(std::cin, senha);
+        std::cout << std::endl;
+
+        std::ifstream usuariosArquivo("usuariosenha.txt");
+        if (usuariosArquivo.is_open()) {
+            std::string linha;
+            std::vector<std::string> usuarios;
+
+            while (getline(usuariosArquivo, linha)) {
+                usuarios.push_back(linha);
+            }
+
+            usuariosArquivo.close();
+
+            auto itUsuario = std::find(usuarios.begin(), usuarios.end(), usuario);
+            auto itSenha = itUsuario + 1;
+
+            if (itUsuario != usuarios.end() && itSenha != usuarios.end()) {
+                if (*itSenha == senha) {
+                    std::cout << "Digite o novo nome de usuario: ";
+                    getline(std::cin, novoUsuario);
+                    std::cout << std::endl;
+
+                    *itUsuario = novoUsuario;
+
+                    std::ofstream usuariosArquivo("usuariosenha.txt", std::ios::trunc);
+                    if (usuariosArquivo.is_open()) {
+                        for (const std::string& u : usuarios) {
+                            usuariosArquivo << u << '\n';
+                        }
+                        usuariosArquivo.close();
+
+                        std::cout << "Nome de usuario alterado com sucesso!" << std::endl;
+                    }
+                    else {
+                        std::cout << "Erro ao abrir o arquivo de usuarios!" << std::endl;
+                    }
+                }
+                else {
+                    std::cout << "Senha incorreta!" << std::endl;
+                }
+            }
+            else {
+                std::cout << "Nome de usuario nao encontrado!" << std::endl;
+            }
+        }
+        else {
+            std::cout << "Erro ao abrir o arquivo de usuarios!" << std::endl;
+        }
+};
+
+
+
+
 
 /*Este método inicia o aplicativo. 
 Ele chama o método exibirlogo() para exibir o logotipo*/ 
@@ -128,8 +194,6 @@ void Iniciar::exibirlogo() {
     std::cout << std::endl;
     std::cout << std::endl;
 }
-
-
 
 
 /*Este método exibe um menu para o usuário, 
@@ -170,7 +234,10 @@ void Iniciar::menu() {
         fazer.login();
     }
 
-}
+};
+
+
+
 
 
 
@@ -194,5 +261,4 @@ int main(){
     
     return 0;
 }
-
 
