@@ -151,6 +151,15 @@ void ChangeUsername::change_username() {
                     std::cout << "Digite o novo nome de usuario: ";
                     getline(std::cin, novoUsuario);
                     std::cout << std::endl;
+                   
+
+                    while (std::find(usuarios.begin(), usuarios.end(), novoUsuario) != usuarios.end()) {
+                    std::cout << "O nome de usuario escolhido ja esta em uso!" << std::endl;
+                    std::cout << "Digite outro novo nome de usuário: ";
+                    getline(std::cin, novoUsuario);
+                    std::cout << std::endl;
+                }
+
 
                     *itUsuario = novoUsuario;
 
