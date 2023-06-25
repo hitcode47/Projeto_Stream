@@ -203,18 +203,19 @@ ou realizar o cadastro (utilizando a classe Signup).*/
 void Iniciar::menu() {
     std::cout << "Entre agora no melhor app de musica" << std::endl;
     std::cout << std::endl;
-    std::cout << "Digite 1 ou 2 para escolher uma opcao: " << std::endl;
+    std::cout << "Digite 1, 2 ou 3 para escolher uma opcao: " << std::endl;
     std::cout << "1. Sign_up" << std::endl;
     std::cout << "2. Login" << std::endl;
+    std::cout << "3. Trocar nome de usuario" << std::endl;
    
 
 
 
    int opcao = 0;
     while (true) {
-        if (!(std::cin >> opcao) || (opcao != 1 && opcao != 2)) {
+        if (!(std::cin >> opcao) || (opcao != 1 && opcao != 2 && opcao != 3)) {
             std::cout << "Opcao invalida!!"<< std::endl;
-            std::cout << "Digite (1) para sign_up ou (2) para login: "<< std::endl;
+            std::cout << "Digite (1) para sign_up, (2) para login ou (3) para mudar o nome de usuario: "<< std::endl;
 
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -232,6 +233,10 @@ void Iniciar::menu() {
     else if (opcao == 2) {
         Login fazer;
         fazer.login();
+    }
+    else if (opcao == 3) {
+        ChangeUsername fazer;
+        fazer.change_username();
     }
 
 };
