@@ -27,12 +27,19 @@ void Pesquisa::Pesquisar::Encontrar() {
     
     }//abrindo o arquivo.
     
-    while (getline(Musica_Exemplo, _linha)) {
-        if (_linha.find(_copia) != std::string::npos) {
-            _resultados.push_back(_linha);
+   while (getline(Musica_Exemplo, _linha)) {
+        std::size_t pos = _linha.find(",");
+        if (pos != std::string::npos) {
+            std::string titulo = _linha.substr(0, pos);
+            if (titulo.find(_copia) != std::string::npos) {
+            _resultados.push_back(titulo);
+            }
         }
-    }//1° obtenho cada linha e guardo em _linha, depois encontro a _palavra == _copia e guardo a linha inteira em _resultados
-
+        
+    }//1° obtenho cada linha e guardo em _linha, depois encntro a 1 ocorrencia que seria no caso de copiar toda a string
+    //antes do link(ou seja a substring), pois não quero exibir isso para o usuario. Logo após eu encontro dentro dessa substring
+    //a palavra "_copia" e assim guardo em _resultados.
+     
     for(int i=0; i < _resultados.size(); i++){
         if (i == 0 || _resultados[i-1][0] == ' ') {
             _resultados[i][0] = std::toupper(_resultados[i][0]);
