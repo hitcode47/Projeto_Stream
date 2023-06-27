@@ -2,7 +2,7 @@
 
 Pesquisa::Pesquisar::Pesquisar(std::string palavra) : _palavra(palavra){}
 
-void Pesquisa::Pesquisar::Encontrar() {
+bool Pesquisa::Pesquisar::Encontrar() {
     auto _copia = _palavra;
 
 
@@ -48,6 +48,7 @@ void Pesquisa::Pesquisar::Encontrar() {
 
      if (_resultados.empty()) {
         std::cout << "Nenhum resultado encontrado para: " << _copia << std::endl;
+        return false;
     }
     else{
         std::cout << "Voce deseja: " << std::endl;
@@ -85,5 +86,5 @@ while(encontrado == false){
 
     }
 
-
+return true;
 }

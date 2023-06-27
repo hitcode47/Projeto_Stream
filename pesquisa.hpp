@@ -12,7 +12,7 @@ namespace Pesquisa {
     class Pesquisar {
     public:
         Pesquisar(std::string palavra);
-        void Encontrar();
+        bool Encontrar();
         
 
     private:
