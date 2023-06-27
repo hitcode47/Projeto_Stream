@@ -3,16 +3,14 @@
 Pesquisa::Pesquisar::Pesquisar(std::string palavra) : _palavra(palavra){}
 
 bool Pesquisa::Pesquisar::Encontrar() {
-    auto _copia = _palavra;
-
-
-    if(!_copia.empty()){
-        _copia[0] = std::toupper(_copia[0]);
-        for(int i=1; i < _copia.size(); i++){
-        if (_copia[i-1] == ' ') {
-            _copia[i] = std::toupper(_copia[i]);
+    
+    if(!_palavra.empty()){
+        _palavra[0] = std::toupper(_palavra[0]);
+        for(int i=1; i < _palavra.size(); i++){
+        if (_palavra[i-1] == ' ') {
+            _palavra[i] = std::toupper(_palavra[i]);
         }else{
-            _copia[i] = std::tolower(_copia[i]);
+            _palavra[i] = std::tolower(_palavra[i]);
         }
 
     }}// Converte pra minuscula.
@@ -31,14 +29,14 @@ bool Pesquisa::Pesquisar::Encontrar() {
         std::size_t pos = _linha.find(",");
         if (pos != std::string::npos) {
             std::string titulo = _linha.substr(0, pos);
-            if (titulo.find(_copia) != std::string::npos) {
+            if (titulo.find(_palavra) != std::string::npos) {
             _resultados.push_back(titulo);
             }
         }
         
     }//1° obtenho cada linha e guardo em _linha, depois encntro a 1 ocorrencia que seria no caso de copiar toda a string
     //antes do link(ou seja a substring), pois não quero exibir isso para o usuario. Logo após eu encontro dentro dessa substring
-    //a palavra "_copia" e assim guardo em _resultados.
+    //a palavra "_palavra" e assim guardo em _resultados.
      
     for(int i=0; i < _resultados.size(); i++){
         if (i == 0 || _resultados[i-1][0] == ' ') {
@@ -47,7 +45,7 @@ bool Pesquisa::Pesquisar::Encontrar() {
     }//converto tudo que esta depois do espaço para letra maiuscula.
 
      if (_resultados.empty()) {
-        std::cout << "Nenhum resultado encontrado para: " << _copia << std::endl;
+        std::cout << "Nenhum resultado encontrado para: " << _palavra << std::endl;
         return false;
     }
     else{
