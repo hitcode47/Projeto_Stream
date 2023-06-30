@@ -5,6 +5,13 @@
 #include <limits>
 #include <algorithm>
 #include <vector>
+#include <functional>
+
+/*Função de hash básica para criptografar as senhas*/
+std::string hashSenha(const std::string& senha) {
+    std::hash<std::string> hashFunc;
+    return std::to_string(hashFunc(senha));
+}
 
 /* Este método é responsável por realizar o login de um usuário. 
 Ele solicita o nome de usuário e a senha, 
@@ -39,7 +46,7 @@ void Login::login() {
                 getline(std::cin, senha);
                 std::cout << std::endl;
 
-                if (senha == testesenha) {
+                if (hashSenha(senha) == testesenha) {
                     std::cout << "LOGIN BEM SUCEDIDO!" << std::endl;
                     std::cout << std::endl;
                     loginBemSucedido = true;
@@ -62,13 +69,10 @@ void Login::login() {
     }
 };
 
-
-
-
-
-/*Este método permite que um novo usuário crie uma conta. 
+/* Este método permite que um novo usuário crie uma conta. 
 Ele solicita um nome de usuário e uma senha, 
-verifica se o usuário já existe no arquivo "usuariosenha.txt" e, em seguida, armazena as informações no arquivo, caso sejam válidas.*/
+verifica se o usuário já existe no arquivo "usuariosenha.txt" e, 
+em seguida, armazena as informações no arquivo, caso sejam válidas.*/
 
 void Signup::sign_up() {
     std::string usuario, senha, senhac;
@@ -108,7 +112,7 @@ void Signup::sign_up() {
     }
     
     std::ofstream usuariosarq2("usuariosenha.txt", std::ios::app);
-    usuariosarq2 << usuario << "\n" << senha << "\n";
+    usuariosarq2 << usuario << "\n" << hashSenha(senha) << "\n";
     usuariosarq2.close();
     
     std::cout << "USUARIO CRIADO COM SUCESSO!" << std::endl;
@@ -117,78 +121,75 @@ void Signup::sign_up() {
 
 
 
+
 /*Permite que o usuário altere o nome de usuário. 
 Solicita o nome de usuário atual e a senha atual, verifica se as credenciais estão corretas, 
 solicita o novo nome de usuário e atualiza as informações no arquivo "usuariosenha.txt".*/
 
+
 void ChangeUsername::change_username() {
-        std::string usuario, senha, novoUsuario;
-        
-        std::cout << "Digite o nome de usuario atual: ";
-        getline(std::cin, usuario);
-        std::cout << std::endl;
+    std::string usuario, senha, novoUsuario;
 
-        std::cout << "Digite a senha atual: ";
-        getline(std::cin, senha);
-        std::cout << std::endl;
+    std::cout << "Digite o nome de usuario atual: ";
+    getline(std::cin, usuario);
+    std::cout << std::endl;
 
-        std::ifstream usuariosArquivo("usuariosenha.txt");
-        if (usuariosArquivo.is_open()) {
-            std::string linha;
-            std::vector<std::string> usuarios;
+    std::cout << "Digite a senha atual: ";
+    getline(std::cin, senha);
+    std::cout << std::endl;
 
-            while (getline(usuariosArquivo, linha)) {
-                usuarios.push_back(linha);
-            }
+    std::ifstream usuariosArquivo("usuariosenha.txt");
+    if (usuariosArquivo.is_open()) {
+        std::string linha;
+        std::vector<std::string> usuarios;
 
-            usuariosArquivo.close();
+        while (getline(usuariosArquivo, linha)) {
+            usuarios.push_back(linha);
+        }
 
-            auto itUsuario = std::find(usuarios.begin(), usuarios.end(), usuario);
-            auto itSenha = itUsuario + 1;
+        usuariosArquivo.close();
 
-            if (itUsuario != usuarios.end() && itSenha != usuarios.end()) {
-                if (*itSenha == senha) {
-                    std::cout << "Digite o novo nome de usuario: ";
-                    getline(std::cin, novoUsuario);
-                    std::cout << std::endl;
-                   
+        auto itUsuario = std::find(usuarios.begin(), usuarios.end(), usuario);
+        auto itSenha = itUsuario;  // Atualiza para itUsuario
 
-                    while (std::find(usuarios.begin(), usuarios.end(), novoUsuario) != usuarios.end()) {
+        if (itUsuario != usuarios.end() && itSenha != usuarios.end()) {
+            ++itSenha;  // Avança para a próxima linha (senha)
+
+            if (*(itSenha) == hashSenha(senha)) {  // Verifica a senha original
+                std::cout << "Digite o novo nome de usuario: ";
+                getline(std::cin, novoUsuario);
+                std::cout << std::endl;
+
+                while (std::find(usuarios.begin(), usuarios.end(), novoUsuario) != usuarios.end()) {
                     std::cout << "O nome de usuario escolhido ja esta em uso!" << std::endl;
-                    std::cout << "Digite outro novo nome de usuário: ";
+                    std::cout << "Digite outro novo nome de usuario: ";
                     getline(std::cin, novoUsuario);
                     std::cout << std::endl;
                 }
 
+                *itUsuario = novoUsuario;
 
-                    *itUsuario = novoUsuario;
-
-                    std::ofstream usuariosArquivo("usuariosenha.txt", std::ios::trunc);
-                    if (usuariosArquivo.is_open()) {
-                        for (const std::string& u : usuarios) {
-                            usuariosArquivo << u << '\n';
-                        }
-                        usuariosArquivo.close();
-
-                        std::cout << "Nome de usuario alterado com sucesso!" << std::endl;
+                std::ofstream usuariosArquivo("usuariosenha.txt", std::ios::trunc);
+                if (usuariosArquivo.is_open()) {
+                    for (const std::string& u : usuarios) {
+                        usuariosArquivo << u << '\n';
                     }
-                    else {
-                        std::cout << "Erro ao abrir o arquivo de usuarios!" << std::endl;
-                    }
-                }
-                else {
-                    std::cout << "Senha incorreta!" << std::endl;
-                }
-            }
-            else {
-                std::cout << "Nome de usuario nao encontrado!" << std::endl;
-            }
-        }
-        else {
-            std::cout << "Erro ao abrir o arquivo de usuarios!" << std::endl;
-        }
-};
+                    usuariosArquivo.close();
 
+                    std::cout << "Nome de usuario alterado com sucesso!" << std::endl;
+                } else {
+                    std::cout << "Erro ao abrir o arquivo de usuarios!" << std::endl;
+                }
+            } else {
+                std::cout << "Senha incorreta!" << std::endl;
+            }
+        } else {
+            std::cout << "Nome de usuario nao encontrado!" << std::endl;
+        }
+    } else {
+        std::cout << "Erro ao abrir o arquivo de usuarios!" << std::endl;
+    }
+}
 
 
 
