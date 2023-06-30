@@ -76,48 +76,67 @@ em seguida, armazena as informações no arquivo, caso sejam válidas.*/
 
 void Signup::sign_up() {
     std::string usuario, senha, senhac;
-    
+
     std::cout << "Digite aqui o nome de usuario: ";
     getline(std::cin, usuario);
     std::cout << std::endl;
-    
+
     std::ifstream usuariosarq1("usuariosenha.txt");
     if (usuariosarq1.is_open()) {
         std::string teste;
+        bool usuarioExistente = false;
+
         while (getline(usuariosarq1, teste)) {
             if (teste == usuario) {
+                usuarioExistente = true;
+                break;
+            }
+        }
+        usuariosarq1.close();
+
+            // Solicita outro nome de usuário
+            while (usuarioExistente) {
                 std::cout << "Usuario ja existente!" << std::endl;
                 std::cout << "Digite outro nome de usuario: ";
                 getline(std::cin, usuario);
                 std::cout << std::endl;
-                
+
+                usuariosarq1.open("usuariosenha.txt");
+                usuarioExistente = false;
+
+                while (getline(usuariosarq1, teste)) {
+                    if (teste == usuario) {
+                        usuarioExistente = true;
+                        break;
+                    }
+                }
+                usuariosarq1.close();
             }
-        }
-        usuariosarq1.close();
+        
     }
-    
+
     std::cout << "Digite aqui a senha: ";
     getline(std::cin, senha);
     std::cout << std::endl;
-    
+
     std::cout << "Digite novamente para confirmar a senha: ";
     getline(std::cin, senhac);
     std::cout << std::endl;
-    
+
     while (senhac != senha) {
         std::cout << "Senhas diferentes" << std::endl;
         std::cout << "Digite novamente para confirmar a senha: ";
         getline(std::cin, senhac);
         std::cout << std::endl;
     }
-    
+
     std::ofstream usuariosarq2("usuariosenha.txt", std::ios::app);
     usuariosarq2 << usuario << "\n" << hashSenha(senha) << "\n";
     usuariosarq2.close();
-    
+
     std::cout << "USUARIO CRIADO COM SUCESSO!" << std::endl;
     std::cout << std::endl;
-};
+}
 
 
 
@@ -269,6 +288,9 @@ void Iniciar::run() {
 
 
 int main(){
+    
+
+
     
     Iniciar app;
     
