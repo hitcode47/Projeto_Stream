@@ -82,11 +82,13 @@ bool Pesquisa::Pesquisar::Encontrar() {
         std::cout << "Voce deseja: " << std::endl;
             int count = 1;
             for (auto it = _resultados.rbegin(); it != _resultados.rend(); ++it) {
-                std::cout << "(" << count << ") " << it->second << std::endl;
-                _encontrado[count] = it->second;
-                count++;
-                if (count == 4) {
-                    break;
+                if(it->first != 0){                
+                    std::cout << "(" << count << ") " << it->second << std::endl;
+                    _encontrado[count] = it->second;
+                    count++;
+                    if (count == 4) {
+                        break;
+                    }
                 }
             }
         }
