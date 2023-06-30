@@ -74,10 +74,19 @@ bool Pesquisa::Pesquisar::Encontrar() {
     }
     //converto tudo que esta depois do espaço para letra maiuscula.
 
-     if (_resultados.empty()) {
+    bool encontrouResultados = false;
+    for (const auto& pair : _resultados) {
+        if (pair.first > 0) {
+            encontrouResultados = true;
+            break;
+        }
+    }
+
+    if (!encontrouResultados) {
         std::cout << "Nenhum resultado encontrado para: " << _palavra << std::endl;
         return false;
     }
+
     else{
         std::cout << "Voce deseja: " << std::endl;
             int count = 1;
