@@ -7,6 +7,8 @@
 #include <vector>
 #include <cctype>
 #include <map>
+#include <sstream>
+
 
 namespace Pesquisa {
     class Pesquisar {
@@ -17,7 +19,7 @@ namespace Pesquisa {
 
     private:
     std::string _palavra;  
-    std::vector<std::string> _resultados;
+    std::multimap<int, std::string> _resultados;
     std::map<double, std::string> _encontrado;
     };
     
