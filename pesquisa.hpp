@@ -10,12 +10,14 @@
 #include <sstream>
 
 
-namespace Pesquisa {
+namespace Pesquisa{
     class Pesquisar {
     public:
+        Pesquisar();
         Pesquisar(std::string palavra);
         bool Encontrar();
         std::string Retorno_Pesquisa();
+
     private:
     std::string _palavra;  
     std::multimap<int, std::string> _resultados;
