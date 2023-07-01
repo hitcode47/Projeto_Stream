@@ -15,12 +15,12 @@ namespace Pesquisa {
     public:
         Pesquisar(std::string palavra);
         bool Encontrar();
-        
-
+        std::string Retorno_Pesquisa();
     private:
     std::string _palavra;  
     std::multimap<int, std::string> _resultados;
     std::map<double, std::string> _encontrado;
+    std::string _musica_escolhida;
     };
     
 }

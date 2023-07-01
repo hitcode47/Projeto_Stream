@@ -124,6 +124,7 @@ bool Pesquisa::Pesquisar::Encontrar() {
             if(opcao == it->first){
                 std::cout << "Voce escolheu: " << it->second << std::endl;
                 encontrado = true;
+                _musica_escolhida = it->second;
                 break;
             }
         
@@ -132,4 +133,8 @@ bool Pesquisa::Pesquisar::Encontrar() {
     }
 
 return true;
+}
+
+std::string Pesquisa::Pesquisar::Retorno_Pesquisa(){
+    return _musica_escolhida;
 }
