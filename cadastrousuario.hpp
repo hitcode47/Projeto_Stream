@@ -64,6 +64,18 @@ public:
     void change_username();
 };
 
+
+class DeleteAccount {
+public:
+    void delete_account();
+
+private:
+    bool verificar_credenciais(const std::string& usuario, const std::string& senha);
+    void delete_account(const std::string& usuario);
+};
+
+
+
 /**
  * @brief Classe responsável por iniciar o aplicativo.
  */
@@ -80,10 +92,6 @@ public:
      */
     std::string menu();
 
-    /**
-     * @brief Executa o aplicativo.
-     * Exibe o logotipo e o menu principal.
-     */
     
 };
 

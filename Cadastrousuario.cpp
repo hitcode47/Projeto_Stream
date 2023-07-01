@@ -242,6 +242,84 @@ void ChangeUsername::change_username() {
 
 
 
+void DeleteAccount::delete_account() {
+        std::string usuario, senha;
+
+        std::cout << "Digite o nome de usuario: ";
+        getline(std::cin, usuario);
+        std::cout << std::endl;
+
+        std::cout << "Digite a senha: ";
+        getline(std::cin, senha);
+        std::cout << std::endl;
+
+        if (verificar_credenciais(usuario, senha)) {
+            delete_account(usuario);
+        } else {
+            std::cout << "Credenciais invalidas. Nao foi possivel apagar a conta." << std::endl;
+        }
+    }
+
+    bool DeleteAccount::verificar_credenciais(const std::string& usuario, const std::string& senha) {
+        std::ifstream usuariosArquivo("usuariosenha.txt");
+        if (usuariosArquivo.is_open()) {
+            std::string testeusuario, testesenha;
+
+            while (getline(usuariosArquivo, testeusuario)) {
+                if (usuario == testeusuario) {
+                    getline(usuariosArquivo, testesenha);
+                    break;
+                }
+                getline(usuariosArquivo, testesenha);  // Descarta a linha da senha correspondente
+            }
+
+            usuariosArquivo.close();
+
+            if (hashSenha(senha) == testesenha) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    void DeleteAccount::delete_account(const std::string& usuario) {
+    std::ifstream usuariosArquivo("usuariosenha.txt");
+    if (usuariosArquivo.is_open()) {
+        std::string linha;
+        std::vector<std::string> usuarios;
+
+        while (getline(usuariosArquivo, linha)) {
+            if (linha == usuario) {
+                getline(usuariosArquivo, linha); // Skip the corresponding password line
+            } else {
+                usuarios.push_back(linha);
+            }
+        }
+
+        usuariosArquivo.close();
+
+        std::ofstream usuariosArquivoOut("usuariosenha.txt", std::ios::trunc);
+        if (usuariosArquivoOut.is_open()) {
+            for (const std::string& u : usuarios) {
+                usuariosArquivoOut << u << '\n';
+            }
+            usuariosArquivoOut.close();
+
+            std::cout << "Conta do usuario " << usuario << " apagada com sucesso!" << std::endl;
+        } else {
+            std::cout << "Erro ao abrir o arquivo de usuarios!" << std::endl;
+        }
+    } else {
+        std::cout << "Erro ao abrir o arquivo de usuários!" << std::endl;
+    }
+}
+
+
+
+
+
+
 /*Este método inicia o aplicativo. 
 Ele chama o método exibirlogo() para exibir o logotipo*/ 
 
@@ -268,19 +346,20 @@ std::string Iniciar::menu() {
 while(true){
     std::cout << "Entre agora no melhor app de musica" << std::endl;
     std::cout << std::endl;
-    std::cout << "Digite 1, 2 ou 3 para escolher uma opcao: " << std::endl;
+    std::cout << "Digite 1, 2, 3 ou 4 para escolher uma opcao: " << std::endl;
     std::cout << "1. Sign_up" << std::endl;
     std::cout << "2. Login" << std::endl;
     std::cout << "3. Trocar nome de usuario" << std::endl;
+    std::cout << "4. Apagar conta de usuario" << std::endl;
    
 
    
 
    int opcao = 0;
     while (true) {
-        if (!(std::cin >> opcao) || (opcao != 1 && opcao != 2 && opcao != 3)) {
+        if (!(std::cin >> opcao) || (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4)) {
             std::cout << "Opcao invalida!!"<< std::endl;
-            std::cout << "Digite (1) para sign_up, (2) para login ou (3) para mudar o nome de usuario: "<< std::endl;
+            std::cout << "Digite (1) para sign_up, (2) para login, (3) para mudar o nome de usuario ou (4) para apagar conta de usuario: "<< std::endl;
 
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -306,6 +385,10 @@ while(true){
     else if (opcao == 3) {
         ChangeUsername fazer;
         fazer.change_username();
+    }
+    else if (opcao == 4) {
+        DeleteAccount fazer;
+        fazer.delete_account();
     }
 }
 };
