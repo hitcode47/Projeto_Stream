@@ -12,6 +12,7 @@
 #include <limits>
 #include <algorithm>
 #include <vector>
+#include <map>
 #include <functional>
 
 /**
@@ -30,7 +31,13 @@ public:
      * @brief Realiza o login de um usuário.
      * Solicita o nome de usuário e a senha, lê as informações do arquivo "usuariosenha.txt" e verifica se as credenciais estão corretas.
      */
-    void login();
+   void login();
+   std::string getternomedeusuario();
+
+private:
+   std::string _nomedeusuario;
+   
+
 };
 
 /**
@@ -71,13 +78,13 @@ public:
      * @brief Exibe o menu principal do aplicativo.
      * O usuário pode escolher entre fazer o login, realizar o cadastro ou trocar o nome de usuário.
      */
-    void menu();
+    std::string menu();
 
     /**
      * @brief Executa o aplicativo.
      * Exibe o logotipo e o menu principal.
      */
-    void run();
+    
 };
 
 #endif

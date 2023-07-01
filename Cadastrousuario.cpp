@@ -5,7 +5,9 @@
 #include <limits>
 #include <algorithm>
 #include <vector>
+#include <map>
 #include <functional>
+
 
 /*Função de hash básica para criptografar as senhas*/
 std::string hashSenha(const std::string& senha) {
@@ -18,8 +20,10 @@ Ele solicita o nome de usuário e a senha,
 lê as informações do arquivo "usuariosenha.txt" e verifica se as credenciais estão corretas.*/
 
 void Login::login() {
+
     std::string usuario, senha, testeusuario, testesenha;
     
+
     std::ifstream confirma("usuariosenha.txt");
 
     if (confirma.is_open()) {
@@ -50,6 +54,7 @@ void Login::login() {
                     std::cout << "LOGIN BEM SUCEDIDO!" << std::endl;
                     std::cout << std::endl;
                     loginBemSucedido = true;
+                    _nomedeusuario=usuario;
                 } 
                 else {
                     std::cout << "Senha incorreta!" << std::endl;
@@ -67,6 +72,7 @@ void Login::login() {
     else {
         std::cout << "Erro ao abrir o arquivo!" << std::endl;
     }
+    
 };
 
 /* Este método permite que um novo usuário crie uma conta. 
@@ -247,12 +253,19 @@ void Iniciar::exibirlogo() {
     std::cout << std::endl;
 }
 
+std::string  Login::getternomedeusuario(){
+    return _nomedeusuario;
+}
+
+
 
 /*Este método exibe um menu para o usuário, 
 onde ele pode escolher entre fazer o login (utilizando a classe Login) 
 ou realizar o cadastro (utilizando a classe Signup).*/
 
-void Iniciar::menu() {
+std::string Iniciar::menu() {
+
+while(true){
     std::cout << "Entre agora no melhor app de musica" << std::endl;
     std::cout << std::endl;
     std::cout << "Digite 1, 2 ou 3 para escolher uma opcao: " << std::endl;
@@ -261,7 +274,7 @@ void Iniciar::menu() {
     std::cout << "3. Trocar nome de usuario" << std::endl;
    
 
-
+   
 
    int opcao = 0;
     while (true) {
@@ -283,42 +296,21 @@ void Iniciar::menu() {
         fazer.sign_up();
     }
     else if (opcao == 2) {
+        std::string retorno;
         Login fazer;
         fazer.login();
+        retorno = fazer.getternomedeusuario();
+        return retorno;
+        break;
     }
     else if (opcao == 3) {
         ChangeUsername fazer;
         fazer.change_username();
     }
-
-};
-
-
-
-
-
-
-/*Este método inicia o aplicativo. 
-Ele chama o método exibirlogo() 
-para exibir o logotipo e, em seguida,
-chama o método menu() para exibir o menu principal.
-*/
-
-void Iniciar::run() {
-    exibirlogo();
-    menu();
-};
-
-
-int main(){
-    
-
-
-    
-    Iniciar app;
-    
-    app.run();
-    
-    return 0;
 }
+};
+
+
+
+
 
