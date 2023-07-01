@@ -88,6 +88,14 @@ void Signup::sign_up() {
     getline(std::cin, usuario);
     std::cout << std::endl;
 
+    // Verifica se o campo do nome de usuário está vazio
+    while (usuario.empty()) {
+        std::cout << "Campo de nome de usuario vazio!" << std::endl;
+        std::cout << "Digite o nome de usuario novamente: ";
+        getline(std::cin, usuario);
+        std::cout << std::endl;
+    }
+
     std::ifstream usuariosarq1("usuariosenha.txt");
     if (usuariosarq1.is_open()) {
         std::string teste;
@@ -101,34 +109,49 @@ void Signup::sign_up() {
         }
         usuariosarq1.close();
 
-            // Solicita outro nome de usuário
-            while (usuarioExistente) {
-                std::cout << "Usuario ja existente!" << std::endl;
-                std::cout << "Digite outro nome de usuario: ";
-                getline(std::cin, usuario);
-                std::cout << std::endl;
+        // Solicita outro nome de usuário
+        while (usuarioExistente) {
+            std::cout << "Usuario ja existente!" << std::endl;
+            std::cout << "Digite outro nome de usuario: ";
+            getline(std::cin, usuario);
+            std::cout << std::endl;
 
-                usuariosarq1.open("usuariosenha.txt");
-                usuarioExistente = false;
+            usuariosarq1.open("usuariosenha.txt");
+            usuarioExistente = false;
 
-                while (getline(usuariosarq1, teste)) {
-                    if (teste == usuario) {
-                        usuarioExistente = true;
-                        break;
-                    }
+            while (getline(usuariosarq1, teste)) {
+                if (teste == usuario) {
+                    usuarioExistente = true;
+                    break;
                 }
-                usuariosarq1.close();
             }
-        
+            usuariosarq1.close();
+        }
     }
 
     std::cout << "Digite aqui a senha: ";
     getline(std::cin, senha);
     std::cout << std::endl;
 
+    // Verifica se o campo de senha está vazio
+    while (senha.empty()) {
+        std::cout << "Campo de senha vazio!" << std::endl;
+        std::cout << "Digite a senha novamente: ";
+        getline(std::cin, senha);
+        std::cout << std::endl;
+    }
+
     std::cout << "Digite novamente para confirmar a senha: ";
     getline(std::cin, senhac);
     std::cout << std::endl;
+
+    // Verifica se o campo de confirmação de senha está vazio
+    while (senhac.empty()) {
+        std::cout << "Campo de confirmacao de senha vazio!" << std::endl;
+        std::cout << "Digite novamente para confirmar a senha: ";
+        getline(std::cin, senhac);
+        std::cout << std::endl;
+    }
 
     while (senhac != senha) {
         std::cout << "Senhas diferentes" << std::endl;
@@ -450,4 +473,3 @@ int main(){
     
     return 0;
 }
-
