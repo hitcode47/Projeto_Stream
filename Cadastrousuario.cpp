@@ -153,7 +153,7 @@ void ChangeUsername::change_username() {
     getline(std::cin, usuario);
     std::cout << std::endl;
 
-    std::cout << "Digite a senha atual: ";
+    std::cout << "Digite a senha: ";
     getline(std::cin, senha);
     std::cout << std::endl;
 
