@@ -5,15 +5,15 @@ reproducao::reproducao(): posicaoAtual(-1)
 
 }
 //Acessa uma posição no map gerado a partir do arquivo e executa uma música
-void reproducao::Executar(const std::string& nomeArquivo){
+void reproducao::Executar(const std::string& nomeArquivo, std::string nome_musica){
     std::map<std::string, std::string> mapa2 = ler_arquivo_em_map(nomeArquivo);
 
     std::string musica;
 
-    std::cout << "Digite o nome da música a ser buscada: ";
-    std::getline(std::cin, musica);
+    std::cout << "sua musica esta sendo buscada" << std::endl;
+    Sleep(5000);
 
-    auto it = mapa2.find(musica);
+    auto it = mapa2.find(nome_musica);
     if (it != mapa2.end()) {
         std::string link = it->second;
         std::cout << "Abrindo link da música: " << link << std::endl;

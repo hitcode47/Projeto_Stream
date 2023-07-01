@@ -15,9 +15,11 @@ class reproducao
 {
 private:
     int posicaoAtual;
+
+
 public:
     reproducao();
-    void Executar(const std::string& nomeArquivo);
+    void Executar(const std::string& nomeArquivo, std::string nome_musica);
     void Parar_Executar();
     void Pular_p_frente(const std::string& nomeArquivo);
     void Pular_p_tras(const std::string& nomeArquivo);

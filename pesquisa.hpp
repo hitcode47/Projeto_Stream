@@ -8,7 +8,7 @@
 #include <cctype>
 #include <map>
 #include <sstream>
-
+#include "reproducao.hpp"
 
 namespace Pesquisa{
     class Pesquisar {
@@ -17,6 +17,7 @@ namespace Pesquisa{
         Pesquisar(std::string palavra);
         bool Encontrar();
         std::string Retorno_Pesquisa();
+        reproducao repo;
 
     private:
     std::string _palavra;  

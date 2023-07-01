@@ -1,3 +1,4 @@
+#pragma once
 #include "pesquisa.hpp"
 #include "cadastrousuario.hpp"
 #include <iostream>
@@ -441,6 +442,7 @@ bool Pesquisa::Pesquisar::Encontrar() {
         for (auto it = _encontrado.begin(); it != _encontrado.end(); it++){
             if(opcao == it->first){
                 std::cout << "Voce escolheu: " << it->second << std::endl;
+                
                 encontrado = true;
                 break;
             }
