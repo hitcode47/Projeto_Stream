@@ -1,5 +1,6 @@
 #include "musicas.hpp"
 #include <limits>
+#include "pesquisa.hpp"
 musicas::musicas()
 {
     
@@ -62,6 +63,10 @@ void musicas::Remove_musica(const std::string& nomeArquivo){
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::getline(std::cin, musica);
 
+
+    Pesquisa::Pesquisar amusica(musica);
+    amusica.Encontrar();
+    musica = amusica.Retorno_Pesquisa();
     auto it = mapa.find(musica);
     if (it != mapa.end()) {
         mapa.erase(it);
