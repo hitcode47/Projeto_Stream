@@ -4,21 +4,42 @@ musicas::musicas()
 {
     
 }
+std::string musicas::Tratamento_de_Palavras(std::string musica_ou_artista){
+    if(musica_ou_artista!=""){
+        musica_ou_artista[0] = std::toupper(musica_ou_artista[0]);
+        for(int i=1; i < musica_ou_artista.size(); i++){
+            if (musica_ou_artista[i-1] == ' ') {
+            musica_ou_artista[i] = std::toupper(musica_ou_artista[i]);
+            }else{
+            musica_ou_artista[i] = std::tolower(musica_ou_artista[i]);
+            }
+
+        }
+    }
+    return musica_ou_artista;
+}
+
 void musicas::adicionar_musica(const std::string& nomeArquivo) {
     std::map<std::string, std::string> mapa = lerArquivoParaMap(nomeArquivo);
 
+    std::string artista;
     std::string musica;
     std::string link;
 
-    std::cout << "Digite o nome da música: ";
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    std::getline(std::cin, musica);
+    std::cout << "Digite o nome do Artista: ";
+    std::getline(std::cin, artista);
 
+    std::cout << "Digite o nome da música: ";
+    std::getline(std::cin, musica);
+    
     std::cout << "Digite o link da música: ";
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::getline(std::cin, link);
 
-    mapa[musica] = link;
+    artista = Tratamento_de_Palavras(artista); //trata as palavras. Se o usuario entrar com "bruno mars" (por exemplo), ele transforma pra "Bruno Mars"
+    musica = Tratamento_de_Palavras(musica);
+
+    mapa.insert(std::make_pair(artista + " - " + musica, link));
 
     std::ofstream arquivo(nomeArquivo);
     if (arquivo.is_open()) {
