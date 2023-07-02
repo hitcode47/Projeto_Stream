@@ -50,7 +50,7 @@ void musicas::adicionar_musica(const std::string& nomeArquivo) {
         arquivo.close();
         std::cout << "Dados salvos no arquivo." << std::endl;
     } else {
-        std::cout << "Não foi possível abrir o arquivo para escrita." << std::endl;
+        std::cout << "Nao foi possível abrir o arquivo para escrita." << std::endl;
     }
 }
 
@@ -59,7 +59,7 @@ void musicas::Remove_musica(const std::string& nomeArquivo){
 
     std::string musica;
 
-    std::cout << "Digite o nome da música a ser apagada: ";
+    std::cout << "Digite o nome da musica a ser apagada: ";
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::getline(std::cin, musica);
 
@@ -71,9 +71,9 @@ void musicas::Remove_musica(const std::string& nomeArquivo){
     if (it != mapa.end()) {
         mapa.erase(it);
         salvarMapEmArquivo(nomeArquivo, mapa);
-        std::cout << "Música removida com sucesso." << std::endl;
+        std::cout << "Musica removida com sucesso." << std::endl;
     } else {
-        std::cout << "Música não encontrada." << std::endl;
+        std::cout << "Musica não encontrada." << std::endl;
     }
 }
 
