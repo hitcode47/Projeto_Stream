@@ -38,12 +38,11 @@ int main(){
     std::string _musica_escolhida;
     _musica_escolhida = Busca.Retorno_Pesquisa();
 
-    reproducao repro;
+    
     if(resultado_da_busca == true){
-        repro.Executar("Musica_Exemplo.txt", _musica_escolhida);
+       Busca.repro.Executar("Musica_Exemplo.txt", _musica_escolhida);
     }
-
-    reproducao reproduz;
+    
     musicas minha_musica;
     bool encerrar = true;
     if(resultado_da_busca){
