@@ -38,12 +38,12 @@ std::cout << "**********************" << std::endl;
 std::cout << "**** REPRODUZINDO ****" << std::endl;
 std::cout << "**********************" << std::endl;
 std::cout << "(1) - Pausar |(II)" << std::endl;
-std::cout << "(2) - Avançar|(>>)" << std::endl;
+std::cout << "(2) - Avanï¿½ar|(>>)" << std::endl;
 std::cout << "(3) - Voltar |(<<)" << std::endl;
 std::cout << "(4) - Fechar |(X)" << std::endl;
 std::cout << "******* OUTROS *******" << std::endl;
-std::cout << "(5) - Adicionar Músicas" << std::endl;
-std::cout << "(6) - Remover Músicas" << std::endl;
+std::cout << "(5) - Adicionar Mï¿½sicas" << std::endl;
+std::cout << "(6) - Remover Mï¿½sicas" << std::endl;
     while (encerrar)
     {   
 
@@ -61,7 +61,7 @@ std::cout << "(6) - Remover Músicas" << std::endl;
             Busca.repro.Pular_p_tras("Musica_Exemplo.txt");
             break;
         case(4):
-            std::cout << "Obrigado por usar o app PANCADÃO" << std::endl;
+            std::cout << "Obrigado por usar o app PANCADï¿½O" << std::endl;
             encerrar = false;
             break;
         case(5):
@@ -71,7 +71,7 @@ std::cout << "(6) - Remover Músicas" << std::endl;
             minha_musica.adicionar_musica("Musica_Exemplo.txt");
             break;
         default:
-            std::cout << "Opção não encontrada. Tente Novamente" << std::endl;
+            std::cout << "Opï¿½ï¿½o nï¿½o encontrada. Tente Novamente" << std::endl;
             continue;
             break;
         }
@@ -84,7 +84,7 @@ std::cout << "(6) - Remover Músicas" << std::endl;
         {
         std::cout << "Deseja fazer uma nova busca?" << std::endl;
         std::cout << "1 - sim" << std::endl;
-        std::cout << "2 - não" << std::endl;
+        std::cout << "2 - nï¿½o" << std::endl;
         int valor = 0;
         std::cin >> valor;
         switch (valor){
