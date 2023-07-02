@@ -68,6 +68,7 @@ public:
 class DeleteAccount {
 public:
     void delete_account();
+    bool verificar_existencia_usuario(const std::string& usuario);
 
 private:
     bool verificar_credenciais(const std::string& usuario, const std::string& senha);
