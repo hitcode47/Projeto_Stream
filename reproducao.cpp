@@ -42,6 +42,7 @@ void reproducao::Parar_Executar()
     soltar(VK_MEDIA_PLAY_PAUSE);
 }
 void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
+
     // Fechar o navegador
     Encerrar();
 
@@ -80,6 +81,7 @@ void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
 }
 
 void reproducao::Pular_p_tras(const std::string& nomeArquivo) {
+
     // Fechar o navegador
     Encerrar();
     std::map<std::string, std::string> mapa2 = ler_arquivo_em_map(nomeArquivo);

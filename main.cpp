@@ -68,7 +68,7 @@ std::cout << "(6) - Remover Músicas" << std::endl;
             minha_musica.adicionar_musica("Musica_Exemplo.txt");
             break;
         case(6):
-            minha_musica.adicionar_musica("Musica_Exemplo.txt");
+            minha_musica.Remove_musica("Musica_Exemplo.txt");
             break;
         default:
             std::cout << "Opção não encontrada. Tente Novamente" << std::endl;
