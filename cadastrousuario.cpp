@@ -240,50 +240,56 @@ void ChangeUsername::change_username() {
 }
 
 
-
-
 void DeleteAccount::delete_account() {
-        std::string usuario, senha;
+    std::string usuario, senha;
 
-        std::cout << "Digite o nome de usuario: ";
-        getline(std::cin, usuario);
-        std::cout << std::endl;
+    std::cout << "Digite o nome de usuario: ";
+    getline(std::cin, usuario);
+    std::cout << std::endl;
 
-        std::cout << "Digite a senha: ";
-        getline(std::cin, senha);
-        std::cout << std::endl;
+    std::cout << "Digite a senha: ";
+    getline(std::cin, senha);
+    std::cout << std::endl;
 
-        if (verificar_credenciais(usuario, senha)) {
+    if (verificar_credenciais(usuario, senha)) {
+        if (verificar_existencia_usuario(usuario)) {
             delete_account(usuario);
         } else {
-            std::cout << "Credenciais invalidas. Nao foi possivel apagar a conta." << std::endl;
+            std::cout << "A conta que deseja excluir nao existe." << std::endl;
+        }
+    } else {
+        std::cout << "Credenciais invalidas. Nao foi possivel apagar a conta." << std::endl;
+    }
+}
+
+
+
+bool DeleteAccount::verificar_credenciais(const std::string& usuario, const std::string& senha) {
+    std::ifstream usuariosArquivo("usuariosenha.txt");
+    if (usuariosArquivo.is_open()) {
+        std::string testeusuario, testesenha;
+
+        while (getline(usuariosArquivo, testeusuario)) {
+            if (usuario == testeusuario) {
+                getline(usuariosArquivo, testesenha);
+                break;
+            }
+            getline(usuariosArquivo, testesenha);  // Descarta a linha da senha correspondente
+        }
+
+        usuariosArquivo.close();
+
+        // Verifica se o usuário foi encontrado e se a senha corresponde
+        if (!testesenha.empty() && hashSenha(senha) == testesenha) {
+            return true;
         }
     }
 
-    bool DeleteAccount::verificar_credenciais(const std::string& usuario, const std::string& senha) {
-        std::ifstream usuariosArquivo("usuariosenha.txt");
-        if (usuariosArquivo.is_open()) {
-            std::string testeusuario, testesenha;
+    return false;
+}
 
-            while (getline(usuariosArquivo, testeusuario)) {
-                if (usuario == testeusuario) {
-                    getline(usuariosArquivo, testesenha);
-                    break;
-                }
-                getline(usuariosArquivo, testesenha);  // Descarta a linha da senha correspondente
-            }
 
-            usuariosArquivo.close();
-
-            if (hashSenha(senha) == testesenha) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    void DeleteAccount::delete_account(const std::string& usuario) {
+void DeleteAccount::delete_account(const std::string& usuario) {
     std::ifstream usuariosArquivo("usuariosenha.txt");
     if (usuariosArquivo.is_open()) {
         std::string linha;
@@ -307,12 +313,33 @@ void DeleteAccount::delete_account() {
             usuariosArquivoOut.close();
 
             std::cout << "Conta do usuario " << usuario << " apagada com sucesso!" << std::endl;
+            return; // Retornar após a exclusão bem-sucedida
         } else {
             std::cout << "Erro ao abrir o arquivo de usuarios!" << std::endl;
         }
     } else {
         std::cout << "Erro ao abrir o arquivo de usuários!" << std::endl;
     }
+}
+
+
+bool DeleteAccount::verificar_existencia_usuario(const std::string& usuario) {
+    std::ifstream usuariosArquivo("usuariosenha.txt");
+    if (usuariosArquivo.is_open()) {
+        std::string testeusuario;
+
+        while (getline(usuariosArquivo, testeusuario)) {
+            if (usuario == testeusuario) {
+                usuariosArquivo.close();
+                return true;
+            }
+            getline(usuariosArquivo, testeusuario);  // Descarta a linha da senha correspondente
+        }
+
+        usuariosArquivo.close();
+    }
+
+    return false;
 }
 
 
