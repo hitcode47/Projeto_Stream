@@ -29,6 +29,12 @@ int main(){
     std::getline(std::cin, palavra);
     Pesquisa::Pesquisar Busca(palavra);
     bool resultado_da_busca = Busca.Encontrar();
+    reproducao repro;
+    std::string _musica_escolhida;
+    _musica_escolhida = Busca.Retorno_Pesquisa();
+    if(resultado_da_busca == true){
+        repro.Executar("Musica_Exemplo.txt", _musica_escolhida);
+    }
 
     reproducao reproduz;
     musicas minha_musica;
@@ -68,7 +74,7 @@ std::cout << "(6) - Remover M�sicas" << std::endl;
             minha_musica.adicionar_musica("Musica_Exemplo.txt");
             break;
         case(6):
-            minha_musica.adicionar_musica("Musica_Exemplo.txt");
+            minha_musica.Remove_musica("Musica_Exemplo.txt");
             break;
         default:
             std::cout << "Op��o n�o encontrada. Tente Novamente" << std::endl;

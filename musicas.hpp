@@ -6,6 +6,7 @@ class musicas
 {
 private:
     reproducao repro;
+    
 public:
     musicas();
     void adicionar_musica(const std::string& nomeArquivo);

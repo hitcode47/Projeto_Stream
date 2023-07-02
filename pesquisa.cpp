@@ -127,7 +127,7 @@ bool Pesquisa::Pesquisar::Encontrar() {
                 std::cout << "Voce escolheu: " << it->second << std::endl;
                 encontrado = true;
                 _musica_escolhida = it->second;
-                repro.Executar("Musica_Exemplo.txt", _musica_escolhida);
+                
                 break;
             }
         
