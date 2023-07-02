@@ -18,21 +18,21 @@ void reproducao::Executar(const std::string& nomeArquivo, std::string nome_music
     if (it != mapa2.end())
     {
         std::string link = it->second;
-        std::cout << "Abrindo link da música: " << link << std::endl;
+        std::cout << "Abrindo link da mï¿½sica: " << link << std::endl;
 
         // Converter a string para o tipo LPCWSTR
         std::wstring linkWide(link.begin(), link.end());
         LPCWSTR linkLpcwstr = linkWide.c_str();
 
-        // Abrir o link da música usando o ShellExecute
+        // Abrir o link da mï¿½sica usando o ShellExecute
         ShellExecute(NULL, L"open", linkLpcwstr, NULL, NULL, SW_SHOWNORMAL);
 
-        // Atualizar a posição atual para a posição do link executado
+        // Atualizar a posiï¿½ï¿½o atual para a posiï¿½ï¿½o do link executado
         posicaoAtual = std::distance(mapa2.begin(), it);
     }
     else
     {
-        std::cout << "Música não encontrada." << std::endl;
+        std::cout << "Mï¿½sica nï¿½o encontrada." << std::endl;
     }
 }
 
@@ -60,7 +60,7 @@ void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
         std::wstring linkWide(link.begin(), link.end());
         LPCWSTR linkLpcwstr = linkWide.c_str();
 
-        // Abrir o link da música usando o ShellExecuteEx
+        // Abrir o link da mï¿½sica usando o ShellExecuteEx
         SHELLEXECUTEINFO sei;
         ZeroMemory(&sei, sizeof(sei));
         sei.cbSize = sizeof(sei);
@@ -70,13 +70,13 @@ void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
         sei.nShow = SW_SHOWNORMAL;
 
         if (ShellExecuteEx(&sei)) {
-            // Atualizar a posição atual para a posição do link posterior
+            // Atualizar a posiï¿½ï¿½o atual para a posiï¿½ï¿½o do link posterior
             posicaoAtual = std::distance(mapa2.begin(), it);
         } else {
-            std::cout << "Não foi possível abrir o link." << std::endl;
+            std::cout << "Nï¿½o foi possï¿½vel abrir o link." << std::endl;
         }
     } else {
-        std::cout << "Não há link posterior disponível." << std::endl;
+        std::cout << "Nï¿½o hï¿½ link posterior disponï¿½vel." << std::endl;
     }
 }
 
@@ -98,7 +98,7 @@ void reproducao::Pular_p_tras(const std::string& nomeArquivo) {
         std::wstring linkWide(link.begin(), link.end());
         LPCWSTR linkLpcwstr = linkWide.c_str();
 
-        // Abrir o link da música anterior usando o ShellExecuteEx
+        // Abrir o link da mï¿½sica anterior usando o ShellExecuteEx
         SHELLEXECUTEINFO sei;
         ZeroMemory(&sei, sizeof(sei));
         sei.cbSize = sizeof(sei);
@@ -108,13 +108,13 @@ void reproducao::Pular_p_tras(const std::string& nomeArquivo) {
         sei.nShow = SW_SHOWNORMAL;
 
         if (ShellExecuteEx(&sei)) {
-            // Atualizar a posição atual para a posição do link anterior
+            // Atualizar a posiï¿½ï¿½o atual para a posiï¿½ï¿½o do link anterior
             posicaoAtual = std::distance(mapa2.begin(), it);
         } else {
-            std::cout << "Não foi possível abrir o link." << std::endl;
+            std::cout << "Nï¿½o foi possï¿½vel abrir o link." << std::endl;
         }
     } else {
-        std::cout << "Não há link anterior disponível." << std::endl;
+        std::cout << "Nï¿½o hï¿½ link anterior disponï¿½vel." << std::endl;
     }
 }
 
@@ -141,7 +141,7 @@ std::map<std::string, std::string> reproducao::ler_arquivo_em_map(const std::str
     }
     else
     {
-        std::cout << "Arquivo não encontrado. Será criado um novo arquivo." << std::endl;
+        std::cout << "Arquivo nï¿½o encontrado. Serï¿½ criado um novo arquivo." << std::endl;
     }
 
     return mapa2;
@@ -159,13 +159,13 @@ BOOL CALLBACK EnumWindowsCallback(HWND hWnd, LPARAM lParam)
             _tcscmp(className, _T("ApplicationFrameWindow")) == 0 ||
             _tcscmp(className, _T("MicrosoftEdgeWindowClass")) == 0)
         {
-            // Verificar se o título da janela corresponde ao Visual Studio Code
+            // Verificar se o tï¿½tulo da janela corresponde ao Visual Studio Code
             TCHAR windowTitle[256];
             if (GetWindowText(hWnd, windowTitle, 256) > 0)
             {
                 if (_tcsstr(windowTitle, _T("Visual Studio Code")) != nullptr)
                 {
-                    // Pular esta janela e continuar para a próxima
+                    // Pular esta janela e continuar para a prï¿½xima
                     return TRUE;
                 }
             }

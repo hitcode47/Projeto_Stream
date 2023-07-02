@@ -18,6 +18,7 @@ namespace Pesquisa{
         bool Encontrar();
         std::string Retorno_Pesquisa();
         reproducao repro;
+        
 
     private:
     std::string _palavra;  
