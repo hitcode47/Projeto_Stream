@@ -1,5 +1,5 @@
 #include "musicas.hpp"
-
+#include <limits>
 musicas::musicas()
 {
     
@@ -11,9 +11,11 @@ void musicas::adicionar_musica(const std::string& nomeArquivo) {
     std::string link;
 
     std::cout << "Digite o nome da música: ";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::getline(std::cin, musica);
 
     std::cout << "Digite o link da música: ";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::getline(std::cin, link);
 
     mapa[musica] = link;
@@ -36,6 +38,7 @@ void musicas::Remove_musica(const std::string& nomeArquivo){
     std::string musica;
 
     std::cout << "Digite o nome da música a ser apagada: ";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::getline(std::cin, musica);
 
     auto it = mapa.find(musica);

@@ -16,7 +16,6 @@ class reproducao
 private:
     int posicaoAtual;
 
-
 public:
     reproducao();
     void Executar(const std::string& nomeArquivo, std::string nome_musica);

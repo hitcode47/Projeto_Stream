@@ -24,7 +24,7 @@ bool Pesquisa::Pesquisar::Encontrar() {
     if (Musica_Exemplo.is_open()) {
     }
     else {
-        std::cout << "O nome do arquivo.txt deve estar diferente do meu cÃ³digo." << std::endl;
+        std::cout << "O nome do arquivo.txt deve estar diferente do meu código." << std::endl;
     
     }//abrindo o arquivo.
     
@@ -60,8 +60,8 @@ bool Pesquisa::Pesquisar::Encontrar() {
         
     }
 
-    //1Â° obtenho cada linha e guardo em linha, depois encntro a 1 ocorrencia que seria no caso de copiar toda a string
-    //antes do link(ou seja a substring), pois nÃ£o quero exibir isso para o usuario. Logo apÃ³s eu encontro dentro dessa substring
+    //1° obtenho cada linha e guardo em linha, depois encntro a 1 ocorrencia que seria no caso de copiar toda a string
+    //antes do link(ou seja a substring), pois não quero exibir isso para o usuario. Logo após eu encontro dentro dessa substring
     //a palavra "_palavra" e assim guardo em _resultados.
     for (auto& pair : _resultados) {
         std::string& value = pair.second;
@@ -74,7 +74,7 @@ bool Pesquisa::Pesquisar::Encontrar() {
             }
         }
     }
-    //converto tudo que esta depois do espaÃ§o para letra maiuscula.
+    //converto tudo que esta depois do espaço para letra maiuscula.
 
     bool encontrouResultados = false;
     for (const auto& pair : _resultados) {
@@ -111,9 +111,9 @@ bool Pesquisa::Pesquisar::Encontrar() {
     std::cout << "Digite o numero desejado" << std::endl;
     while(encontrado == false){
         std::string opcao_string;
-        std::getline(std::cin, opcao_string); // lÃª a string.
+        std::getline(std::cin, opcao_string); // lê a string.
 
-        // Verificar se a entrada Ã© um nÃºmero inteiro
+        // Verificar se a entrada é um número inteiro
         try {
             opcao = std::stoi(opcao_string);
         } 
@@ -127,7 +127,7 @@ bool Pesquisa::Pesquisar::Encontrar() {
                 std::cout << "Voce escolheu: " << it->second << std::endl;
                 encontrado = true;
                 _musica_escolhida = it->second;
-                repo.Executar("Musica_Exemplo.txt", _musica_escolhida);
+                repro.Executar("Musica_Exemplo.txt", _musica_escolhida);
                 break;
             }
         
