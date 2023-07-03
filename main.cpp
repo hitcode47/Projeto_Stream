@@ -85,10 +85,12 @@ int main(){
             break;
         case(2):
             Busca.repro.Pular_p_frente("Musica_Exemplo.txt");
+            _musica_escolhida = Busca.repro.Retornar_nome();
             obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(3):
             Busca.repro.Pular_p_tras("Musica_Exemplo.txt");
+            _musica_escolhida = Busca.repro.Retornar_nome();
             obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(4):

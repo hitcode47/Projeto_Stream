@@ -10,7 +10,6 @@
 #include <cstdlib>
 #include <tchar.h>
 
-
 class reproducao
 {
 private:
@@ -23,8 +22,10 @@ public:
     void Pular_p_frente(const std::string& nomeArquivo);
     void Pular_p_tras(const std::string& nomeArquivo);
     void Encerrar();
+    std::string Retornar_nome();
 private:
     static std::map<std::string, std::string> ler_arquivo_em_map(const std::string& nomeArquivo);
     static void pressionar(WORD keyCode);
     static void soltar(WORD keyCode);
+    std::string _musica_escolhida;
 };
