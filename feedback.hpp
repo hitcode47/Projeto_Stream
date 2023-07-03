@@ -10,9 +10,9 @@
 class Feed{
     public:
 
-    void Fazer_comentario(std::string, std::string, std::string);
+    void Fazer_comentario(std::string, std::string);
     
-    void Ler_Comentario(std::string, std::string, std::string);
+    void Ler_Comentario(std::string, std::string);
 
     private:
     std::list<std::string> _comentarios;

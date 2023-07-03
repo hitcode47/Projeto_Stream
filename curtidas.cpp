@@ -1,10 +1,13 @@
 #include "curtidas.hpp"
 #include <iostream>
 
-void Curtida::like(std::string Artista, std::string Musica, std:: string Usuario){
+
+void Curtida::like(std::string Musica, std::string Usuario){
+
     std:: ofstream arquivo ("Curtidas.txt", std::ios::app);
+
     if(arquivo.is_open()){
-        arquivo << Artista<<"-"<< Musica << ", "<< Usuario << ": "<<"Like"<< std:: endl;
+        arquivo << Musica << ", "<< Usuario << ": "<<"Like"<< std:: endl;
 
         arquivo.close();            
         std::cout << "Like registrado com sucesso.";
@@ -13,10 +16,10 @@ void Curtida::like(std::string Artista, std::string Musica, std:: string Usuario
     }
 }
 
-void Curtida::dislike(std::string Artista, std::string Musica, std::string Usuario ){
+void Curtida::dislike(std::string Musica, std::string Usuario ){
     std:: ofstream arquivo ("Curtidas.txt", std::ios::app);
     if(arquivo.is_open()){
-        arquivo << Artista<<"-"<< Musica << ","<< Usuario << ": "<<"Dislike"<< std:: endl;
+        arquivo << Musica << ","<< Usuario << ": "<<"Dislike"<< std:: endl;
         arquivo.close();
 
         std::cout << "Dislike registrado com sucesso.";

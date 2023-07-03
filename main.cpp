@@ -2,6 +2,8 @@
 #include "cadastrousuario.hpp"
 #include "reproducao.hpp"
 #include "musicas.hpp"
+#include "curtidas.hpp"
+#include "feedback.hpp"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -57,6 +59,15 @@ std::cout << "******* OUTROS *******" << std::endl;
 std::cout << "(5) - Adicionar Musicas" << std::endl;
 std::cout << "(6) - Remover Musicas" << std::endl;
 std::cout << "(7) - Fazer uma nova Pesquisa" << std::endl;
+std::cout << "(8) - Para deixar seu like" << std::endl;
+std::cout << "(9) - Para deixar seu dislike" << std::endl;
+std::cout << "(10) - Para fazer seus comentarios" << std::endl;
+std::cout << "(11) - Para ler comentarios" << std::endl;
+std::cout << "******* OBSERVACAO *******" << std::endl;
+Curtida obs;
+Feed coment;
+obs.ver_quatidade_curtias(_musica_escolhida);
+
     while (encerrar)
     {   
         int opcao;
@@ -93,9 +104,20 @@ std::cout << "(7) - Fazer uma nova Pesquisa" << std::endl;
             minha_musica.Remove_musica("Musica_Exemplo.txt");
             break;
         case(7):
-        goto ibusca;
-        break;
-
+            goto ibusca;
+            break;
+        case(8):
+            obs.like(_musica_escolhida, nomedeacesso);
+            break;
+        case(9):
+            obs.dislike(_musica_escolhida, nomedeacesso);
+            break;
+        case(10):
+            coment.Fazer_comentario(_musica_escolhida, nomedeacesso);
+            break;
+        case(11):
+            coment.Ler_Comentario(_musica_escolhida, nomedeacesso);
+            break;
         default:
             std::cout << "Opcao nao encontrada. Tente Novamente" << std::endl;
             continue;
