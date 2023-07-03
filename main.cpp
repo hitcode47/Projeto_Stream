@@ -4,12 +4,8 @@
 #include "musicas.hpp"
 #include "curtidas.hpp"
 #include "feedback.hpp"
-#include <iostream>
-#include <fstream>
-#include <string>
 #include <limits>
 #include <algorithm>
-#include <vector>
 #include <functional>
 #include <locale.h>
 #include <stdio.h>
@@ -95,6 +91,7 @@ obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(4):
             std::cout << "Obrigado por usar o app PANCADAO" << std::endl;
+            Busca.repro.Encerrar();
             encerrar = false;
             break;
         case(5):
