@@ -3,7 +3,7 @@
 #include "reproducao.hpp"
 #include "musicas.hpp"
 #include "curtidas.hpp"
-#include "feedback.hpp"
+#include "comentario.hpp"
 #include <limits>
 #include <algorithm>
 #include <functional>
@@ -44,25 +44,25 @@ int main(){
     musicas minha_musica;
     bool encerrar = true;
     if(resultado_da_busca){
-std::cout << "**********************" << std::endl;
-std::cout << "**** REPRODUZINDO ****" << std::endl;
-std::cout << "**********************" << std::endl;
-std::cout << "(1) - Pausar |(II)" << std::endl;
-std::cout << "(2) - Avancar|(>>)" << std::endl;
-std::cout << "(3) - Voltar |(<<)" << std::endl;
-std::cout << "(4) - Fechar |(X)" << std::endl;
-std::cout << "******* OUTROS *******" << std::endl;
-std::cout << "(5) - Adicionar Musicas" << std::endl;
-std::cout << "(6) - Remover Musicas" << std::endl;
-std::cout << "(7) - Fazer uma nova Pesquisa" << std::endl;
-std::cout << "(8) - Para deixar seu like" << std::endl;
-std::cout << "(9) - Para deixar seu dislike" << std::endl;
-std::cout << "(10) - Para fazer seus comentarios" << std::endl;
-std::cout << "(11) - Para ler comentarios" << std::endl;
-std::cout << "******* OBSERVACAO *******" << std::endl;
-Curtida obs;
-Feed coment;
-obs.ver_quatidade_curtias(_musica_escolhida);
+    std::cout << "**********************" << std::endl;
+    std::cout << "**** REPRODUZINDO ****" << std::endl;
+    std::cout << "**********************" << std::endl;
+    std::cout << "(1) - Pausar |(II)" << std::endl;
+    std::cout << "(2) - Avancar|(>>)" << std::endl;
+    std::cout << "(3) - Voltar |(<<)" << std::endl;
+    std::cout << "(4) - Fechar |(X)" << std::endl;
+    std::cout << "******* OUTROS *******" << std::endl;
+    std::cout << "(5) - Adicionar Musicas" << std::endl;
+    std::cout << "(6) - Remover Musicas" << std::endl;
+    std::cout << "(7) - Fazer uma nova Pesquisa" << std::endl;
+    std::cout << "(8) - Para deixar seu like" << std::endl;
+    std::cout << "(9) - Para deixar seu dislike" << std::endl;
+    std::cout << "(10) - Para fazer seus comentarios" << std::endl;
+    std::cout << "(11) - Para ler comentarios" << std::endl;
+    std::cout << "******* OBSERVACAO *******" << std::endl;
+    Curtida obs;
+    Comentario coment;
+    obs.ver_quatidade_curtias(_musica_escolhida);
 
     while (encerrar)
     {   
@@ -85,9 +85,11 @@ obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(2):
             Busca.repro.Pular_p_frente("Musica_Exemplo.txt");
+            obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(3):
             Busca.repro.Pular_p_tras("Musica_Exemplo.txt");
+            obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(4):
             std::cout << "Obrigado por usar o app PANCADAO" << std::endl;
@@ -105,15 +107,17 @@ obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(8):
             obs.like(_musica_escolhida, nomedeacesso);
+            obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(9):
             obs.dislike(_musica_escolhida, nomedeacesso);
+            obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(10):
             coment.Fazer_comentario(_musica_escolhida, nomedeacesso);
             break;
         case(11):
-            coment.Ler_Comentario(_musica_escolhida, nomedeacesso);
+            coment.Ler_comentario(_musica_escolhida, nomedeacesso);
             break;
         default:
             std::cout << "Opcao nao encontrada. Tente Novamente" << std::endl;

@@ -1,5 +1,5 @@
-#ifndef FEEDBACK_HPP
-#define FEEDBACK_HPP
+#ifndef COMENTARIO_HPP
+#define COMENTARIO_HPP
 
 #include <string>
 #include <iostream>
@@ -7,12 +7,12 @@
 #include <list>
 #include <map>
 
-class Feed{
+class Comentario{
     public:
 
     void Fazer_comentario(std::string, std::string);
     
-    void Ler_Comentario(std::string, std::string);
+    void Ler_comentario(std::string, std::string);
 
     private:
     std::list<std::string> _comentarios;

@@ -10,7 +10,7 @@ void Curtida::like(std::string Musica, std::string Usuario){
         arquivo << Musica << ", "<< Usuario << ": "<<"Like"<< std:: endl;
 
         arquivo.close();            
-        std::cout << "Like registrado com sucesso.";
+        std::cout << "Like registrado com sucesso."<< std:: endl;
     }else {
         std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
     }
@@ -22,7 +22,7 @@ void Curtida::dislike(std::string Musica, std::string Usuario ){
         arquivo << Musica << ","<< Usuario << ": "<<"Dislike"<< std:: endl;
         arquivo.close();
 
-        std::cout << "Dislike registrado com sucesso.";
+        std::cout << "Dislike registrado com sucesso."<< std:: endl;
     }else {
         std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
     }
@@ -31,6 +31,9 @@ void Curtida::dislike(std::string Musica, std::string Usuario ){
 void Curtida::ver_quatidade_curtias(std::string Musica ){
     std::ifstream arquivo("Curtidas.txt");
     std::string linha;
+    Contl=0;
+    Contd=0;
+
     if (arquivo.is_open()) {
         while (getline(arquivo, linha)) {
             std::size_t posMusica = linha.find(Musica);

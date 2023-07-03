@@ -46,6 +46,7 @@
         "typeinfo": "cpp",
         "map": "cpp",
         "codecvt": "cpp",
-        "ctime": "cpp"
+        "ctime": "cpp",
+        "list": "cpp"
     }
 }
