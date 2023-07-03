@@ -16,8 +16,8 @@ class Curtida {
     void ver_quatidade_curtias(std:: string);
 
     private:
-    int Contl=0;
-    int Contd=0;
+    int Contl;
+    int Contd;
     
 };
 

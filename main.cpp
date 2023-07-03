@@ -85,9 +85,11 @@ obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(2):
             Busca.repro.Pular_p_frente("Musica_Exemplo.txt");
+            obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(3):
             Busca.repro.Pular_p_tras("Musica_Exemplo.txt");
+            obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(4):
             std::cout << "Obrigado por usar o app PANCADAO" << std::endl;
