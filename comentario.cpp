@@ -1,12 +1,13 @@
-#include "feedback.hpp"
+#include "comentario.hpp"
 
 
-
-void Feed::Fazer_comentario(std::string Musica, std::string Usuario){
+void Comentario::Fazer_comentario(std::string Musica, std::string Usuario){
     std::ofstream arquivo("FeedBack.txt", std::ios::app);
     if (arquivo.is_open()) {
     std::string comentario;
-    std::cin.ignore();
+    std::cin.ignore(); 
+    //Sem o cin.iginore(), o programas estava achado que o usuario ja tinha deixado o seu comentario
+    //então foi nescessario coloca-lo para que a caixa de comentario fosse criada.
     std::cout << "Digite seu comentario: ";
     std::getline(std::cin, comentario);
     
@@ -20,7 +21,7 @@ void Feed::Fazer_comentario(std::string Musica, std::string Usuario){
 }
 
 
-void Feed::Ler_Comentario(std::string Musica, std::string Usuario) {
+void Comentario::Ler_comentario(std::string Musica, std::string Usuario) {
     std::ifstream arquivo("FeedBack.txt");
     std::string linha;
     if (arquivo.is_open()) {
