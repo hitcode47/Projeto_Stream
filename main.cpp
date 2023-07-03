@@ -4,12 +4,8 @@
 #include "musicas.hpp"
 #include "curtidas.hpp"
 #include "feedback.hpp"
-#include <iostream>
-#include <fstream>
-#include <string>
 #include <limits>
 #include <algorithm>
-#include <vector>
 #include <functional>
 #include <locale.h>
 #include <stdio.h>
