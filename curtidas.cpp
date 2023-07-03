@@ -22,7 +22,7 @@ void Curtida::dislike(std::string Musica, std::string Usuario ){
         arquivo << Musica << ","<< Usuario << ": "<<"Dislike"<< std:: endl;
         arquivo.close();
 
-        std::cout << "Dislike registrado com sucesso.";
+        std::cout << "Dislike registrado com sucesso."<< std:: endl;
     }else {
         std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
     }

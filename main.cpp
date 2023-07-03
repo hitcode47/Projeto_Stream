@@ -108,9 +108,11 @@ obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(8):
             obs.like(_musica_escolhida, nomedeacesso);
+            obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(9):
             obs.dislike(_musica_escolhida, nomedeacesso);
+            obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(10):
             coment.Fazer_comentario(_musica_escolhida, nomedeacesso);
