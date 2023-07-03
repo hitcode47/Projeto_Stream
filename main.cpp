@@ -95,6 +95,7 @@ obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(4):
             std::cout << "Obrigado por usar o app PANCADAO" << std::endl;
+            Busca.repro.Encerrar();
             encerrar = false;
             break;
         case(5):
