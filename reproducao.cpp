@@ -41,6 +41,10 @@ void reproducao::Parar_Executar()
     pressionar(VK_MEDIA_PLAY_PAUSE);
     soltar(VK_MEDIA_PLAY_PAUSE);
 }
+
+std::string reproducao::Retornar_nome(){
+    return _musica_escolhida;
+}
 void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
 
     // Fechar o navegador
@@ -52,7 +56,8 @@ void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
         auto it = mapa2.begin();
         std::advance(it, posicaoAtual + 1);
         std::string link = it->second;
-        std::cout << "Pulando para o link posterior: " << link << std::endl;
+        _musica_escolhida = it->first;
+        std::cout << "Pulando para o link posterior: " << it->first << ": " << link << std::endl;
 
         Sleep(5000);
 
