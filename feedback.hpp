@@ -1,11 +1,22 @@
-#ifndef CURTIDA_HPP
-#define CURTIDA_HPP
+#ifndef FEEDBACK_CPP
+#define FEEDBACK_CPP
 
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <list>
 #include <map>
+
+class Comentario{
+    public:
+
+    void Fazer_comentario(std::string, std::string);
+    
+    void Ler_comentario(std::string, std::string);
+
+    private:
+    std::list<std::string> _comentarios;
+};
 
 class Curtida {
     public:
@@ -20,6 +31,9 @@ class Curtida {
     int Contl;
     int Contd;
     bool verificacao_curtidas (std::string);
+    void sobreescrever();
     
 };
+
+
 #endif
