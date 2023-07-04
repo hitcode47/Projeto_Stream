@@ -1,30 +1,167 @@
 #include "curtidas.hpp"
 #include <iostream>
 
-
-void Curtida::like(std::string Musica, std::string Usuario){
-
-    std:: ofstream arquivo ("Curtidas.txt", std::ios::app);
-
+bool Curtida::verificacao_curtidas(std::string Usuario){
+    std:: ifstream arquivo ("Curtidas.txt");
+    std:: string linha;
     if(arquivo.is_open()){
-        arquivo << Musica << ", "<< Usuario << ": "<<"Like"<< std:: endl;
-
-        arquivo.close();            
-        std::cout << "Like registrado com sucesso."<< std:: endl;
+        
+        while (getline(arquivo, linha)){
+            std::size_t posUsuario = linha.find(Usuario);
+            if (posUsuario != std::string::npos){
+                std::size_t separator = linha.find(":");
+                if (separator !=std::string::npos){
+                    std::string verificacao = linha.substr(separator + 2);
+                    if(verificacao == "Like"){
+                        return true;
+                    }else if (verificacao == "Dislike"){
+                        return true;
+                    }
+                }
+            }else {
+                return false;
+            }
+        }
+        
     }else {
         std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
     }
 }
 
-void Curtida::dislike(std::string Musica, std::string Usuario ){
-    std:: ofstream arquivo ("Curtidas.txt", std::ios::app);
-    if(arquivo.is_open()){
-        arquivo << Musica << ","<< Usuario << ": "<<"Dislike"<< std:: endl;
-        arquivo.close();
+void Curtida::like(std::string Musica, std::string Usuario){
+    if(verificacao_curtidas(Usuario)==false){
+        std:: ofstream arquivo ("Curtidas.txt", std::ios::app);
 
-        std::cout << "Dislike registrado com sucesso."<< std:: endl;
+        if(arquivo.is_open()){
+            arquivo << Musica << ", "<< Usuario << ": "<<"Like"<< std:: endl;
+
+            arquivo.close();            
+            std::cout << "Like registrado com sucesso."<< std:: endl;
+        }else {
+            std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
+        }
     }else {
-        std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
+        bool encerrar = true;
+        bool encerrar2 = true;
+        while(encerrar){
+            int indeciso;
+            std:: cout << "***O usuario ja regiu a essa musica.***"<< std:: endl;
+            std:: cout << "O usuario deseja reagir novamente?"<< std:: endl<<std:: endl;
+            std:: cout << "Digite:"<< std:: endl;
+            std:: cout << "(1)Para sim"<< std:: endl;
+            std:: cout << "(2)Para nao"<< std:: endl;
+            std:: cin >> indeciso;
+            std::cin.ignore();
+
+            switch (indeciso){
+            case (1):
+                
+                while(encerrar2){
+                    int troca;
+                    std:: cout << "Digite:"<< std:: endl;
+                    std:: cout << "(1)Para like"<< std:: endl;
+                    std:: cout << "(2)Para dislike"<< std:: endl;
+                    std:: cout << "(3)Para nao fazer alteracao na sua curtida."<< std:: endl;
+                    std:: cin >> troca;
+                    switch (troca){
+                    case (1):
+                        
+                        encerrar2= false;
+                        encerrar=false;
+                        break;
+                    case (2):
+                        encerrar2= false;
+                        encerrar=false;
+                        break;
+                    case(3):
+                        encerrar2=false;
+                        encerrar=false;
+                        break;
+                    default:
+                        std::cout << "Opcao nao encontrada. Tente Novamente" << std::endl << std::endl;
+                        continue;
+                        encerrar2=false;
+                        break;    
+                    }
+                }
+                break;
+            case (2): 
+                encerrar=false;
+                break;
+            default:
+                std::cout << "Opcao nao encontrada. Tente Novamente" << std::endl << std::endl;
+                continue;
+                encerrar=false;
+                break;
+            }
+        }
+    }
+}
+
+void Curtida::dislike(std::string Musica, std::string Usuario ){
+    if(verificacao_curtidas(Usuario)== false ){
+        std:: ofstream arquivo ("Curtidas.txt", std::ios::app);
+        if(arquivo.is_open()){
+            arquivo << Musica << ","<< Usuario << ": "<<"Dislike"<< std:: endl;
+            arquivo.close();    
+
+            std::cout << "Dislike registrado com sucesso."<< std:: endl;
+        }else {
+            std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
+        }
+    }else{
+        bool encerrar = true;
+        bool encerrar2 = true;
+        while(encerrar){
+            int indeciso;
+            std:: cout << "***O usuario ja regiu a essa musica.***"<< std:: endl;
+            std:: cout << "O usuario deseja reagir novamente?"<< std:: endl<<std:: endl;
+            std:: cout << "Digite:"<< std:: endl;
+            std:: cout << "(1)Para sim"<< std:: endl;
+            std:: cout << "(2)Para nao"<< std:: endl;
+            std:: cin >> indeciso;
+            std::cin.ignore();
+            switch (indeciso){
+            case (1):
+                
+                while(encerrar2){
+                    int troca;
+                    std:: cout << "Digite:"<< std:: endl;
+                    std:: cout << "(1)Para like"<< std:: endl;
+                    std:: cout << "(2)Para dislike"<< std:: endl;
+                    std:: cout << "(3)Para nao fazer alteracao na sua curtida."<< std:: endl;
+                    std:: cin >> troca;
+                    switch (troca){
+                    case (1):
+                        encerrar2= false;
+                        encerrar=false;
+                        break;
+                    case (2):
+                        encerrar2= false;
+                        encerrar=false;
+                        break;
+                    case(3):
+                        encerrar2= false;
+                        encerrar=false;
+                        break;
+                    default:
+                        std::cout << "**Opcao nao encontrada. Tente Novamente**" << std::endl<<std:: endl;
+                        continue;
+                        encerrar2=false;
+                        break;
+                    }
+                }
+                break;
+            case (2): 
+                encerrar = true;
+                break;
+            default:
+                std::cout << "Opcao nao encontrada. Tente Novamente" << std::endl<<std:: endl;
+                continue;
+                encerrar=false;
+                break;
+            }
+        }
     }
 }
 

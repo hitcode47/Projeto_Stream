@@ -14,11 +14,12 @@ class Curtida {
     void dislike( std::string, std::string);
 
     void ver_quatidade_curtias(std:: string);
+    
 
     private:
     int Contl;
     int Contd;
+    bool verificacao_curtidas (std::string);
     
 };
-
 #endif
