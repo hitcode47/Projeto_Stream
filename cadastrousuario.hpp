@@ -29,7 +29,7 @@ class Login {
 public:
     /**
      * @brief Realiza o login de um usuário.
-     * Solicita o nome de usuário e a senha, lê as informações do arquivo "usuariosenha.txt" e verifica se as credenciais estão corretas.
+     * Solicita o nome de usuário e a senha, lê as informações do arquivo "usuariosenha.txt" e verifica se as credenciais estão certas.
      */
    void login();
    std::string getternomedeusuario();
