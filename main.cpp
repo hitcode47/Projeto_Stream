@@ -2,8 +2,7 @@
 #include "cadastrousuario.hpp"
 #include "reproducao.hpp"
 #include "musicas.hpp"
-#include "curtidas.hpp"
-#include "comentario.hpp"
+#include "feedback.hpp"
 #include <limits>
 #include <algorithm>
 #include <functional>
