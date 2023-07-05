@@ -28,6 +28,7 @@ void Comentario::Ler_comentario(std::string Musica, std::string Usuario) {
         while (getline(arquivo, linha)) {
 
             std::size_t posMusica = linha.find(Musica);
+            
             if (posMusica != std::string::npos) {
                 std::size_t separator = linha.find(",");
                 if (separator != std::string::npos) {
@@ -52,57 +53,64 @@ void Comentario::Ler_comentario(std::string Musica, std::string Usuario) {
     }
 }
 
-bool Curtida::sobreescrever(std::string Usuario,std::streampos& posicao ){
-    std::ifstream arquivo("Curtidas.txt");
-    std::string linha;
-    if (arquivo.is_open()) {
-        std::streampos pos = arquivo.tellg();  // Posição atual do arquivo
 
-        while (getline(arquivo, linha)) {
-            std::size_t posUsuario = linha.find(Usuario);
-            posicao = pos;  // Armazena a posição da linha
-            arquivo.close();
-             return true;
-            pos = arquivo.tellg();  // Atualiza a posição do arquivo
+
+void Curtida::removerLinha(std::string usuario, std::string musica) {
+    std::ifstream arquivoEntrada("Curtidas.txt");
+    std::ofstream arquivoTemp("Curtidas_temp.txt");
+    std::string linha;
+    bool linhaRemovida = false;
+
+    if (arquivoEntrada.is_open() && arquivoTemp.is_open()) {
+        std::vector<std::string> linhasRestantes;
+
+        while (getline(arquivoEntrada, linha)) {
+            if (linha.find(musica) != std::string::npos && linha.find(usuario) != std::string::npos) {
+                linhaRemovida = true;
+            } else {
+                linhasRestantes.push_back(linha);
+            }
         }
 
-        arquivo.close();
-    } else {
-        std::cout << "Nao foi possivel abrir o arquivo." << std::endl;
-    }
+        arquivoEntrada.close();
+        arquivoTemp.close();
 
-    return false;
+        if (linhaRemovida) {
+            std::ofstream arquivoFinal("Curtidas.txt");
+            for (const std::string& linha : linhasRestantes) {
+                arquivoFinal << linha << std::endl;
+            }
+            arquivoFinal.close();
+
+        } else {
+            remove("Curtidas_temp.txt");  // Remove o arquivo temporário se nenhuma linha foi removida
+        }
+    } else {
+        std::cout << "Não foi possível abrir o arquivo." << std::endl;
+        
+    }
 }
 
-bool Curtida::verificacao_curtidas(std::string Usuario){
+bool Curtida::verificacao_curtidas(std::string Usuario, std::string Musica){
     std:: ifstream arquivo ("Curtidas.txt");
     std:: string linha;
     if(arquivo.is_open()){
         
         while (getline(arquivo, linha)){
-            std::size_t posUsuario = linha.find(Usuario);
-            if (posUsuario != std::string::npos){
-                std::size_t separator = linha.find(":");
-                if (separator !=std::string::npos){
-                    std::string verificacao = linha.substr(separator + 2);
-                    if(verificacao == "Like"){
-                        return true;
-                    }else if (verificacao == "Dislike"){
-                        return true;
-                    }
+            if(linha.find(Musica) != std::string::npos){
+                if(linha.find(Usuario)){
+                    removerLinha(Usuario, Musica);
                 }
-            }else {
-                return false;
             }
         }
-        
+        return false;
     }else {
         std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
     }
 }
 
 void Curtida::like(std::string Musica, std::string Usuario){
-     if (verificacao_curtidas(Usuario) == false) {
+     if (verificacao_curtidas(Usuario, Musica) == false) {
         std::ofstream arquivo("Curtidas.txt", std::ios::app);
 
         if (arquivo.is_open()) {
@@ -112,24 +120,11 @@ void Curtida::like(std::string Musica, std::string Usuario){
         } else {
             std::cout << "Nao foi possível abrir o arquivo." << std::endl;
         }
-    } else {
-        std::streampos posicao;
-        if (sobreescrever(Usuario, posicao)) {
-            std::fstream arquivo("Curtidas.txt", std::ios::in | std::ios::out);
-            if (arquivo.is_open()) {
-                arquivo.seekp(posicao);  // Posiciona o ponteiro do arquivo na posição da linha
-                arquivo << Musica << ", " << Usuario << ": " << "Like" << std::endl;
-                arquivo.close();
-                std::cout << "Reacao atualizada com sucesso." << std::endl;
-            } else {
-                std::cout << "Nao foi possível abrir o arquivo." << std::endl;
-            }
-        }
-    }
+    } 
 } 
 
 void Curtida::dislike(std::string Musica, std::string Usuario ){
-    if (verificacao_curtidas(Usuario) == false) {
+    if (verificacao_curtidas(Usuario, Musica) == false) {
         std::ofstream arquivo("Curtidas.txt", std::ios::app);
         if (arquivo.is_open()) {
             arquivo << Musica << ", " << Usuario << ": " << "Dislike" << std::endl;
@@ -139,18 +134,7 @@ void Curtida::dislike(std::string Musica, std::string Usuario ){
             std::cout << "Nao foi possível abrir o arquivo." << std::endl;
         }
     } else {
-        std::streampos posicao;
-        if (sobreescrever(Usuario, posicao)) {
-            std::fstream arquivo("Curtidas.txt", std::ios::in | std::ios::out);
-            if (arquivo.is_open()) {
-                arquivo.seekp(posicao);  // Posiciona o ponteiro do arquivo na posição da linha
-                arquivo << Musica << ", " << Usuario << ": " << "Dislike" << std::endl;
-                arquivo.close();
-                std::cout << "Reacao atualizada com sucesso." << std::endl;
-            } else {
-                std::cout << "Nao foi possível abrir o arquivo." << std::endl;
-            }
-        } 
+        
     }
 } 
 

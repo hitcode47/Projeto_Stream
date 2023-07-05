@@ -6,6 +6,10 @@
 #include <fstream>
 #include <list>
 #include <map>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
 
 class Comentario{
     public:
@@ -26,12 +30,14 @@ class Curtida {
 
     void ver_quatidade_curtias(std:: string);
     
+    bool verificacao_curtidas (std::string, std::string);
+
+    void removerLinha(std::string usuario, std::string musica);
 
     private:
     int Contl;
     int Contd;
-    bool verificacao_curtidas (std::string);
-    bool sobreescrever(std::string,std::streampos&);
+    
    
     
 };
