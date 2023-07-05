@@ -2,8 +2,7 @@
 #include "cadastrousuario.hpp"
 #include "reproducao.hpp"
 #include "musicas.hpp"
-#include "curtidas.hpp"
-#include "comentario.hpp"
+#include "feedback.hpp"
 #include <limits>
 #include <algorithm>
 #include <functional>
@@ -85,10 +84,12 @@ int main(){
             break;
         case(2):
             Busca.repro.Pular_p_frente("Musica_Exemplo.txt");
+            _musica_escolhida = Busca.repro.Retornar_nome();
             obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(3):
             Busca.repro.Pular_p_tras("Musica_Exemplo.txt");
+            _musica_escolhida = Busca.repro.Retornar_nome();
             obs.ver_quatidade_curtias(_musica_escolhida);
             break;
         case(4):
