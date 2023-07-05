@@ -104,6 +104,7 @@ bool Curtida::verificacao_curtidas(std::string Usuario, std::string Musica){
     }else {
         std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
     }
+    return false;
 }
 
 void Curtida::like(std::string Musica, std::string Usuario){
