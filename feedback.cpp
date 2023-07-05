@@ -60,17 +60,9 @@ bool Curtida::sobreescrever(std::string Usuario,std::streampos& posicao ){
 
         while (getline(arquivo, linha)) {
             std::size_t posUsuario = linha.find(Usuario);
-            if (posUsuario != std::string::npos) {
-                std::size_t separator = linha.find(":");
-                if (separator != std::string::npos) {
-                    std::string verificacao = linha.substr(separator + 2);
-                    if (verificacao == "Like" || verificacao == "Dislike") {
-                        posicao = pos;  // Armazena a posição da linha
-                        arquivo.close();
-                        return true;
-                    }
-                }
-            }
+            posicao = pos;  // Armazena a posição da linha
+            arquivo.close();
+             return true;
             pos = arquivo.tellg();  // Atualiza a posição do arquivo
         }
 
