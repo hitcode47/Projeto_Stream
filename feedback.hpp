@@ -20,7 +20,7 @@ class Comentario{
 
 class Curtida {
     public:
-    void like(std::string, std:: string);
+    void like(std::string, std::string);
 
     void dislike( std::string, std::string);
 
@@ -31,7 +31,8 @@ class Curtida {
     int Contl;
     int Contd;
     bool verificacao_curtidas (std::string);
-    void sobreescrever();
+    bool sobreescrever(std::string,std::streampos&);
+   
     
 };
 
