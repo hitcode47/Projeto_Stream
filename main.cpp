@@ -84,13 +84,12 @@ int main(){
             break;
         case(2):
             Busca.repro.Pular_p_frente("Musica_Exemplo.txt");
-            _musica_escolhida = Busca.repro.Retornar_nome();
-            obs.ver_quatidade_curtias(_musica_escolhida);
+
+            obs.ver_quatidade_curtias(Busca.repro.Retornar_nome());
             break;
         case(3):
             Busca.repro.Pular_p_tras("Musica_Exemplo.txt");
-            _musica_escolhida = Busca.repro.Retornar_nome();
-            obs.ver_quatidade_curtias(_musica_escolhida);
+            obs.ver_quatidade_curtias(Busca.repro.Retornar_nome());
             break;
         case(4):
             std::cout << "Obrigado por usar o app PANCADAO" << std::endl;
@@ -107,18 +106,18 @@ int main(){
             goto ibusca;
             break;
         case(8):
-            obs.like(_musica_escolhida, nomedeacesso);
-            obs.ver_quatidade_curtias(_musica_escolhida);
+            obs.like(Busca.repro.Retornar_nome(), nomedeacesso);
+            obs.ver_quatidade_curtias(Busca.repro.Retornar_nome());
             break;
         case(9):
-            obs.dislike(_musica_escolhida, nomedeacesso);
-            obs.ver_quatidade_curtias(_musica_escolhida);
+            obs.dislike(Busca.repro.Retornar_nome(), nomedeacesso);
+            obs.ver_quatidade_curtias(Busca.repro.Retornar_nome());
             break;
         case(10):
-            coment.Fazer_comentario(_musica_escolhida, nomedeacesso);
+            coment.Fazer_comentario(Busca.repro.Retornar_nome(), nomedeacesso);
             break;
         case(11):
-            coment.Ler_comentario(_musica_escolhida, nomedeacesso);
+            coment.Ler_comentario(Busca.repro.Retornar_nome(), nomedeacesso);
             break;
         default:
             std::cout << "Opcao nao encontrada. Tente Novamente" << std::endl;
