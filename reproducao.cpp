@@ -18,7 +18,9 @@ void reproducao::Executar(const std::string& nomeArquivo, std::string nome_music
     if (it != mapa2.end())
     {
         std::string link = it->second;
-        std::cout << "Abrindo link da m�sica: " << link << std::endl;
+        std::string musica = it->first;
+        _musica_escolhida = musica;
+        std::cout << "Abrindo musica: " << musica << std::endl;
 
         // Converter a string para o tipo LPCWSTR
         std::wstring linkWide(link.begin(), link.end());
@@ -32,7 +34,7 @@ void reproducao::Executar(const std::string& nomeArquivo, std::string nome_music
     }
     else
     {
-        std::cout << "M�sica n�o encontrada." << std::endl;
+        std::cout << "Musica nao encontrada." << std::endl;
     }
 }
 
@@ -57,7 +59,7 @@ void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
         std::advance(it, posicaoAtual + 1);
         std::string link = it->second;
         _musica_escolhida = it->first;
-        std::cout << "Pulando para o link posterior: " << it->first << ": " << link << std::endl;
+        std::cout << "Pulando para o musica posterior: " << it->first << std::endl;
 
         Sleep(5000);
 
@@ -78,10 +80,10 @@ void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
             // Atualizar a posi��o atual para a posi��o do link posterior
             posicaoAtual = std::distance(mapa2.begin(), it);
         } else {
-            std::cout << "N�o foi poss�vel abrir o link." << std::endl;
+            std::cout << "Nao foi possivel abrir o link." << std::endl;
         }
     } else {
-        std::cout << "N�o h� link posterior dispon�vel." << std::endl;
+        std::cout << "Nao ha link posterior disponivel." << std::endl;
     }
 }
 
@@ -95,8 +97,9 @@ void reproducao::Pular_p_tras(const std::string& nomeArquivo) {
         auto it = mapa2.begin();
         std::advance(it, posicaoAtual - 1);
         std::string link = it->second;
-        std::cout << "Pulando para o link anterior: " << link << std::endl;
-
+        std::string musica = it->first;
+        std::cout << "Pulando para o muscia anterior: " << musica << std::endl;
+        _musica_escolhida = it->first;
         Sleep(5000);
 
         // Converter a string para o tipo LPCWSTR
@@ -116,10 +119,10 @@ void reproducao::Pular_p_tras(const std::string& nomeArquivo) {
             // Atualizar a posi��o atual para a posi��o do link anterior
             posicaoAtual = std::distance(mapa2.begin(), it);
         } else {
-            std::cout << "N�o foi poss�vel abrir o link." << std::endl;
+            std::cout << "Nao foi possivel abrir o link." << std::endl;
         }
     } else {
-        std::cout << "N�o h� link anterior dispon�vel." << std::endl;
+        std::cout << "Nao ha link anterior disponivel." << std::endl;
     }
 }
 
@@ -146,7 +149,7 @@ std::map<std::string, std::string> reproducao::ler_arquivo_em_map(const std::str
     }
     else
     {
-        std::cout << "Arquivo n�o encontrado. Ser� criado um novo arquivo." << std::endl;
+        std::cout << "Arquivo nao encontrado. Sera criado um novo arquivo." << std::endl;
     }
 
     return mapa2;
