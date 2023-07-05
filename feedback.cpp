@@ -57,11 +57,10 @@ void Comentario::Ler_comentario(std::string Musica, std::string Usuario) {
 
 void Curtida::removerLinha(std::string usuario, std::string musica) {
     std::ifstream arquivoEntrada("Curtidas.txt");
-    std::ofstream arquivoTemp("Curtidas_temp.txt");
     std::string linha;
     bool linhaRemovida = false;
 
-    if (arquivoEntrada.is_open() && arquivoTemp.is_open()) {
+    if (arquivoEntrada.is_open()) {
         std::vector<std::string> linhasRestantes;
 
         while (getline(arquivoEntrada, linha)) {
@@ -73,7 +72,7 @@ void Curtida::removerLinha(std::string usuario, std::string musica) {
         }
 
         arquivoEntrada.close();
-        arquivoTemp.close();
+       
 
         if (linhaRemovida) {
             std::ofstream arquivoFinal("Curtidas.txt");
@@ -82,9 +81,7 @@ void Curtida::removerLinha(std::string usuario, std::string musica) {
             }
             arquivoFinal.close();
 
-        } else {
-            remove("Curtidas_temp.txt");  // Remove o arquivo temporário se nenhuma linha foi removida
-        }
+        } 
     } else {
         std::cout << "Não foi possível abrir o arquivo." << std::endl;
         
