@@ -87,7 +87,7 @@ void Signup::sign_up() {
     getline(std::cin, usuario);
     std::cout << std::endl;
 
-    // Verifica se o campo do nome de usuário está vazio
+    /*Verifica se o campo do nome de usuário está vazio*/ 
     while (usuario.empty()) {
         std::cout << "Campo de nome de usuario vazio!" << std::endl;
         std::cout << "Digite o nome de usuario novamente: ";
@@ -108,7 +108,7 @@ void Signup::sign_up() {
         }
         usuariosarq1.close();
 
-        // Solicita outro nome de usuário
+        /*Solicita outro nome de usuário*/ 
         while (usuarioExistente) {
             std::cout << "Usuario ja existente!" << std::endl;
             std::cout << "Digite outro nome de usuario: ";
@@ -132,7 +132,7 @@ void Signup::sign_up() {
     getline(std::cin, senha);
     std::cout << std::endl;
 
-    // Verifica se o campo de senha está vazio
+    /*Verifica se o campo de senha está vazio*/ 
     while (senha.empty()) {
         std::cout << "Campo de senha vazio!" << std::endl;
         std::cout << "Digite a senha novamente: ";
@@ -144,7 +144,7 @@ void Signup::sign_up() {
     getline(std::cin, senhac);
     std::cout << std::endl;
 
-    // Verifica se o campo de confirmação de senha está vazio
+    /*Verifica se o campo de confirmação de senha está vazio*/
     while (senhac.empty()) {
         std::cout << "Campo de confirmacao de senha vazio!" << std::endl;
         std::cout << "Digite novamente para confirmar a senha: ";
@@ -198,12 +198,12 @@ void ChangeUsername::change_username() {
         usuariosArquivo.close();
 
         auto itUsuario = std::find(usuarios.begin(), usuarios.end(), usuario);
-        auto itSenha = itUsuario;  // Atualiza para itUsuario
+        auto itSenha = itUsuario;  /*Atualiza para itUsuario*/
 
         if (itUsuario != usuarios.end() && itSenha != usuarios.end()) {
-            ++itSenha;  // Avança para a próxima linha (senha)
+            ++itSenha;  /*Avança para a próxima linha (senha)*/
 
-            if (*(itSenha) == hashSenha(senha)) {  // Verifica a senha original
+            if (*(itSenha) == hashSenha(senha)) {  /*Verifica a senha original*/
                 std::cout << "Digite o novo nome de usuario: ";
                 getline(std::cin, novoUsuario);
                 std::cout << std::endl;
@@ -274,12 +274,12 @@ bool DeleteAccount::verificar_credenciais(const std::string& usuario, const std:
                 getline(usuariosArquivo, testesenha);
                 break;
             }
-            getline(usuariosArquivo, testesenha);  // Descarta a linha da senha correspondente
+            getline(usuariosArquivo, testesenha);  /*Descarta a linha da senha correspondente*/
         }
 
         usuariosArquivo.close();
 
-        // Verifica se o usuário foi encontrado e se a senha corresponde
+        /*Verifica se o usuário foi encontrado e se a senha corresponde*/
         if (!testesenha.empty() && hashSenha(senha) == testesenha) {
             return true;
         }
@@ -297,7 +297,7 @@ void DeleteAccount::delete_account(const std::string& usuario) {
 
         while (getline(usuariosArquivo, linha)) {
             if (linha == usuario) {
-                getline(usuariosArquivo, linha); // Skip the corresponding password line
+                getline(usuariosArquivo, linha); 
             } else {
                 usuarios.push_back(linha);
             }
@@ -313,7 +313,7 @@ void DeleteAccount::delete_account(const std::string& usuario) {
             usuariosArquivoOut.close();
 
             std::cout << "Conta do usuario " << usuario << " apagada com sucesso!" << std::endl;
-            return; // Retornar após a exclusão bem-sucedida
+            return; /*Retornar após a exclusão bem-sucedida*/
         } else {
             std::cout << "Erro ao abrir o arquivo de usuarios!" << std::endl;
         }
@@ -333,7 +333,7 @@ bool DeleteAccount::verificar_existencia_usuario(const std::string& usuario) {
                 usuariosArquivo.close();
                 return true;
             }
-            getline(usuariosArquivo, testeusuario);  // Descarta a linha da senha correspondente
+            getline(usuariosArquivo, testeusuario);  /*Descarta a linha da senha correspondente*/
         }
 
         usuariosArquivo.close();
