@@ -96,19 +96,20 @@ bool Curtida::verificacao_curtidas(std::string Usuario, std::string Musica){
         while (getline(arquivo, linha)){
             if(linha.find(Musica) != std::string::npos){
                 if(linha.find(Usuario)){
-                    removerLinha(Usuario, Musica);
+                    return true;
                 }
             }
         }
-        return true;
+        
     }else {
         std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
     }
-    return true;
+    return false;
 }
 
 void Curtida::like(std::string Musica, std::string Usuario){
      if (verificacao_curtidas(Usuario, Musica)) {
+        removerLinha(Usuario, Musica);
         std::ofstream arquivo("Curtidas.txt", std::ios::app);
 
         if (arquivo.is_open()) {
@@ -118,11 +119,22 @@ void Curtida::like(std::string Musica, std::string Usuario){
         } else {
             std::cout << "Nao foi possível abrir o arquivo." << std::endl;
         }
-    } 
+    }else{
+        std::ofstream arquivo("Curtidas.txt", std::ios::app);
+
+        if (arquivo.is_open()) {
+            arquivo << Musica << ", " << Usuario << ": " << "Like" << std::endl;
+            arquivo.close();
+            std::cout << "Like registrado com sucesso." << std::endl;
+        } else {
+            std::cout << "Nao foi possível abrir o arquivo." << std::endl;
+        }
+    }
 } 
 
 void Curtida::dislike(std::string Musica, std::string Usuario ){
     if (verificacao_curtidas(Usuario, Musica)) {
+        removerLinha(Usuario, Musica);
         std::ofstream arquivo("Curtidas.txt", std::ios::app);
         if (arquivo.is_open()) {
             arquivo << Musica << ", " << Usuario << ": " << "Dislike" << std::endl;
@@ -132,7 +144,14 @@ void Curtida::dislike(std::string Musica, std::string Usuario ){
             std::cout << "Nao foi possível abrir o arquivo." << std::endl;
         }
     } else {
-        
+        std::ofstream arquivo("Curtidas.txt", std::ios::app);
+        if (arquivo.is_open()) {
+            arquivo << Musica << ", " << Usuario << ": " << "Dislike" << std::endl;
+            arquivo.close();
+            std::cout << "Dislike registrado com sucesso." << std::endl;
+        } else {
+            std::cout << "Nao foi possível abrir o arquivo." << std::endl;
+        }
     }
 } 
 
