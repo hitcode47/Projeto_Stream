@@ -3,105 +3,142 @@
 
 [
   {
-    "name": "usuário",
+    "name": "Login",
     "superclasses": "",
     "subclasses": "",
     "type": 1,
     "responsibilities": [
-      "Criar Primeira Playlist",
-      "Criar Novas Playlists",
-      "Incluir e excluir Músicas em um diretório",
-      "Gerenciar configurações da conta",
-      "Compartilhar playlist com outros usuários"
+      "Solicitar nome do usuário e senha",
+      "Verificar se as credenciais estão certas"
     ],
     "collaborators": [
-      "playlist",
-      "músicas",
-      "Cadastro"
+      "Singnup",
+      "Iniciar "
     ]
   },
   {
-    "name": "Cadastro",
-    "superclasses": "Abrir Conta",
-    "subclasses": "Cadastro do cliente",
-    "type": 1,
-    "responsibilities": [
-      "Colher informações para contato e acesso",
-      "Realizar processo de confirmação por email",
-      "Abrir guia de login",
-      "Armazenar informações do usuário",
-      "Validar dados inseridos"
-    ],
-    "collaborators": [
-      "Usuário"
-    ]
-  },
-  {
-    "name": "Pesquisa",
+    "name": "Signup",
     "superclasses": "",
     "subclasses": "",
     "type": 1,
     "responsibilities": [
-      "Pesquisar músicas",
-      "Pesquisar artistas",
-      "Pesquisar playlists",
-      "Filtrar resultados de busca",
-      "Exibir resultados relevantes"
+      "Cadastrar novo usuário",
+      "Verificar se o usuário já existe ",
+      "Armazenar as informações de novos usuarios"
     ],
     "collaborators": [
-      "Usuário",
-      "Música",
-      "Playlist"
+      "Iniciar"
     ]
   },
   {
-    "name": "Música",
+    "name": "ChangeUsername ",
     "superclasses": "",
     "subclasses": "",
     "type": 1,
     "responsibilities": [
-      "Armazenar informações sobre a música",
-      "Reproduzir a música escolhida",
-      "Pular para próxima música",
-      "Pular para música anterior",
-      "Acessar informações"
+      "Atualiza o cadastro do usuário",
+      "Solicita as novas informações do usuário"
     ],
     "collaborators": [
-      "Playlist",
-      "Usuário"
+      "Signup",
+      "Iniciar"
     ]
   },
   {
-    "name": "Reprodução",
+    "name": "DeleteAccount",
     "superclasses": "",
     "subclasses": "",
     "type": 1,
     "responsibilities": [
-      "Play",
-      "Pausar",
-      "Pular",
-      "Velocidade",
-      "Voltar música"
+      "Exclui a conta de um usuário "
     ],
     "collaborators": [
-      "Músicas"
+      "Iniciar"
     ]
   },
   {
-    "name": "Feedback",
+    "name": "Iniciar ",
     "superclasses": "",
     "subclasses": "",
     "type": 1,
     "responsibilities": [
-      "Contar os números de curtidas",
-      "Contar os números de dislikes",
-      "Criar caixas de diálogos",
-      "Curtir/descurtir a música",
-      "Curtir/descurtir comentários"
+      "Inicia o programa "
     ],
     "collaborators": [
-      "Músicas",
-      "Usuário"
+      ""
+    ]
+  },
+  {
+    "name": "Comentário",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Registrar comentários",
+      "Exibir comentários feitos por outros usuários  "
+    ],
+    "collaborators": [
+      "Reprodução",
+      "Login",
+      "musica "
+    ]
+  },
+  {
+    "name": "Curtida",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Registar curtidas ",
+      "Realizar a contagem de reações feitas em uma musica"
+    ],
+    "collaborators": [
+      "Reprodução",
+      "Login",
+      "musica "
+    ]
+  },
+  {
+    "name": "Musica",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Adicionar musicas",
+      "Remover musicas "
+    ],
+    "collaborators": [
+      "Pesquisa"
+    ]
+  },
+  {
+    "name": "Pesquisa ",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Procurar musicas",
+      ""
+    ],
+    "collaborators": [
+      "Musica"
+    ]
+  },
+  {
+    "name": "Reprodução ",
+    "superclasses": "",
+    "subclasses": "",
+    "type": 1,
+    "responsibilities": [
+      "Executar ",
+      "Parar ",
+      "Pular para outra musica",
+      "Voltar para musica anterior ",
+      "Encerrar programa "
+    ],
+    "collaborators": [
+      "Musica ",
+      "Pesquisa "
     ]
   }
 ]
