@@ -100,15 +100,15 @@ bool Curtida::verificacao_curtidas(std::string Usuario, std::string Musica){
                 }
             }
         }
-        return false;
+        return true;
     }else {
         std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
     }
-    return false;
+    return true;
 }
 
 void Curtida::like(std::string Musica, std::string Usuario){
-     if (verificacao_curtidas(Usuario, Musica) == false) {
+     if (verificacao_curtidas(Usuario, Musica)) {
         std::ofstream arquivo("Curtidas.txt", std::ios::app);
 
         if (arquivo.is_open()) {
@@ -122,7 +122,7 @@ void Curtida::like(std::string Musica, std::string Usuario){
 } 
 
 void Curtida::dislike(std::string Musica, std::string Usuario ){
-    if (verificacao_curtidas(Usuario, Musica) == false) {
+    if (verificacao_curtidas(Usuario, Musica)) {
         std::ofstream arquivo("Curtidas.txt", std::ios::app);
         if (arquivo.is_open()) {
             arquivo << Musica << ", " << Usuario << ": " << "Dislike" << std::endl;
