@@ -25,12 +25,20 @@ namespace Pesquisa{
         ///
         /// @return Verdadeiro se a pesquisa foi um sucesso, Falso caso contrário.
         bool Encontrar();
+        /// @brief Confirma a busca realzada pelo usuário
+        ///
+        /// Acessa os _resultados definidos pela busca e retorna no máximo as
+        /// as três músicas com as sintaxes parecidas, dando o poder de escolha
+        /// para o usuário. 
+        /// 
+        /// @return Verdadeiro se ocorreu com sucesso, Falso caso contrário. 
+        bool confirma_Busca();
         /// @brief Retorna a música e o artista pesquisado.
         /// @return A música e o artista.
         std::string Retorno_Pesquisa();
         ///
-        /// Instância da classe reprodução para que a musica_escolhida possa ser
-        /// reproduzida.
+        /// Instância da classe reprodução para que a musica_escolhida possa
+        /// ser reproduzida.
         ///
         reproducao repro;
         

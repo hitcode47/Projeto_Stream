@@ -5,8 +5,8 @@ Bruno Mars - Just the Way You Are,https://www.youtube.com/watch?v=LjhCEhWiKXk
 Coldplay - Viva La Vida,https://www.youtube.com/watch?v=dvgZkm1xWPE
 Dua Lipa - Don't Start Now,https://www.youtube.com/watch?v=oygrmJFKYZY
 Eagles - Hotel California,https://www.youtube.com/watch?v=EqPtz5qN7HM
-Ed Sheeran - Shape of You,https://www.youtube.com/watch?v=JGwWNGJdvx8
-Esse cara - Esse cara,https://youtu.be/r_0JjYUe5jo
+Ed Sheeran - Shape Of You,https://www.youtube.com/watch?v=JGwWNGJdvx8
+Esse cara - Esse Cara,https://youtu.be/r_0JjYUe5jo
 Guns N' Roses - Sweet Child O' Mine,https://www.youtube.com/watch?v=1w7OgIMMRc4
 Ivete Sangalo - Moral,https://www.youtube.com/watch?v=h9V3VsPHQNs
 Ivete Sangalo - So Love Na Cabeça,https://www.youtube.com/watch?v=2zJCFLy4p5I
