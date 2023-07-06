@@ -2,8 +2,6 @@
 
 Pesquisa::Pesquisar::Pesquisar(std::string palavra) : _palavra(palavra){}
 
-Pesquisa::Pesquisar::Pesquisar(){}
-
 bool Pesquisa::Pesquisar::Encontrar() {
     
     if(!_palavra.empty()){
