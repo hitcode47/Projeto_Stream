@@ -36,8 +36,9 @@ void Musica::adicionar_musica(const std::string& nomeArquivo) {
     
     std::cout << "Digite o link da música: ";
     std::getline(std::cin, link);
-
-    artista = Tratamento_de_Palavras(artista); //trata as palavras. Se o usuario entrar com "bruno mars" (por exemplo), ele transforma pra "Bruno Mars"
+    /* trata as palavras. Se o usuario entrar com "bruno mars", 
+    ele transforma para "Bruno Mars"*/
+    artista = Tratamento_de_Palavras(artista); 
     musica = Tratamento_de_Palavras(musica);
 
     mapa.insert(std::make_pair(artista + " - " + musica, link));
