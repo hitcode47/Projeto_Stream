@@ -5,13 +5,11 @@ void Comentario::Fazer_comentario(std::string Musica, std::string Usuario){
     std::ofstream arquivo("FeedBack.txt", std::ios::app);
     if (arquivo.is_open()) {
     std::string comentario;
-    std::cin.ignore(); 
-    //Sem o cin.iginore(), o programas estava achado que o usuario ja tinha deixado o seu comentario
-    //então foi nescessario coloca-lo para que a caixa de comentario fosse criada.
+    std::cin.ignore(); /*usado para a criacao do comentario.*/
     std::cout << "Digite seu comentario: ";
     std::getline(std::cin, comentario);
     
-    arquivo << Musica << " , " << Usuario << ":" << comentario << std::endl; // Adiciona o comentário à mesma linha
+    arquivo << Musica << " , " << Usuario << ":" << comentario << std::endl; /*Adiciona o comentário a mesma linha.*/
     arquivo.close();
 
     std::cout << "Comentario registrado com sucesso!" << std::endl;
@@ -39,7 +37,7 @@ void Comentario::Ler_comentario(std::string Musica, std::string Usuario) {
         }
         arquivo.close();
 
-        // Imprimir os comentários encontrados
+        /*Imprimir os comentarios encontrados.*/
         if (!_comentarios.empty()) {
             std::cout << "Comentarios encontrados:" << std::endl;
             for (const auto& comentario : _comentarios) {
@@ -104,7 +102,7 @@ bool Curtida::verificacao_curtidas(std::string Usuario, std::string Musica){
     }else {
         std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
     }
-    return false;
+        return false;
 }
 
 void Curtida::like(std::string Musica, std::string Usuario){
@@ -175,7 +173,7 @@ void Curtida::ver_quatidade_curtias(std::string Musica ){
         }
         arquivo.close();
 
-        // Imprimir quantidade de like encontrados
+        /*Imprimir quantidade de likes encontrados.*/
        std:: cout <<"Quantidade de likes: "<< Contl << std:: endl;
        std:: cout <<"Quantidade de dislikes: "<< Contd << std:: endl;
     } else {
