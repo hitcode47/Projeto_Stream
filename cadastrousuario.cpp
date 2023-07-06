@@ -42,7 +42,7 @@ void Login::login() {
                     getline(confirma, testesenha);
                     break;
                 }
-                getline(confirma, testesenha);  // Descarta a linha da senha correspondente
+                getline(confirma, testesenha);  /*Descarta a linha da senha correspondente*/
             }
 
             if (usuarioEncontrado) {

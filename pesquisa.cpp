@@ -2,8 +2,6 @@
 
 Pesquisa::Pesquisar::Pesquisar(std::string palavra) : _palavra(palavra){}
 
-Pesquisa::Pesquisar::Pesquisar(){}
-
 bool Pesquisa::Pesquisar::Encontrar() {
     
     if(!_palavra.empty()){
@@ -24,13 +22,9 @@ bool Pesquisa::Pesquisar::Encontrar() {
     if (Musica_Exemplo.is_open()) {
     }
     else {
-        std::cout << "O nome do arquivo.txt deve estar diferente do meu c�digo." << std::endl;
+        std::cout << "Nao foi possivel abrir o arquivo.txt" << std::endl;
     
     }//abrindo o arquivo.
-    
-
-
-
 
    while (getline(Musica_Exemplo, linha)) {
         std::size_t pos = linha.find(",");
@@ -60,7 +54,7 @@ bool Pesquisa::Pesquisar::Encontrar() {
         
     }
 
-    //1� obtenho cada linha e guardo em linha, depois encntro a 1 ocorrencia que seria no caso de copiar toda a string
+    //1� obtenho cada linha e guardo em _linha, depois encntro a 1 ocorrencia que seria no caso de copiar toda a string
     //antes do link(ou seja a substring), pois n�o quero exibir isso para o usuario. Logo ap�s eu encontro dentro dessa substring
     //a palavra "_palavra" e assim guardo em _resultados.
     for (auto& pair : _resultados) {
@@ -88,23 +82,26 @@ bool Pesquisa::Pesquisar::Encontrar() {
         std::cout << "Nenhum resultado encontrado para: " << _palavra << std::endl;
         return false;
     }
-
     else{
-        std::cout << "Voce deseja: " << std::endl;
-            int count = 1;
-            for (auto it = _resultados.rbegin(); it != _resultados.rend(); ++it) {
-                if(it->first != 0){                
-                    std::cout << "(" << count << ") " << it->second << std::endl;
-                    _encontrado[count] = it->second;
-                    count++;
-                    if (count == 4) {
-                        break;
-                    }
+        return confirma_Busca();
+    }
+}
+
+bool Pesquisa::Pesquisar::confirma_Busca(){
+    std::cout << "Voce deseja: " << std::endl;
+        int count = 1;
+        for (auto it = _resultados.rbegin(); it != _resultados.rend(); ++it) {
+            if(it->first != 0){                
+                std::cout << "(" << count << ") " << it->second << std::endl;
+                _encontrado[count] = it->second;
+                count++;
+                if (count == 4) {
+                    break;
                 }
             }
         }
 
-        
+           
     int opcao;
     bool encontrado = false;
 
