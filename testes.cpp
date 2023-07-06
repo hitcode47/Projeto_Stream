@@ -8,7 +8,7 @@ DOCTEST_TEST_CASE("Testando a função hashSenha") {
 }
 
 DOCTEST_TEST_CASE("Testando a função login") {
-    // Create a test file with sample usernames and passwords
+  
     std::ofstream usuariosarq("usuariosenha.txt");
     usuariosarq << "admin\n";
     usuariosarq << hashSenha("admin") << "\n";
@@ -19,7 +19,7 @@ DOCTEST_TEST_CASE("Testando a função login") {
     Login l;
 
     SUBCASE("Login com credenciais corretas") {
-        // Provide correct username and password
+     
         std::istringstream input("admin\nadmin\n");
         std::ostringstream output;
         l.login(input, output);
@@ -27,7 +27,7 @@ DOCTEST_TEST_CASE("Testando a função login") {
     }
 
     SUBCASE("Login com senha incorreta") {
-        // Provide correct username but incorrect password
+        
         std::istringstream input("admin\nwrongpassword\n");
         std::ostringstream output;
         l.login(input, output);
@@ -35,7 +35,7 @@ DOCTEST_TEST_CASE("Testando a função login") {
     }
 
     SUBCASE("Login com usuário inexistente") {
-        // Provide nonexistent username
+        
         std::istringstream input("nonexistentuser\npassword\n");
         std::ostringstream output;
         l.login(input, output);
@@ -59,7 +59,7 @@ DOCTEST_TEST_CASE("Testando a função sign_up") {
     }
 
     SUBCASE("Cadastro com nome de usuário já existente") {
-        // Provide an existing username
+       
         std::istringstream input("admin\npassword\npassword\n");
         std::ostringstream output;
         s.sign_up(input, output);
@@ -67,7 +67,7 @@ DOCTEST_TEST_CASE("Testando a função sign_up") {
     }
 
     SUBCASE("Cadastro com campo de senha vazio") {
-        // Provide a valid username but an empty password
+        
         std::istringstream input("newuser\n\npassword\n");
         std::ostringstream output;
         s.sign_up(input, output);
@@ -76,7 +76,7 @@ DOCTEST_TEST_CASE("Testando a função sign_up") {
 }
 
 DOCTEST_TEST_CASE("Testando a função change_username") {
-    // Create a test file with sample usernames and passwords
+    
     std::ofstream usuariosarq("usuariosenha.txt");
     usuariosarq << "admin\n";
     usuariosarq << hashSenha("admin") << "\n";
@@ -87,7 +87,7 @@ DOCTEST_TEST_CASE("Testando a função change_username") {
     ChangeUsername cu;
 
     SUBCASE("Alteração de nome de usuário com credenciais corretas") {
-        // Provide correct current username, password, and new username
+       
         std::istringstream input("admin\nadmin\nnewadmin\n");
         std::ostringstream output;
         cu.change_username(input, output);
@@ -95,7 +95,7 @@ DOCTEST_TEST_CASE("Testando a função change_username") {
     }
 
     SUBCASE("Alteração de nome de usuário com senha incorreta") {
-        // Provide correct current username but incorrect password
+        
         std::istringstream input("admin\nwrongpassword\nnewadmin\n");
         std::ostringstream output;
         cu.change_username(input, output);
@@ -103,7 +103,7 @@ DOCTEST_TEST_CASE("Testando a função change_username") {
     }
 
     SUBCASE("Alteração de nome de usuário com usuário inexistente") {
-        // Provide nonexistent current username
+        
         std::istringstream input("nonexistentuser\npassword\nnewuser\n");
         std::ostringstream output;
         cu.change_username(input, output);
@@ -112,7 +112,7 @@ DOCTEST_TEST_CASE("Testando a função change_username") {
 }
 
 DOCTEST_TEST_CASE("Testando a função delete_account") {
-    // Create a test file with sample usernames and passwords
+   
     std::ofstream usuariosarq("usuariosenha.txt");
     usuariosarq << "admin\n";
     usuariosarq << hashSenha("admin") << "\n";
@@ -123,15 +123,15 @@ DOCTEST_TEST_CASE("Testando a função delete_account") {
     DeleteAccount da;
 
     SUBCASE("Exclusão de conta com credenciais corretas") {
-        // Provide correct username and password
+ 
         std::istringstream input("admin\nadmin\n");
         std::ostringstream output;
         da.delete_account(input, output);
-        CHECK(output.str() == ""); // Output can be empty or a success message
+        CHECK(output.str() == ""); 
     }
 
     SUBCASE("Exclusão de conta com senha incorreta") {
-        // Provide correct username but incorrect password
+        
         std::istringstream input("admin\nwrongpassword\n");
         std::ostringstream output;
         da.delete_account(input, output);
@@ -139,7 +139,7 @@ DOCTEST_TEST_CASE("Testando a função delete_account") {
     }
 
     SUBCASE("Exclusão de conta com usuário inexistente") {
-        // Provide nonexistent username
+       
         std::istringstream input("nonexistentuser\npassword\n");
         std::ostringstream output;
         da.delete_account(input, output);
