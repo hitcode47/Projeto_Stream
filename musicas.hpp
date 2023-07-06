@@ -2,10 +2,10 @@
 #include <fstream>
 #include <map>
 #include <sstream>
-class musicas
+class Musica
 {  
 public:
-    musicas();
+    Musica();
     void adicionar_musica(const std::string& nomeArquivo);
     void Remove_musica(const std::string& nomeArquivo);
     
