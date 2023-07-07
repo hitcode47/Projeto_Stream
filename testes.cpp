@@ -1,3 +1,4 @@
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "cadastrousuario.hpp"
 #include "feedback.hpp"
 #include <iostream>
