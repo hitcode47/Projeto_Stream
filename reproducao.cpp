@@ -54,7 +54,7 @@ void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
 
     std::map<std::string, std::string> mapa2 = ler_arquivo_em_map(nomeArquivo);
 
-    if (posicaoAtual >= 0 && posicaoAtual < mapa2.size() - 1) {
+    if (posicaoAtual < mapa2.size() - 1) {
         auto it = mapa2.begin();
         std::advance(it, posicaoAtual + 1);
         std::string link = it->second;
