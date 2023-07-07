@@ -138,7 +138,7 @@ std::map<std::string, std::string> reproducao::ler_arquivo_em_map(const std::str
         {
             if(!linha.empty()){
                 linha[0] = std::toupper(linha[0]);
-                for(int i=1; i < linha.size(); i++){
+                for(unsigned i=1; i < linha.size(); i++){
 
                     if(linha[i] == ','){
                         break;
