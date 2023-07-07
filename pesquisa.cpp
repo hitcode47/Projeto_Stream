@@ -6,7 +6,7 @@ bool Pesquisa::Pesquisar::Encontrar() {
     
     if(!_palavra.empty()){
         _palavra[0] = std::toupper(_palavra[0]);
-        for(int i=1; i < _palavra.size(); i++){
+        for(unsigned i=1; i < _palavra.size(); i++){
             if (_palavra[i-1] == ' ') {
             _palavra[i] = std::toupper(_palavra[i]);
             }else{
@@ -39,7 +39,7 @@ bool Pesquisa::Pesquisar::Encontrar() {
                 palavras_subdivididas.push_back(palavra);
             }
             int contador_de_palavras=0;
-            int i=0;
+            unsigned i=0;
 
             while (i < palavras_subdivididas.size()){
 

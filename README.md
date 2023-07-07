@@ -26,6 +26,13 @@ Colaboradores:
  * Breno Ribeiro Rodrigues;
  * Dantom Dimitri Guedes
 
+
+
+
+
+
+
+
 Comentários: ...
 
 User Stories:  
@@ -132,10 +139,10 @@ User Stories:
 
  * Classes Obtitas:
 
-       * Usuário;
-       * Música;
-       * Playlist;
-       * Feedback;
-       * Cadastro;
+       * Login;
+       * SingUp;
+       * ChangeUsername;
+       * DeleteAccount;
+       * Iniciar;
 
 

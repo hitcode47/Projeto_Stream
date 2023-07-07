@@ -34,6 +34,7 @@ namespace Pesquisa{
         /// @return Verdadeiro se ocorreu com sucesso, Falso caso contrário. 
         bool confirma_Busca();
         /// @brief Retorna a música e o artista pesquisado.
+        ///
         /// @return A música e o artista.
         std::string Retorno_Pesquisa();
         ///

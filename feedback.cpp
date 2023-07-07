@@ -5,13 +5,11 @@ void Comentario::Fazer_comentario(std::string Musica, std::string Usuario){
     std::ofstream arquivo("FeedBack.txt", std::ios::app);
     if (arquivo.is_open()) {
     std::string comentario;
-    std::cin.ignore(); 
-    //Sem o cin.iginore(), o programas estava achado que o usuario ja tinha deixado o seu comentario
-    //então foi nescessario coloca-lo para que a caixa de comentario fosse criada.
+    std::cin.ignore(); /*usado para a criacao do comentario.*/
     std::cout << "Digite seu comentario: ";
     std::getline(std::cin, comentario);
     
-    arquivo << Musica << " , " << Usuario << ":" << comentario << std::endl; // Adiciona o comentário à mesma linha
+    arquivo << Musica << " , " << Usuario << ":" << comentario << std::endl; /*Adiciona o comentário a mesma linha.*/
     arquivo.close();
 
     std::cout << "Comentario registrado com sucesso!" << std::endl;
@@ -39,7 +37,7 @@ void Comentario::Ler_comentario(std::string Musica, std::string Usuario) {
         }
         arquivo.close();
 
-        // Imprimir os comentários encontrados
+        /*Imprimir os comentarios encontrados.*/
         if (!_comentarios.empty()) {
             std::cout << "Comentarios encontrados:" << std::endl;
             for (const auto& comentario : _comentarios) {
@@ -96,19 +94,20 @@ bool Curtida::verificacao_curtidas(std::string Usuario, std::string Musica){
         while (getline(arquivo, linha)){
             if(linha.find(Musica) != std::string::npos){
                 if(linha.find(Usuario)){
-                    removerLinha(Usuario, Musica);
+                    return true;
                 }
             }
         }
-        return false;
+        
     }else {
         std:: cout << "Nao foi possivel abrir o arquivo."<< std :: endl;
     }
-    return false;
+        return false;
 }
 
 void Curtida::like(std::string Musica, std::string Usuario){
-     if (verificacao_curtidas(Usuario, Musica) == false) {
+     if (verificacao_curtidas(Usuario, Musica)) {
+        removerLinha(Usuario, Musica);
         std::ofstream arquivo("Curtidas.txt", std::ios::app);
 
         if (arquivo.is_open()) {
@@ -118,11 +117,22 @@ void Curtida::like(std::string Musica, std::string Usuario){
         } else {
             std::cout << "Nao foi possível abrir o arquivo." << std::endl;
         }
-    } 
+    }else{
+        std::ofstream arquivo("Curtidas.txt", std::ios::app);
+
+        if (arquivo.is_open()) {
+            arquivo << Musica << ", " << Usuario << ": " << "Like" << std::endl;
+            arquivo.close();
+            std::cout << "Like registrado com sucesso." << std::endl;
+        } else {
+            std::cout << "Nao foi possível abrir o arquivo." << std::endl;
+        }
+    }
 } 
 
 void Curtida::dislike(std::string Musica, std::string Usuario ){
-    if (verificacao_curtidas(Usuario, Musica) == false) {
+    if (verificacao_curtidas(Usuario, Musica)) {
+        removerLinha(Usuario, Musica);
         std::ofstream arquivo("Curtidas.txt", std::ios::app);
         if (arquivo.is_open()) {
             arquivo << Musica << ", " << Usuario << ": " << "Dislike" << std::endl;
@@ -132,7 +142,14 @@ void Curtida::dislike(std::string Musica, std::string Usuario ){
             std::cout << "Nao foi possível abrir o arquivo." << std::endl;
         }
     } else {
-        
+        std::ofstream arquivo("Curtidas.txt", std::ios::app);
+        if (arquivo.is_open()) {
+            arquivo << Musica << ", " << Usuario << ": " << "Dislike" << std::endl;
+            arquivo.close();
+            std::cout << "Dislike registrado com sucesso." << std::endl;
+        } else {
+            std::cout << "Nao foi possível abrir o arquivo." << std::endl;
+        }
     }
 } 
 
@@ -156,7 +173,7 @@ void Curtida::ver_quatidade_curtias(std::string Musica ){
         }
         arquivo.close();
 
-        // Imprimir quantidade de like encontrados
+        /*Imprimir quantidade de likes encontrados.*/
        std:: cout <<"Quantidade de likes: "<< Contl << std:: endl;
        std:: cout <<"Quantidade de dislikes: "<< Contd << std:: endl;
     } else {

@@ -40,7 +40,7 @@ int main(){
        Busca.repro.Executar("Musica_Exemplo.txt", _musica_escolhida);
     }
     
-    musicas minha_musica;
+    Musica minha_musica;
     bool encerrar = true;
     if(resultado_da_busca){
     std::cout << "**********************" << std::endl;
