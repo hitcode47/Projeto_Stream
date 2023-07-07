@@ -54,7 +54,7 @@ void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
 
     std::map<std::string, std::string> mapa2 = ler_arquivo_em_map(nomeArquivo);
 
-    if (posicaoAtual < mapa2.size() - 1) {
+    if (posicaoAtual >= 0 && posicaoAtual < mapa2.size() - 1) {
         auto it = mapa2.begin();
         std::advance(it, posicaoAtual + 1);
         std::string link = it->second;
@@ -136,6 +136,23 @@ std::map<std::string, std::string> reproducao::ler_arquivo_em_map(const std::str
         std::string linha;
         while (std::getline(arquivo, linha))
         {
+            if(!linha.empty()){
+                linha[0] = std::toupper(linha[0]);
+                for(int i=1; i < linha.size(); i++){
+
+                    if(linha[i] == ','){
+                        break;
+                    }
+                    else{
+                        if (linha[i-1] == ' ') {
+                            linha[i] = std::toupper(linha[i]);
+                        }else{
+                            linha[i] = std::tolower(linha[i]);
+                        }
+                    }
+                }   
+            }
+            //converte as letras após o espaço para maiuscula.
             size_t pos = linha.find(',');
             if (pos != std::string::npos)
             {
