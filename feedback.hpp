@@ -39,20 +39,24 @@ class Comentario{
 class Curtida {
     public:
     /// @brief Adiciona um "Like" à música escolhida
+    ///
     /// @param musica String do nome da música. 
     /// @param usuario String do nome do usuário. 
     void like(std::string, std::string);
 
     void dislike( std::string, std::string);
     /// @brief Conta o número de "Likes" e "Deslikes"
+    ///
     /// @param Musica String do nome da música.  
     void ver_quatidade_curtias(std:: string);
     /// @brief Verifica se um usúario já deu ou não alguma reação em uma música.
+    ///
     /// @param  usuario String do nome do usuário.
     /// @param  musica String do nome da música.
     /// @return Verdadeiro se encontrar o usuário, Falso caso contrário.
     bool verificacao_curtidas (std::string, std::string);
     /// @brief Remove uma linha de arquivo de curtidas
+    ///
     /// @param usuario String do nome do usuário.
     /// @param musica String do nome da música.
     void removerLinha(std::string usuario, std::string musica);

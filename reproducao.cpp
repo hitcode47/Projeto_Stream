@@ -22,14 +22,14 @@ void reproducao::Executar(const std::string& nomeArquivo, std::string nome_music
         _musica_escolhida = musica;
         std::cout << "Abrindo musica: " << musica << std::endl;
 
-        // Converter a string para o tipo LPCWSTR
+        /*Converter a string para o tipo LPCWSTR*/
         std::wstring linkWide(link.begin(), link.end());
         LPCWSTR linkLpcwstr = linkWide.c_str();
 
-        // Abrir o link da m�sica usando o ShellExecute
+        /*Abrir o link da musica usando o ShellExecute*/
         ShellExecute(NULL, L"open", linkLpcwstr, NULL, NULL, SW_SHOWNORMAL);
 
-        // Atualizar a posi��o atual para a posi��o do link executado
+        /*Atualizar a posicao atual para a posicao do link executado*/
         posicaoAtual = std::distance(mapa2.begin(), it);
     }
     else
@@ -49,7 +49,7 @@ std::string reproducao::Retornar_nome(){
 }
 void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
 
-    // Fechar o navegador
+    /*Fechar o navegador*/
     Encerrar();
 
     std::map<std::string, std::string> mapa2 = ler_arquivo_em_map(nomeArquivo);
@@ -63,11 +63,11 @@ void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
 
         Sleep(5000);
 
-        // Converter a string para o tipo LPCWSTR
+        /*Converter a string para o tipo LPCWSTR*/
         std::wstring linkWide(link.begin(), link.end());
         LPCWSTR linkLpcwstr = linkWide.c_str();
 
-        // Abrir o link da m�sica usando o ShellExecuteEx
+        /*Abrir o link da musica usando o ShellExecuteEx*/
         SHELLEXECUTEINFO sei;
         ZeroMemory(&sei, sizeof(sei));
         sei.cbSize = sizeof(sei);
@@ -77,7 +77,7 @@ void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
         sei.nShow = SW_SHOWNORMAL;
 
         if (ShellExecuteEx(&sei)) {
-            // Atualizar a posi��o atual para a posi��o do link posterior
+            /*Atualizar a posicao atual para a posicao do link posterior*/
             posicaoAtual = std::distance(mapa2.begin(), it);
         } else {
             std::cout << "Nao foi possivel abrir o link." << std::endl;
@@ -89,7 +89,7 @@ void reproducao::Pular_p_frente(const std::string& nomeArquivo) {
 
 void reproducao::Pular_p_tras(const std::string& nomeArquivo) {
 
-    // Fechar o navegador
+    /*Fechar o navegador*/
     Encerrar();
     std::map<std::string, std::string> mapa2 = ler_arquivo_em_map(nomeArquivo);
 
@@ -102,11 +102,11 @@ void reproducao::Pular_p_tras(const std::string& nomeArquivo) {
         _musica_escolhida = it->first;
         Sleep(5000);
 
-        // Converter a string para o tipo LPCWSTR
+        /*Converter a string para o tipo LPCWSTR*/
         std::wstring linkWide(link.begin(), link.end());
         LPCWSTR linkLpcwstr = linkWide.c_str();
 
-        // Abrir o link da m�sica anterior usando o ShellExecuteEx
+        /*Abrir o link da musica anterior usando o ShellExecuteEx*/
         SHELLEXECUTEINFO sei;
         ZeroMemory(&sei, sizeof(sei));
         sei.cbSize = sizeof(sei);
@@ -116,7 +116,7 @@ void reproducao::Pular_p_tras(const std::string& nomeArquivo) {
         sei.nShow = SW_SHOWNORMAL;
 
         if (ShellExecuteEx(&sei)) {
-            // Atualizar a posi��o atual para a posi��o do link anterior
+            /*Atualizar a posicao atual para a posicao do link anterior*/
             posicaoAtual = std::distance(mapa2.begin(), it);
         } else {
             std::cout << "Nao foi possivel abrir o link." << std::endl;
@@ -157,7 +157,7 @@ std::map<std::string, std::string> reproducao::ler_arquivo_em_map(const std::str
 
 BOOL CALLBACK EnumWindowsCallback(HWND hWnd, LPARAM lParam)
 {
-    // Verificar se a janela pertence a um navegador
+    /*Verificar se a janela pertence a um navegador*/
     TCHAR className[256];
     if (GetClassName(hWnd, className, 256))
     {
@@ -167,18 +167,18 @@ BOOL CALLBACK EnumWindowsCallback(HWND hWnd, LPARAM lParam)
             _tcscmp(className, _T("ApplicationFrameWindow")) == 0 ||
             _tcscmp(className, _T("MicrosoftEdgeWindowClass")) == 0)
         {
-            // Verificar se o t�tulo da janela corresponde ao Visual Studio Code
+            /*Verificar se o titulo da janela corresponde ao Visual Studio Code*/
             TCHAR windowTitle[256];
             if (GetWindowText(hWnd, windowTitle, 256) > 0)
             {
                 if (_tcsstr(windowTitle, _T("Visual Studio Code")) != nullptr)
                 {
-                    // Pular esta janela e continuar para a pr�xima
+                    /*Pular esta janela e continuar para a proxima*/
                     return TRUE;
                 }
             }
 
-            // Enviar mensagem de fechamento para a janela
+            /*Enviar mensagem de fechamento para a janela*/
             SendMessage(hWnd, WM_CLOSE, 0, 0);
         }
     }
@@ -188,7 +188,7 @@ BOOL CALLBACK EnumWindowsCallback(HWND hWnd, LPARAM lParam)
 
 void reproducao::Encerrar()
 {
-    // Enumerar todas as janelas abertas
+    /*Enumerar todas as janelas abertas*/
     EnumWindows(EnumWindowsCallback, 0);
 }
 
