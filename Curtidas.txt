@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-o: Like
-e
-
-<<<<<<< HEAD
-=======
 Guns N' Roses - Sweet Child O' Mine, Diego: Dislike
 Ivete Sangalo - Moral, Diego: Dislike
 Guns N' Roses - Sweet Child O' Mine, dantom: Like
->>>>>>> 4d4840c44d74b7de3dfcc6cf594b902689cadd5b
 Michael Jackson - Thriller, brlo: Like
-=======
->>>>>>> 122ed95dccd3727ffa1e29925970d24be41b67df
+Sia - Cheap Thrills Ft. Sean Paul, dantom: Like
+Sia - Chandelier, dantom: Like
+Sia - Chandelier, nicolas: Dislike
+Sia - Cheap Thrills Ft. Sean Paul, nicolas: Like
