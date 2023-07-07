@@ -14,7 +14,7 @@
 class reproducao
 {
 private:
-    int posicaoAtual;
+    unsigned posicaoAtual;
 
 public:
     reproducao();

@@ -8,7 +8,7 @@ Musica::Musica()
 std::string Musica::Tratamento_de_Palavras(std::string musica_ou_artista){
     if(musica_ou_artista!=""){
         musica_ou_artista[0] = std::toupper(musica_ou_artista[0]);
-        for(int i=1; i < musica_ou_artista.size(); i++){
+        for(unsigned i=1; i < musica_ou_artista.size(); i++){
             if (musica_ou_artista[i-1] == ' ') {
             musica_ou_artista[i] = std::toupper(musica_ou_artista[i]);
             }else{

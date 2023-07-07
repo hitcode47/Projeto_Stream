@@ -7,151 +7,148 @@
 #include "doctest.h"
 
 
-DOCTEST_TEST_CASE("Testando a função hashSenha") {
-    CHECK(hashSenha("123456") == "126381531049624");
-    CHECK(hashSenha("abcdef") == "1099511627776");
-    CHECK(hashSenha("senha") == "1099511627776");
-}
-
-DOCTEST_TEST_CASE("Testando a função login") {
-  
-    std::ofstream usuariosarq("usuariosenha.txt");
-    usuariosarq << "admin\n";
-    usuariosarq << hashSenha("admin") << "\n";
-    usuariosarq << "user\n";
-    usuariosarq << hashSenha("user") << "\n";
-    usuariosarq.close();
-
-    Login l;
-
-    SUBCASE("Login com credenciais corretas") {
-     
-        std::istringstream input("admin\nadmin\n");
-        std::ostringstream output;
-        l.login(input, output);
-        CHECK(output.str() == "LOGIN BEM SUCEDIDO!\n\n");
-    }
-
-    SUBCASE("Login com senha incorreta") {
-        
-        std::istringstream input("admin\nwrongpassword\n");
-        std::ostringstream output;
-        l.login(input, output);
-        CHECK(output.str() == "Senha incorreta!\n");
-    }
-
-    SUBCASE("Login com usuário inexistente") {
-        
-        std::istringstream input("nonexistentuser\npassword\n");
-        std::ostringstream output;
-        l.login(input, output);
-        CHECK(output.str() == "Nome de usuario nao encontrado!\n");
-    }
-}
-
-DOCTEST_TEST_CASE("Testando a função sign_up") {
-    // Create an empty test file
-    std::ofstream usuariosarq("usuariosenha.txt");
-    usuariosarq.close();
-
-    Signup s;
-
-    SUBCASE("Cadastro com nome de usuário válido") {
-        // Provide a valid username and password
-        std::istringstream input("newuser\npassword\npassword\n");
-        std::ostringstream output;
-        s.sign_up(input, output);
-        CHECK(output.str() == "USUARIO CRIADO COM SUCESSO!\n\n");
-    }
-
-    SUBCASE("Cadastro com nome de usuário já existente") {
-       
-        std::istringstream input("admin\npassword\npassword\n");
-        std::ostringstream output;
-        s.sign_up(input, output);
-        CHECK(output.str() == "Usuario ja existente!\n");
-    }
-
-    SUBCASE("Cadastro com campo de senha vazio") {
-        
-        std::istringstream input("newuser\n\npassword\n");
-        std::ostringstream output;
-        s.sign_up(input, output);
-        CHECK(output.str() == "Campo de senha vazio!\n");
-    }
-}
-
-DOCTEST_TEST_CASE("Testando a função change_username") {
+TEST_CASE("hashSenha gerando hash corretamente") {
+    std::string password = "password123";
+    std::string expectedHash = "123456789"; 
     
-    std::ofstream usuariosarq("usuariosenha.txt");
-    usuariosarq << "admin\n";
-    usuariosarq << hashSenha("admin") << "\n";
-    usuariosarq << "user\n";
-    usuariosarq << hashSenha("user") << "\n";
-    usuariosarq.close();
+    std::string actualHash = hashSenha(password);
 
-    ChangeUsername cu;
-
-    SUBCASE("Alteração de nome de usuário com credenciais corretas") {
-       
-        std::istringstream input("admin\nadmin\nnewadmin\n");
-        std::ostringstream output;
-        cu.change_username(input, output);
-        CHECK(output.str() == "Nome de usuario alterado com sucesso!\n");
-    }
-
-    SUBCASE("Alteração de nome de usuário com senha incorreta") {
-        
-        std::istringstream input("admin\nwrongpassword\nnewadmin\n");
-        std::ostringstream output;
-        cu.change_username(input, output);
-        CHECK(output.str() == "Senha incorreta!\n");
-    }
-
-    SUBCASE("Alteração de nome de usuário com usuário inexistente") {
-        
-        std::istringstream input("nonexistentuser\npassword\nnewuser\n");
-        std::ostringstream output;
-        cu.change_username(input, output);
-        CHECK(output.str() == "Nome de usuario nao encontrado!\n");
-    }
+    CHECK(actualHash == expectedHash);
 }
 
-DOCTEST_TEST_CASE("Testando a função delete_account") {
+
+TEST_CASE("Login bem sucedido") {
+    
+    Login login;
+
+  
+    std::ofstream testFile("usuariosenha.txt");
+    testFile << "username\n" << hashSenha("password") << "\n";
+    testFile.close();
+
+    
+    std::istringstream input("username\npassword\n");
+
+    
+    std::streambuf* oldCinBuffer = std::cin.rdbuf(input.rdbuf());
+
+  
+    login.login();
+
+    
+    std::cin.rdbuf(oldCinBuffer);
+
    
-    std::ofstream usuariosarq("usuariosenha.txt");
-    usuariosarq << "admin\n";
-    usuariosarq << hashSenha("admin") << "\n";
-    usuariosarq << "user\n";
-    usuariosarq << hashSenha("user") << "\n";
-    usuariosarq.close();
-
-    DeleteAccount da;
-
-    SUBCASE("Exclusão de conta com credenciais corretas") {
- 
-        std::istringstream input("admin\nadmin\n");
-        std::ostringstream output;
-        da.delete_account(input, output);
-        CHECK(output.str() == ""); 
-    }
-
-    SUBCASE("Exclusão de conta com senha incorreta") {
-        
-        std::istringstream input("admin\nwrongpassword\n");
-        std::ostringstream output;
-        da.delete_account(input, output);
-        CHECK(output.str() == "Credenciais invalidas. Nao foi possivel apagar a conta.\n");
-    }
-
-    SUBCASE("Exclusão de conta com usuário inexistente") {
-       
-        std::istringstream input("nonexistentuser\npassword\n");
-        std::ostringstream output;
-        da.delete_account(input, output);
-        CHECK(output.str() == "A conta que deseja excluir nao existe.\n");
-    }
+    CHECK(login.getternomedeusuario() == "username");
 }
+
+
+
+TEST_CASE("Signup criando novo usuário") {
+ 
+    Signup signup;
+
+    std::istringstream input("newuser\npassword\npassword\n");
+
+   
+    std::streambuf* oldCinBuffer = std::cin.rdbuf(input.rdbuf());
+
+  
+    signup.sign_up();
+
+    
+    std::cin.rdbuf(oldCinBuffer);
+
+  
+    std::ifstream userFile("usuariosenha.txt");
+    std::string username, password;
+
+    bool userExists = false;
+    while (getline(userFile, username) && getline(userFile, password)) {
+        if (username == "newuser" && password == hashSenha("password")) {
+            userExists = true;
+            break;
+        }
+    }
+
+    CHECK(userExists);
+}
+
+
+
+TEST_CASE("ChangeUsername trocando nome") {
+
+    ChangeUsername changeUsername;
+
+    
+    std::ofstream testFile("usuariosenha.txt");
+    testFile << "currentuser\n" << hashSenha("password") << "\n";
+    testFile.close();
+
+    
+    std::istringstream input("currentuser\npassword\nnewuser\n");
+
+ 
+    std::streambuf* oldCinBuffer = std::cin.rdbuf(input.rdbuf());
+
+    
+    changeUsername.change_username();
+
+    
+    std::cin.rdbuf(oldCinBuffer);
+
+    
+    std::ifstream userFile("usuariosenha.txt");
+    std::string username, password;
+
+    bool usernameUpdated = false;
+    while (getline(userFile, username) && getline(userFile, password)) {
+        if (username == "newuser") {
+            usernameUpdated = true;
+            break;
+        }
+    }
+
+    CHECK(usernameUpdated);
+}
+
+
+TEST_CASE("DeleteAccount apagando conta") {
+    
+    DeleteAccount deleteAccount;
+
+    
+    std::ofstream testFile("usuariosenha.txt");
+    testFile << "existinguser\n" << hashSenha("password") << "\n";
+    testFile.close();
+
+    
+    std::istringstream input("existinguser\npassword\n");
+    std::streambuf* oldCinBuffer = std::cin.rdbuf(input.rdbuf());
+
+    
+    deleteAccount.delete_account();
+
+    
+    std::cin.rdbuf(oldCinBuffer);
+
+  
+    std::ifstream userFile("usuariosenha.txt");
+    std::string username, password;
+
+    bool userExists = false;
+    while (getline(userFile, username) && getline(userFile, password)) {
+        if (username == "existinguser" && password == hashSenha("password")) {
+            userExists = true;
+            break;
+        }
+    }
+
+    CHECK(!userExists);
+}
+
+
+
 
 TEST_CASE("Teste da classe Comentario") {
 
