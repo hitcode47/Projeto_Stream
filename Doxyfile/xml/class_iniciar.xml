@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="class_iniciar" kind="class" language="C++" prot="public">
+    <compoundname>Iniciar</compoundname>
+    <includes refid="cadastrousuario_8hpp" local="no">cadastrousuario.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_iniciar_1aad4107d70522c62415c72669e5649be3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Iniciar::exibirlogo</definition>
+        <argsstring>()</argsstring>
+        <name>exibirlogo</name>
+        <qualifiedname>Iniciar::exibirlogo</qualifiedname>
+        <briefdescription>
+<para>Exibe a logotipo escolhida para o projeto. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="85" column="10" bodyfile="git hub/Projeto_Stream/cadastrousuario.cpp" bodystart="353" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="class_iniciar_1a3e24da672516bbf7e768f31b7f5f3a5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Iniciar::menu</definition>
+        <argsstring>()</argsstring>
+        <name>menu</name>
+        <qualifiedname>Iniciar::menu</qualifiedname>
+        <briefdescription>
+<para>Exibe o menu principal do aplicativo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>O usuário poderá escolher entre fazer o login, realizar o cadastro, trocar o nome de usuário ou apagar uma conta existente.</para>
+<para><simplesect kind="return"><para>O nome do usuário após o login. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="92" column="17" bodyfile="git hub/Projeto_Stream/cadastrousuario.cpp" bodystart="371" bodyend="421"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="82" column="1" bodyfile="git hub/Projeto_Stream/cadastrousuario.hpp" bodystart="82" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_iniciar_1aad4107d70522c62415c72669e5649be3" prot="public" virt="non-virtual"><scope>Iniciar</scope><name>exibirlogo</name></member>
+      <member refid="class_iniciar_1a3e24da672516bbf7e768f31b7f5f3a5e" prot="public" virt="non-virtual"><scope>Iniciar</scope><name>menu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

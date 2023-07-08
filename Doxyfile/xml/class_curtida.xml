@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="class_curtida" kind="class" language="C++" prot="public">
+    <compoundname>Curtida</compoundname>
+    <includes refid="feedback_8hpp" local="no">feedback.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_curtida_1a58e33db541d5983c207631fc81881dfc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Curtida::Contl</definition>
+        <argsstring></argsstring>
+        <name>Contl</name>
+        <qualifiedname>Curtida::Contl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/feedback.hpp" line="65" column="9" bodyfile="git hub/Projeto_Stream/feedback.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_curtida_1a459445bcc907d41c7f8666ccabc346cb" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Curtida::Contd</definition>
+        <argsstring></argsstring>
+        <name>Contd</name>
+        <qualifiedname>Curtida::Contd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/feedback.hpp" line="66" column="9" bodyfile="git hub/Projeto_Stream/feedback.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_curtida_1af1dd8d47dce341ffbbb53d8b2e1fd585" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Curtida::like</definition>
+        <argsstring>(std::string, std::string)</argsstring>
+        <name>like</name>
+        <qualifiedname>Curtida::like</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <defname>Musica</defname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <defname>Usuario</defname>
+        </param>
+        <briefdescription>
+<para>Adiciona um &quot;Like&quot; à música escolhida. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>musica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String do nome da música. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>usuario</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String do nome do usuário. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/feedback.hpp" line="45" column="10" bodyfile="git hub/Projeto_Stream/feedback.cpp" bodystart="108" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_curtida_1a51723bda67eb4956fb5cf924b3d02063" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Curtida::dislike</definition>
+        <argsstring>(std::string, std::string)</argsstring>
+        <name>dislike</name>
+        <qualifiedname>Curtida::dislike</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <defname>Musica</defname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <defname>Usuario</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/feedback.hpp" line="47" column="10" bodyfile="git hub/Projeto_Stream/feedback.cpp" bodystart="133" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_curtida_1a0fc3ba6710709bc5e9f80a2fba5a10e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Curtida::ver_quatidade_curtias</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>ver_quatidade_curtias</name>
+        <qualifiedname>Curtida::ver_quatidade_curtias</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <defname>Musica</defname>
+        </param>
+        <briefdescription>
+<para>Conta o número de &quot;Likes&quot; e &quot;Deslikes&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_musica" kindref="compound">Musica</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String do nome da música. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/feedback.hpp" line="51" column="10" bodyfile="git hub/Projeto_Stream/feedback.cpp" bodystart="156" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_curtida_1ab0cdefcbfb8a14f7c46b83e6119e6863" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Curtida::verificacao_curtidas</definition>
+        <argsstring>(std::string, std::string)</argsstring>
+        <name>verificacao_curtidas</name>
+        <qualifiedname>Curtida::verificacao_curtidas</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <defname>Usuario</defname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <defname>Musica</defname>
+        </param>
+        <briefdescription>
+<para>Verifica se um usúario já deu ou não alguma reação em uma música. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>usuario</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String do nome do usuário. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>musica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String do nome da música. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Verdadeiro se encontrar o usuário, Falso caso contrário. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/feedback.hpp" line="57" column="10" bodyfile="git hub/Projeto_Stream/feedback.cpp" bodystart="89" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_curtida_1a7bc36b04684cb7c078348f524fde99a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Curtida::removerLinha</definition>
+        <argsstring>(std::string usuario, std::string musica)</argsstring>
+        <name>removerLinha</name>
+        <qualifiedname>Curtida::removerLinha</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>usuario</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>musica</declname>
+        </param>
+        <briefdescription>
+<para>Remove uma linha de arquivo de curtidas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>usuario</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String do nome do usuário. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>musica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String do nome da música. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/feedback.hpp" line="62" column="10" bodyfile="git hub/Projeto_Stream/feedback.cpp" bodystart="56" bodyend="87"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="git hub/Projeto_Stream/feedback.hpp" line="39" column="1" bodyfile="git hub/Projeto_Stream/feedback.hpp" bodystart="39" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_curtida_1a459445bcc907d41c7f8666ccabc346cb" prot="private" virt="non-virtual"><scope>Curtida</scope><name>Contd</name></member>
+      <member refid="class_curtida_1a58e33db541d5983c207631fc81881dfc" prot="private" virt="non-virtual"><scope>Curtida</scope><name>Contl</name></member>
+      <member refid="class_curtida_1a51723bda67eb4956fb5cf924b3d02063" prot="public" virt="non-virtual"><scope>Curtida</scope><name>dislike</name></member>
+      <member refid="class_curtida_1af1dd8d47dce341ffbbb53d8b2e1fd585" prot="public" virt="non-virtual"><scope>Curtida</scope><name>like</name></member>
+      <member refid="class_curtida_1a7bc36b04684cb7c078348f524fde99a1" prot="public" virt="non-virtual"><scope>Curtida</scope><name>removerLinha</name></member>
+      <member refid="class_curtida_1a0fc3ba6710709bc5e9f80a2fba5a10e2" prot="public" virt="non-virtual"><scope>Curtida</scope><name>ver_quatidade_curtias</name></member>
+      <member refid="class_curtida_1ab0cdefcbfb8a14f7c46b83e6119e6863" prot="public" virt="non-virtual"><scope>Curtida</scope><name>verificacao_curtidas</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

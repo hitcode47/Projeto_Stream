@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="class_delete_account" kind="class" language="C++" prot="public">
+    <compoundname>DeleteAccount</compoundname>
+    <includes refid="cadastrousuario_8hpp" local="no">cadastrousuario.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_delete_account_1aa4c89e3914bd3b1c59a4257413fab657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeleteAccount::delete_account</definition>
+        <argsstring>()</argsstring>
+        <name>delete_account</name>
+        <qualifiedname>DeleteAccount::delete_account</qualifiedname>
+        <briefdescription>
+<para>Exclui a conta de um usuário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Solcita o nome de usário, bem como sua senha e verifica a veracidade das informações. Após isso, exclui as informações do usuário no arquivo &quot;usuariosenha.txt&quot;. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="62" column="10" bodyfile="git hub/Projeto_Stream/cadastrousuario.cpp" bodystart="243" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="class_delete_account_1a34175a67039f4190f1772dd5a0b6978b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DeleteAccount::verificar_existencia_usuario</definition>
+        <argsstring>(const std::string &amp;usuario)</argsstring>
+        <name>verificar_existencia_usuario</name>
+        <qualifiedname>DeleteAccount::verificar_existencia_usuario</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>usuario</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se há um determinado usuário no arquivo &quot;usuariosenha.txt&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>usuario</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Suposto usuário cadastrado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Verdadeiro se o usuário existir, Falso caso contrário. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="67" column="10" bodyfile="git hub/Projeto_Stream/cadastrousuario.cpp" bodystart="326" bodyend="343"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_delete_account_1a453ad11c617448a61f76a60f9f736e45" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DeleteAccount::verificar_credenciais</definition>
+        <argsstring>(const std::string &amp;usuario, const std::string &amp;senha)</argsstring>
+        <name>verificar_credenciais</name>
+        <qualifiedname>DeleteAccount::verificar_credenciais</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>usuario</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>senha</declname>
+        </param>
+        <briefdescription>
+<para>Verifica se as crendenciais do usuário estão corretas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>usuario</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>O nome do usuário em verificação. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>senha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A senha do usuário em verificação. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Verdadeiro se as credenciais estão corretas, Falso caso contrário. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="75" column="10" bodyfile="git hub/Projeto_Stream/cadastrousuario.cpp" bodystart="267" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="class_delete_account_1a848b8334641bb9807ca7b9c145b9b791" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeleteAccount::delete_account</definition>
+        <argsstring>(const std::string &amp;usuario)</argsstring>
+        <name>delete_account</name>
+        <qualifiedname>DeleteAccount::delete_account</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>usuario</declname>
+        </param>
+        <briefdescription>
+<para>Deleta as informações do usuário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>usuario</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>O nome do usuário em verificação. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="79" column="10" bodyfile="git hub/Projeto_Stream/cadastrousuario.cpp" bodystart="292" bodyend="323"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="54" column="1" bodyfile="git hub/Projeto_Stream/cadastrousuario.hpp" bodystart="54" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_delete_account_1aa4c89e3914bd3b1c59a4257413fab657" prot="public" virt="non-virtual"><scope>DeleteAccount</scope><name>delete_account</name></member>
+      <member refid="class_delete_account_1a848b8334641bb9807ca7b9c145b9b791" prot="private" virt="non-virtual"><scope>DeleteAccount</scope><name>delete_account</name></member>
+      <member refid="class_delete_account_1a453ad11c617448a61f76a60f9f736e45" prot="private" virt="non-virtual"><scope>DeleteAccount</scope><name>verificar_credenciais</name></member>
+      <member refid="class_delete_account_1a34175a67039f4190f1772dd5a0b6978b" prot="public" virt="non-virtual"><scope>DeleteAccount</scope><name>verificar_existencia_usuario</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

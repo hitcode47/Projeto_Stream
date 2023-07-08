@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="class_pesquisa_1_1_pesquisar" kind="class" language="C++" prot="public">
+    <compoundname>Pesquisa::Pesquisar</compoundname>
+    <includes refid="pesquisa_8hpp" local="no">pesquisa.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_pesquisa_1_1_pesquisar_1a96b934100cd35b891db0cc3de09c06d7" prot="public" static="no" mutable="no">
+        <type><ref refid="classreproducao" kindref="compound">reproducao</ref></type>
+        <definition>reproducao Pesquisa::Pesquisar::repro</definition>
+        <argsstring></argsstring>
+        <name>repro</name>
+        <qualifiedname>Pesquisa::Pesquisar::repro</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Instância da classe reprodução para que a musica_escolhida possa ser reproduzida. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/pesquisa.hpp" line="44" column="20" bodyfile="git hub/Projeto_Stream/pesquisa.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pesquisa_1_1_pesquisar_1a8deedfa085e7fc6702857a5eed780209" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Pesquisa::Pesquisar::_palavra</definition>
+        <argsstring></argsstring>
+        <name>_palavra</name>
+        <qualifiedname>Pesquisa::Pesquisar::_palavra</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/pesquisa.hpp" line="47" column="17" bodyfile="git hub/Projeto_Stream/pesquisa.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pesquisa_1_1_pesquisar_1a72e7089c707df3335534b0019ab9e5a1" prot="private" static="no" mutable="no">
+        <type>std::multimap&lt; int, std::string &gt;</type>
+        <definition>std::multimap&lt;int, std::string&gt; Pesquisa::Pesquisar::_resultados</definition>
+        <argsstring></argsstring>
+        <name>_resultados</name>
+        <qualifiedname>Pesquisa::Pesquisar::_resultados</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/pesquisa.hpp" line="48" column="19" bodyfile="git hub/Projeto_Stream/pesquisa.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pesquisa_1_1_pesquisar_1a9a65ea37ea27c765317f79ffb0c91f48" prot="private" static="no" mutable="no">
+        <type>std::map&lt; double, std::string &gt;</type>
+        <definition>std::map&lt;double, std::string&gt; Pesquisa::Pesquisar::_encontrado</definition>
+        <argsstring></argsstring>
+        <name>_encontrado</name>
+        <qualifiedname>Pesquisa::Pesquisar::_encontrado</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/pesquisa.hpp" line="49" column="14" bodyfile="git hub/Projeto_Stream/pesquisa.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pesquisa_1_1_pesquisar_1a9627ff443b8d6f3ffcd27c1f0fc0b889" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Pesquisa::Pesquisar::_musica_escolhida</definition>
+        <argsstring></argsstring>
+        <name>_musica_escolhida</name>
+        <qualifiedname>Pesquisa::Pesquisar::_musica_escolhida</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/pesquisa.hpp" line="50" column="17" bodyfile="git hub/Projeto_Stream/pesquisa.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pesquisa_1_1_pesquisar_1a440232b7ca974d4c2e43279d3b51ae10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pesquisa::Pesquisar::Pesquisar</definition>
+        <argsstring>(std::string palavra)</argsstring>
+        <name>Pesquisar</name>
+        <qualifiedname>Pesquisa::Pesquisar::Pesquisar</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>palavra</declname>
+        </param>
+        <briefdescription>
+<para>Construtor da classe <ref refid="class_pesquisa_1_1_pesquisar" kindref="compound">Pesquisar</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>palavra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A palavra, música ou artista a ser pesquisada. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/pesquisa.hpp" line="19" column="9" bodyfile="git hub/Projeto_Stream/pesquisa.cpp" bodystart="3" bodyend="3"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pesquisa_1_1_pesquisar_1a5d038ab98b2a2d9f46f24ffde23f99bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Pesquisa::Pesquisar::Encontrar</definition>
+        <argsstring>()</argsstring>
+        <name>Encontrar</name>
+        <qualifiedname>Pesquisa::Pesquisar::Encontrar</qualifiedname>
+        <briefdescription>
+<para>Realiza a pesquisa no arquivo, música ou artista. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Realiza a pesquisa através do arquivo &quot;Musica_Exemplo.txt&quot; com a finalidade de encontrar a maior ocorrencia da palavra passada e assim retornar um boleano para a continuação do código.</para>
+<para><simplesect kind="return"><para>Verdadeiro se a pesquisa foi um sucesso, Falso caso contrário. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/pesquisa.hpp" line="27" column="14" bodyfile="git hub/Projeto_Stream/pesquisa.cpp" bodystart="5" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pesquisa_1_1_pesquisar_1ac9f4b1e87f28464821f1558114b1aa50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Pesquisa::Pesquisar::confirma_Busca</definition>
+        <argsstring>()</argsstring>
+        <name>confirma_Busca</name>
+        <qualifiedname>Pesquisa::Pesquisar::confirma_Busca</qualifiedname>
+        <briefdescription>
+<para>Confirma a busca realzada pelo usuário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Acessa os _resultados definidos pela busca e retorna no máximo as as três músicas com as sintaxes parecidas, dando o poder de escolha para o usuário.</para>
+<para><simplesect kind="return"><para>Verdadeiro se ocorreu com sucesso, Falso caso contrário. <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/pesquisa.hpp" line="35" column="14" bodyfile="git hub/Projeto_Stream/pesquisa.cpp" bodystart="90" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pesquisa_1_1_pesquisar_1ad23b58cb66645e13b874c08d3f628aab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Pesquisa::Pesquisar::Retorno_Pesquisa</definition>
+        <argsstring>()</argsstring>
+        <name>Retorno_Pesquisa</name>
+        <qualifiedname>Pesquisa::Pesquisar::Retorno_Pesquisa</qualifiedname>
+        <briefdescription>
+<para>Retorna a música e o artista pesquisado. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A música e o artista. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/pesquisa.hpp" line="39" column="21" bodyfile="git hub/Projeto_Stream/pesquisa.cpp" bodystart="138" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Pesquisa::Pesquisar</label>
+        <link refid="class_pesquisa_1_1_pesquisar"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>repro</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>reproducao</label>
+        <link refid="classreproducao"/>
+      </node>
+    </collaborationgraph>
+    <location file="git hub/Projeto_Stream/pesquisa.hpp" line="14" column="5" bodyfile="git hub/Projeto_Stream/pesquisa.hpp" bodystart="14" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_pesquisa_1_1_pesquisar_1a9a65ea37ea27c765317f79ffb0c91f48" prot="private" virt="non-virtual"><scope>Pesquisa::Pesquisar</scope><name>_encontrado</name></member>
+      <member refid="class_pesquisa_1_1_pesquisar_1a9627ff443b8d6f3ffcd27c1f0fc0b889" prot="private" virt="non-virtual"><scope>Pesquisa::Pesquisar</scope><name>_musica_escolhida</name></member>
+      <member refid="class_pesquisa_1_1_pesquisar_1a8deedfa085e7fc6702857a5eed780209" prot="private" virt="non-virtual"><scope>Pesquisa::Pesquisar</scope><name>_palavra</name></member>
+      <member refid="class_pesquisa_1_1_pesquisar_1a72e7089c707df3335534b0019ab9e5a1" prot="private" virt="non-virtual"><scope>Pesquisa::Pesquisar</scope><name>_resultados</name></member>
+      <member refid="class_pesquisa_1_1_pesquisar_1ac9f4b1e87f28464821f1558114b1aa50" prot="public" virt="non-virtual"><scope>Pesquisa::Pesquisar</scope><name>confirma_Busca</name></member>
+      <member refid="class_pesquisa_1_1_pesquisar_1a5d038ab98b2a2d9f46f24ffde23f99bb" prot="public" virt="non-virtual"><scope>Pesquisa::Pesquisar</scope><name>Encontrar</name></member>
+      <member refid="class_pesquisa_1_1_pesquisar_1a440232b7ca974d4c2e43279d3b51ae10" prot="public" virt="non-virtual"><scope>Pesquisa::Pesquisar</scope><name>Pesquisar</name></member>
+      <member refid="class_pesquisa_1_1_pesquisar_1a96b934100cd35b891db0cc3de09c06d7" prot="public" virt="non-virtual"><scope>Pesquisa::Pesquisar</scope><name>repro</name></member>
+      <member refid="class_pesquisa_1_1_pesquisar_1ad23b58cb66645e13b874c08d3f628aab" prot="public" virt="non-virtual"><scope>Pesquisa::Pesquisar</scope><name>Retorno_Pesquisa</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

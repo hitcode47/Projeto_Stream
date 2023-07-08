@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">Projeto_Stream</highlight></codeline>
+<codeline><highlight class="normal">================================================</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Projeto<sp/>final<sp/>relacionado<sp/>à<sp/>disciplina<sp/>de<sp/>Programação<sp/>de<sp/>Desenvolvimento<sp/>de<sp/>Software(PDS)II.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Colaboradores:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Bruno<sp/>Dos<sp/>Santos<sp/>Lopes:<sp/>Responsável<sp/>pela<sp/>introdução<sp/>do<sp/>método<sp/>música<sp/>e<sp/>reprodução;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Nicolas<sp/>Silva<sp/>de<sp/>Paula<sp/>Gonçalves:<sp/>Responsável<sp/>pela<sp/>introdução<sp/>do<sp/>método<sp/>pesquisa;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Diego<sp/>Felipe<sp/>Machado<sp/>Silva:<sp/>Responsável<sp/>pela<sp/>introdução<sp/>do<sp/>método<sp/>feedback;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Breno<sp/>Ribeiro<sp/>Rodrigues:<sp/>Responsável<sp/>pela<sp/>documentação<sp/>e<sp/>solução<sp/>de<sp/>bugs;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Dantom<sp/>Dimitri<sp/>Guedes:<sp/>Responsável<sp/>pela<sp/>introdução<sp/>do<sp/>método<sp/>cadastro.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Documentação<sp/>Aplicativo<sp/>Pancadão:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*OBSERVAÇÕES*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Ao<sp/>rodar<sp/>o<sp/>programa,<sp/>recomenda-se<sp/>fechar<sp/>todas<sp/>as<sp/>guias<sp/>consideradas<sp/>importantes<sp/>do<sp/>seu<sp/>navegador.<sp/>Tal<sp/>erro<sp/>é<sp/>facilmente<sp/>solucionado,<sp/>porém,<sp/>por<sp/>conta<sp/>de<sp/>um<sp/>calendário<sp/>curto,</highlight></codeline>
+<codeline><highlight class="normal"><sp/>o<sp/>grupo<sp/>optou<sp/>por<sp/>não<sp/>modificar<sp/>o<sp/>programa;</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Um<sp/>documento<sp/>teste<sp/>foi<sp/>implementado<sp/>no<sp/>programa,<sp/>porém<sp/>não<sp/>foi<sp/>possível<sp/>conciliá-lo<sp/>ao<sp/>código.<sp/>Embora<sp/>a<sp/>construção<sp/>lógica<sp/>esteja<sp/>conforme<sp/>o<sp/>esperado,<sp/>uma<sp/>grande<sp/>dificuldade</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>de<sp/>implementação<sp/>foi<sp/>encontrado.<sp/>Recomenda-se<sp/>rodar<sp/>o<sp/>programa<sp/>desconsiderando<sp/>o<sp/>DocTest<sp/>e<sp/>analisar<sp/>somente<sp/>a<sp/>lógica<sp/>formulada;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>música<sp/>é<sp/>uma<sp/>das<sp/>principais<sp/>ferramentas<sp/>de<sp/>expressão<sp/>que<sp/>está<sp/>presente<sp/>na<sp/>vida<sp/>de<sp/>muitas<sp/>pessoas.<sp/>Nessse<sp/>sentido,<sp/>o<sp/>grupo<sp/>empenhou-se<sp/>em<sp/>desenvolver<sp/>um<sp/>aplicativo<sp/>de<sp/>música</highlight></codeline>
+<codeline><highlight class="normal">chamado<sp/>&quot;Pancadão&quot;.<sp/>Dessa<sp/>forma,<sp/>buscamos<sp/>construir<sp/>um<sp/>programa<sp/>simples<sp/>com<sp/>uma<sp/>interface<sp/>intuitiva<sp/>e<sp/>sugestiva<sp/>para<sp/>qualquer<sp/>tipo<sp/>de<sp/>usuário.<sp/>Assim,<sp/>o<sp/>aplicativo<sp/>permite<sp/>que<sp/></highlight></codeline>
+<codeline><highlight class="normal">o<sp/>usuário<sp/>crie<sp/>sua<sp/>conta<sp/>e,<sp/>a<sp/>partir<sp/>disso,<sp/>crie<sp/>playlists,<sp/>reaja<sp/>por<sp/>meio<sp/>de<sp/>&quot;likes&quot;<sp/>ou<sp/>&quot;deslikes&quot;<sp/>em<sp/>uma<sp/>música,<sp/>faça<sp/>comentários<sp/>e<sp/>até<sp/>mesmo<sp/>usufrua<sp/>de<sp/>um<sp/>pesquisador<sp/>inte-</highlight></codeline>
+<codeline><highlight class="normal">ligente,<sp/>o<sp/>qual<sp/>dará<sp/>recomendações<sp/>de<sp/>canções<sp/>a<sp/>partir<sp/>da<sp/>semelhança<sp/>sintática<sp/>das<sp/>palavras<sp/>de<sp/>entrada.<sp/>Ademais,<sp/>funções<sp/>básicas<sp/>como<sp/>pular,<sp/>retroceder<sp/>e<sp/>pausar<sp/>uma<sp/>música<sp/></highlight></codeline>
+<codeline><highlight class="normal">também<sp/>estão<sp/>presentes.<sp/>Por<sp/>fim,<sp/>o<sp/>usuário<sp/>terá<sp/>a<sp/>escolha<sp/>de<sp/>fazer<sp/>login,<sp/>trocar<sp/>o<sp/>nome<sp/>de<sp/>usuário,<sp/>deletar<sp/>uma<sp/>conta<sp/>existente<sp/>e<sp/>encerrar<sp/>o<sp/>aplicativo<sp/>ao<sp/>fim<sp/>do<sp/>seu<sp/>uso.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Inicialmente,<sp/>o<sp/>grupo<sp/>dedicou-se<sp/>em<sp/>criar<sp/>as<sp/>funções<sp/>de<sp/>cadastro<sp/>e<sp/>login<sp/>do<sp/>usuário.<sp/>Assim,<sp/>tal<sp/>sistema<sp/>apresentou<sp/>diversas<sp/>dificuldades<sp/>durante<sp/>sua<sp/>implementação.<sp/>Optou-se,</highlight></codeline>
+<codeline><highlight class="normal">primeiramente,<sp/>por<sp/>utilizar<sp/>&quot;arquivos&quot;<sp/>como<sp/>banco<sp/>de<sp/>dados<sp/>devido<sp/>à<sp/>sua<sp/>capacidade<sp/>de<sp/>manter<sp/>os<sp/>dados<sp/>salvos<sp/>mesmo<sp/>após<sp/>o<sp/>encerramento<sp/>do<sp/>programa<sp/>e<sp/>desligamento<sp/>do<sp/>computa-</highlight></codeline>
+<codeline><highlight class="normal">dor,<sp/>apesar<sp/>das<sp/>limitações<sp/>inerentes<sp/>a<sp/>essa<sp/>abordagem.<sp/>Além<sp/>disso,<sp/>identificar<sp/>falhas<sp/>de<sp/>segurança<sp/>mostrou-se<sp/>como<sp/>a<sp/>parte<sp/>mais<sp/>desafiadora<sp/>do<sp/>processo.<sp/>Mesmo<sp/>ao<sp/>acreditar<sp/></highlight></codeline>
+<codeline><highlight class="normal">que<sp/>todas<sp/>as<sp/>possíveis<sp/>entradas<sp/>do<sp/>usuário<sp/>haviam<sp/>sido<sp/>consideradas,<sp/>novas<sp/>situações<sp/>surgiam<sp/>durante<sp/>os<sp/>testes,<sp/>exigindo<sp/>um<sp/>constante<sp/>aprimoramento<sp/>do<sp/>sistema.<sp/>Ademais,<sp/>a<sp/>ta<sp/></highlight></codeline>
+<codeline><highlight class="normal">tarefa<sp/>de<sp/>adicionar<sp/>novas<sp/>linhas<sp/>de<sp/>código<sp/>ao<sp/>sistema<sp/>já<sp/>existente<sp/>revelou-se<sp/>complexa,<sp/>pois<sp/>era<sp/>necessário<sp/>garantir<sp/>que<sp/>todas<sp/>as<sp/>partes<sp/>se<sp/>integrassem<sp/>perfeitamente.</highlight></codeline>
+<codeline><highlight class="normal">Diante<sp/>desses<sp/>obstáculos,<sp/>foi<sp/>necessário<sp/>adotar<sp/>uma<sp/>abordagem<sp/>mais<sp/>formal<sp/>e<sp/>meticulosa,<sp/>seguindo<sp/>os<sp/>princípios<sp/>de<sp/>POO,<sp/>com<sp/>o<sp/>intuito<sp/>de<sp/>assegurar<sp/>a<sp/>eficiência<sp/>e<sp/>a<sp/>segurança</highlight></codeline>
+<codeline><highlight class="normal">do<sp/>sistema<sp/>como<sp/>um<sp/>todo.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Após<sp/>isso,<sp/>novos<sp/>diálogos<sp/>tiveram<sp/>início<sp/>à<sp/>respeito<sp/>das<sp/>músicas<sp/>e<sp/>como<sp/>as<sp/>reproduções<sp/>seriam<sp/>feitas.<sp/>Assim,<sp/>ficamos<sp/>encarregados<sp/>de<sp/>criar<sp/>funcionalidades<sp/>que<sp/>permitissem<sp/></highlight></codeline>
+<codeline><highlight class="normal">adicionar,<sp/>remover<sp/>e<sp/>reproduzir<sp/>faixas<sp/>musicais<sp/>no<sp/>youtube,<sp/>de<sp/>modo<sp/>que<sp/>fosse<sp/>garantido<sp/>a<sp/>leitura<sp/>e<sp/>escrita<sp/>adequadas<sp/>dos<sp/>dados<sp/>(das<sp/>músicas)<sp/>em<sp/>arquivos,<sp/>bem<sp/>como<sp/>a<sp/>manipulação<sp/>correta<sp/>das<sp/>estruturas<sp/>de<sp/>dados.<sp/>No<sp/>entanto,<sp/>ao<sp/>longo<sp/>do<sp/>caminho<sp/>foram<sp/>identificados<sp/>alguns<sp/>empecilhos.<sp/>Alguma<sp/>delas<sp/>foram,<sp/>lidar<sp/>com<sp/>a<sp/>manipulação<sp/>de<sp/>arquivos,<sp/>abrir<sp/>e<sp/>fechar<sp/>os<sp/></highlight></codeline>
+<codeline><highlight class="normal">arquivos<sp/>corretamente<sp/>e<sp/>lidar<sp/>com<sp/>possíveis<sp/>erros<sp/>de<sp/>escrita<sp/>e<sp/>leitura.<sp/>Além<sp/>disso,<sp/>a<sp/>manipulação<sp/>dos<sp/>mapas<sp/>(map)<sp/>para<sp/>armazenar<sp/>as<sp/>músicas<sp/>e<sp/>seus<sp/>links<sp/>correspondentes<sp/>também<sp/>se<sp/>mostrou<sp/>um<sp/>obstáculo<sp/>a<sp/>ser<sp/>enfrentado.<sp/>Outra<sp/>dificuldade<sp/>encontrada<sp/>foi<sp/>interagir<sp/>com<sp/>o<sp/>sistema<sp/>operacional<sp/>para<sp/>reproduzir<sp/>as<sp/>músicas<sp/>em<sp/>interfaces<sp/>de<sp/>navegação<sp/>web.<sp/></highlight></codeline>
+<codeline><highlight class="normal">Foi<sp/>necessário<sp/>aprender<sp/>sobre<sp/>funções<sp/>como<sp/>ShellExecute<sp/>e<sp/>descobrir<sp/>como<sp/>abrir<sp/>os<sp/>links<sp/>de<sp/>música<sp/>e<sp/>controlar<sp/>a<sp/>reprodução<sp/>de<sp/>forma<sp/>adequada.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Já<sp/>a<sp/>parte<sp/>de<sp/>desenvolver<sp/>a<sp/>pesquisa<sp/>não<sp/>deu<sp/>muito<sp/>trabalho<sp/>durante<sp/>a<sp/>implementação.<sp/>Optou-se<sp/>por<sp/>utilizar<sp/>o<sp/>&quot;arquivo&quot;<sp/>onde<sp/>será<sp/>armazenado<sp/>o<sp/>nome<sp/>do<sp/>cantor,<sp/>música<sp/>e<sp/>o<sp/>link<sp/>do<sp/>YouTube.<sp/>A<sp/>classe<sp/>&quot;Pesquisa&quot;<sp/>ficarou<sp/>responsável<sp/>por<sp/>receber<sp/>do<sp/>usuário<sp/>qual<sp/>artista/música<sp/>ele<sp/>deseja,<sp/>retornando-os<sp/>para<sp/>que<sp/>a<sp/>classe<sp/>Musica<sp/>consiga<sp/>buscar<sp/>o<sp/>link<sp/>do<sp/>YouTube<sp/>através<sp/>do<sp/>que<sp/>o<sp/>usuário<sp/>solicitar.<sp/>Dessa<sp/>maneira,<sp/>realizar<sp/>a<sp/>pesquisa<sp/>pelo<sp/>arquivo<sp/>através<sp/>da<sp/>entrada<sp/>do<sp/>usuário,<sp/>tornou-se<sp/>a<sp/>parte<sp/>mais<sp/>desafiadora<sp/>do<sp/>processo.<sp/>Teve-se<sp/>que<sp/></highlight></codeline>
+<codeline><highlight class="normal">avaliar<sp/>as<sp/>possíveis<sp/>entradas<sp/>do<sp/>usuário<sp/>e<sp/>corrigi-las<sp/>manualmente,<sp/>uma<sp/>vez<sp/>que<sp/>caso<sp/>o<sp/>usuário<sp/>pesquise<sp/>por<sp/>um<sp/>determinado<sp/>artista<sp/>com<sp/>letras<sp/>minúsculas,<sp/>precisa-se<sp/>transformar<sp/></highlight></codeline>
+<codeline><highlight class="normal">para<sp/>o<sp/>tipo<sp/>de<sp/>letra<sp/>adequado<sp/>com<sp/>o<sp/>&quot;arquivo.txt&quot;<sp/>onde<sp/>estava<sp/>armazenado<sp/>as<sp/>informações,<sp/>para<sp/>que<sp/>assim<sp/>pudesse<sp/>estar<sp/>encontrando.<sp/>Além<sp/>disso,<sp/>foi<sp/>escolhido<sp/>deixar<sp/>que<sp/>o<sp/>usuário<sp/>fosse<sp/>o<sp/>mais<sp/>livre<sp/>possível<sp/>nas<sp/>entradas,<sp/>ou<sp/>seja,<sp/>é<sp/>possível<sp/>que<sp/>o<sp/>usuário<sp/>entrasse<sp/>com<sp/>qualquer<sp/>coisa,<sp/>até<sp/>mesmo<sp/>números,<sp/>onde<sp/>caso<sp/>não<sp/>exista,<sp/>retornava<sp/>um<sp/>texto<sp/>subjetivo<sp/>informando<sp/>&quot;Não<sp/>foi<sp/>possível<sp/>localizar<sp/>a<sp/>música/artista<sp/>desejado.&quot;,<sp/>assim<sp/>como<sp/>ocorre<sp/>nas<sp/>pesquisas<sp/>do<sp/>Google<sp/>Chrome.<sp/>Por<sp/>fim,<sp/>seguindo<sp/>a<sp/>mesma<sp/>ideia,<sp/>o<sp/>programa<sp/>foi<sp/>elaborado<sp/></highlight></codeline>
+<codeline><highlight class="normal">para<sp/>realizar<sp/>pesquisas<sp/>inteligentes,<sp/>onde<sp/>surgirão<sp/>sugestões<sp/>de<sp/>pesquisa<sp/>com<sp/>base<sp/>na<sp/>semelhança<sp/>da<sp/>sintaxe.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Dessa<sp/>forma,<sp/>pensando<sp/>em<sp/>como<sp/>enriquecer<sp/>nosso<sp/>código,<sp/>foram<sp/>desenvolvidos<sp/>métodos<sp/>para<sp/>a<sp/>criação<sp/>de<sp/>comentários<sp/>e<sp/>reações<sp/>em<sp/>uma<sp/>determinada<sp/>música.<sp/>Assim,<sp/>criaram-se<sp/>funcionalidades<sp/>que<sp/>permitissem<sp/>o<sp/>usuário<sp/>dar<sp/>sua<sp/>avaliação<sp/>sobre<sp/>a<sp/>musica<sp/>reproduzida.<sp/>O<sp/>principal<sp/>problema<sp/>encontrado<sp/>estava<sp/>na<sp/>manipulação<sp/>de<sp/>arquivos,<sp/>bem<sp/>como<sp/>abrir<sp/>e<sp/>fechar<sp/></highlight></codeline>
+<codeline><highlight class="normal">os<sp/>arquivos<sp/>corretamente,<sp/>lidar<sp/>com<sp/>possíveis<sp/>erros<sp/>de<sp/>escrita,<sp/>sobre<sp/>escrever<sp/>partes<sp/>já<sp/>escritas<sp/>no<sp/>meio<sp/>do<sp/>texto<sp/>se<sp/>mostrou<sp/>ser<sp/>um<sp/>grande<sp/>desfio.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Por<sp/>fim,<sp/>a<sp/>última<sp/>etapa<sp/>do<sp/>trabalho<sp/>foi<sp/>padronizar<sp/>as<sp/>linhas<sp/>de<sp/>código<sp/>como<sp/>um<sp/>todo.<sp/>Assim,<sp/>padronização<sp/>de<sp/>comentários<sp/>nos<sp/>arquivos<sp/>cpp,<sp/>número<sp/>máximo<sp/>de<sp/>colunas<sp/>a<sp/>serem<sp/>usadas<sp/>e</highlight></codeline>
+<codeline><highlight class="normal">implementação<sp/>de<sp/>boas<sp/>práticas<sp/>foram<sp/>algumas<sp/>das<sp/><sp/>preocupações<sp/>finais<sp/>do<sp/>grupo.<sp/>Isso<sp/>tudo<sp/>foi<sp/>pensado<sp/>em<sp/>função<sp/>da<sp/>documentação<sp/>a<sp/>ser<sp/>gerada,<sp/>de<sp/>modo<sp/>a<sp/>tornar<sp/>o<sp/>programa<sp/>algo</highlight></codeline>
+<codeline><highlight class="normal">didático<sp/>e<sp/>que<sp/>se<sp/>encaixasse<sp/>nos<sp/>padrões<sp/>adotados<sp/>durante<sp/>as<sp/>aulas.<sp/>Logo,<sp/>após<sp/>finalizado,<sp/>adotamos<sp/>as<sp/>normas<sp/>estabelecidas<sp/>pelo<sp/>Doxygen<sp/>para<sp/>gerar<sp/>formalmente<sp/>toda<sp/>documentação<sp/>do</highlight></codeline>
+<codeline><highlight class="normal">aplicativo.<sp/>Os<sp/>principais<sp/>problemas<sp/>identificados<sp/>neste<sp/>processo<sp/>foi<sp/>entender<sp/>o<sp/>comportamento<sp/>do<sp/>DoxyGen<sp/>e<sp/>identificar<sp/>um<sp/>padrão<sp/>de<sp/>escrita<sp/>do<sp/>código,<sp/>uma<sp/>vez<sp/>que,<sp/>após<sp/>finalização</highlight></codeline>
+<codeline><highlight class="normal">do<sp/>código,<sp/>um<sp/>processo<sp/>de<sp/>padronização<sp/>foi<sp/>iniciado.<sp/>Além<sp/>disso,<sp/>no<sp/>estágio<sp/>final,<sp/>identificaram-se<sp/>alguns<sp/>problemas<sp/>de<sp/>escrita<sp/>no<sp/>código,<sp/>o<sp/>que<sp/>foi<sp/>facilmente<sp/>solucionado.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Professor:<sp/>Luigi</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Dados<sp/>do<sp/>Projeto:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">O<sp/>que<sp/>é?:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>software<sp/>gerenciador<sp/>de<sp/>reprodutor<sp/>de<sp/>músicas.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Qual<sp/>seu<sp/>status?:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Elaboração<sp/>conceitual<sp/>do<sp/>projeto<sp/>e<sp/>divisão<sp/>de<sp/>demandas</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tecnologias<sp/>utilizadas:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Visual<sp/>Stúdio<sp/>Code;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Github;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Como<sp/>usar:<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Comentários:<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">User<sp/>Stories:<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Como<sp/>o<sp/>usuário<sp/>deseja<sp/>construir<sp/>uma<sp/>playlist<sp/>de<sp/>músicas<sp/>que<sp/>ele<sp/>mais<sp/>gosta,<sp/>desejo<sp/>criar<sp/>uma<sp/>lista<sp/>de<sp/>músicas<sp/>adicioná-las<sp/>e<sp/>retirá-las,<sp/>para<sp/>que<sp/>ele<sp/>possa<sp/>salvar<sp/>os<sp/>títulos<sp/>do<sp/>seu<sp/>agrado<sp/>e<sp/>escutá-las<sp/>posteriormente.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>As<sp/>músicas<sp/>ficarem<sp/>salvas;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Incluir<sp/>músicas<sp/>na<sp/>playlist;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Excluir<sp/>músicas<sp/>na<sp/>playlist;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Nomear<sp/>a<sp/>playlist;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Como<sp/>o<sp/>usuário<sp/>deseja<sp/>pesquisar<sp/>por<sp/>músicas,<sp/>quero<sp/>criar<sp/>uma<sp/>barra<sp/>de<sp/>pesquisa,<sp/>para<sp/>que<sp/>seja<sp/>possível<sp/>achar<sp/>rapidamente<sp/>o<sp/>título<sp/>procurado.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Espaço<sp/>destinado<sp/>para<sp/>o<sp/>usuário<sp/>digitar<sp/>o<sp/>nome<sp/>da<sp/>música<sp/>a<sp/>qual<sp/>será<sp/>feita<sp/>a<sp/>pesquisa;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>A<sp/>barra<sp/>de<sp/>pesquisa<sp/>deve<sp/>ser<sp/>testada<sp/>quanto<sp/>à<sp/>usabilidade<sp/>e<sp/>facilidade,<sp/>para<sp/>garantir<sp/>que<sp/>seja<sp/>simples<sp/>de<sp/>usar<sp/>e<sp/>entender<sp/>para<sp/>o<sp/>usuário<sp/>final;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>O<sp/>usuário<sp/>deve<sp/>poder<sp/>reproduzir<sp/>a<sp/>música<sp/>que<sp/>aparecer<sp/>após<sp/>a<sp/>pesquisa;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Como<sp/>o<sp/>usuário<sp/>deseja<sp/>dar<sp/>um<sp/>feedback<sp/>sobre<sp/>a<sp/>música<sp/>a<sp/>qual<sp/>ele<sp/>escutou,<sp/>quero<sp/>que<sp/>seja<sp/>possível<sp/>curtir<sp/>ou<sp/>descurtir<sp/>o<sp/>título<sp/>em<sp/>questão.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Curtir<sp/>ou<sp/>descurtir<sp/>a<sp/>música;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Contar<sp/>os<sp/>números<sp/>de<sp/>curtidas;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Contar<sp/>os<sp/>números<sp/>de<sp/>“dislikes”;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Criar<sp/>caixas<sp/>de<sp/>diálogos;<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Como<sp/>o<sp/>usuário<sp/>deseja<sp/>criar<sp/>e/ou<sp/>logar<sp/>em<sp/>uma<sp/>conta,<sp/>quero<sp/>criar<sp/>um<sp/>banco<sp/>de<sp/>dados<sp/>com<sp/>o<sp/>perfil<sp/>de<sp/>cada<sp/>usuário,<sp/>para<sp/>seja<sp/>possível<sp/>aprimorar<sp/>a<sp/>organização<sp/>da<sp/>plataforma.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Criar<sp/>login;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Criar<sp/>senha;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>O<sp/>usuário<sp/>deve<sp/>informar<sp/>um<sp/>e-mail;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Cadastrar<sp/>usuário;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Enviar<sp/>uma<sp/>mensagem<sp/>de<sp/>confirmação<sp/>para<sp/>o<sp/>e-mail<sp/>informado;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Como<sp/>o<sp/>usuário<sp/>deve<sp/>realizar<sp/>operações<sp/>básicas<sp/>na<sp/>plataforma,<sp/>deve<sp/>haver<sp/>uma<sp/>interface<sp/>de<sp/>ações<sp/>interativas,<sp/>para<sp/>que<sp/>ele<sp/>possa<sp/>pular<sp/>ou<sp/>voltar<sp/>músicas,<sp/>além<sp/>de<sp/>ver<sp/>informações<sp/>(gênero<sp/>da<sp/>música).<sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Reproduzir<sp/>as<sp/>músicas<sp/>escolhidas;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Pular<sp/>para<sp/>próxima<sp/>música;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Pular<sp/>para<sp/>música<sp/>anterior;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Acessar<sp/>informações;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Classes<sp/>Obtitas:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;&lt;&lt;&lt;&lt;&lt;&lt;<sp/>HEAD</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Usuário;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Música;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Playlist;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Curtida;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Comentario;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Cadastro;</highlight></codeline>
+<codeline><highlight class="normal">=======</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Login;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>SingUp;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>ChangeUsername;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>DeleteAccount;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>Iniciar;</highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;&gt;&gt;&gt;&gt;&gt;<sp/>origin/master</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="git hub/Projeto_Stream/README.md"/>
+  </compounddef>
+</doxygen>

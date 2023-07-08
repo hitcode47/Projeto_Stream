@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="class_comentario" kind="class" language="C++" prot="public">
+    <compoundname>Comentario</compoundname>
+    <includes refid="feedback_8hpp" local="no">feedback.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_comentario_1ab4bf7099b5139e0b64dca0c02b86d7f1" prot="private" static="no" mutable="no">
+        <type>std::list&lt; std::string &gt;</type>
+        <definition>std::list&lt;std::string&gt; Comentario::_comentarios</definition>
+        <argsstring></argsstring>
+        <name>_comentarios</name>
+        <qualifiedname>Comentario::_comentarios</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/feedback.hpp" line="36" column="15" bodyfile="git hub/Projeto_Stream/feedback.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_comentario_1a0b7f18c6857650798a45f9f28da702bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Comentario::Fazer_comentario</definition>
+        <argsstring>(std::string, std::string)</argsstring>
+        <name>Fazer_comentario</name>
+        <qualifiedname>Comentario::Fazer_comentario</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <defname>Musica</defname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <defname>Usuario</defname>
+        </param>
+        <briefdescription>
+<para>Permite fazer um comentário em uma música. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>O arquivo &quot;Feedback.txt&quot; é aberto e o usuário tem a possibilidade de fazer um comentário. Após isso, o arquivo armazenará toda informação adicionada.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>musica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String do nome da música. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>usuario</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String do nome do usuário. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/feedback.hpp" line="23" column="10" bodyfile="git hub/Projeto_Stream/feedback.cpp" bodystart="4" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_comentario_1a88f1f7ebdae3ad2d25f98596037aa07f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Comentario::Ler_comentario</definition>
+        <argsstring>(std::string, std::string)</argsstring>
+        <name>Ler_comentario</name>
+        <qualifiedname>Comentario::Ler_comentario</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <defname>Musica</defname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <defname>Usuario</defname>
+        </param>
+        <briefdescription>
+<para>Permite que um usuário leia um comentário em uma música. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>O arquivo &quot;Feedback.txt&quot; é aberto em modo leitura. Feito isso, linha por linha é percorrida com a finalidade de encontrar a música e o usuário especificado. Após isso, toda informação é armazenada no vetor &quot;_comentarios&quot; e imprime a mensagem encontrada.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>musica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String do nome da música. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>usuario</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String do nome do usuário. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/feedback.hpp" line="33" column="10" bodyfile="git hub/Projeto_Stream/feedback.cpp" bodystart="22" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="git hub/Projeto_Stream/feedback.hpp" line="13" column="1" bodyfile="git hub/Projeto_Stream/feedback.hpp" bodystart="13" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_comentario_1ab4bf7099b5139e0b64dca0c02b86d7f1" prot="private" virt="non-virtual"><scope>Comentario</scope><name>_comentarios</name></member>
+      <member refid="class_comentario_1a0b7f18c6857650798a45f9f28da702bc" prot="public" virt="non-virtual"><scope>Comentario</scope><name>Fazer_comentario</name></member>
+      <member refid="class_comentario_1a88f1f7ebdae3ad2d25f98596037aa07f" prot="public" virt="non-virtual"><scope>Comentario</scope><name>Ler_comentario</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

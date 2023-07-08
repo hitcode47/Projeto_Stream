@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="reproducao_8hpp" kind="file" language="C++">
+    <compoundname>reproducao.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">windows.h</includes>
+    <includes local="no">shellapi.h</includes>
+    <includes local="no">map</includes>
+    <includes local="no">tlhelp32.h</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">tchar.h</includes>
+    <includedby refid="main_8cpp" local="yes">git hub/Projeto_Stream/main.cpp</includedby>
+    <includedby refid="musicas_8hpp" local="yes">git hub/Projeto_Stream/musicas.hpp</includedby>
+    <includedby refid="pesquisa_8hpp" local="yes">git hub/Projeto_Stream/pesquisa.hpp</includedby>
+    <includedby refid="reproducao_8cpp" local="yes">git hub/Projeto_Stream/reproducao.cpp</includedby>
+    <includedby refid="testes_8cpp" local="yes">git hub/Projeto_Stream/testes.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>git hub/Projeto_Stream/reproducao.hpp</label>
+        <link refid="reproducao_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>cstdlib</label>
+      </node>
+      <node id="3">
+        <label>fstream</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="7">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>shellapi.h</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>tchar.h</label>
+      </node>
+      <node id="8">
+        <label>tlhelp32.h</label>
+      </node>
+      <node id="5">
+        <label>windows.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>git hub/Projeto_Stream/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>git hub/Projeto_Stream/musicas.cpp</label>
+        <link refid="musicas_8cpp"/>
+      </node>
+      <node id="3">
+        <label>git hub/Projeto_Stream/musicas.hpp</label>
+        <link refid="musicas_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>git hub/Projeto_Stream/pesquisa.cpp</label>
+        <link refid="pesquisa_8cpp"/>
+      </node>
+      <node id="6">
+        <label>git hub/Projeto_Stream/pesquisa.hpp</label>
+        <link refid="pesquisa_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>git hub/Projeto_Stream/reproducao.cpp</label>
+        <link refid="reproducao_8cpp"/>
+      </node>
+      <node id="1">
+        <label>git hub/Projeto_Stream/reproducao.hpp</label>
+        <link refid="reproducao_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>git hub/Projeto_Stream/testes.cpp</label>
+        <link refid="testes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classreproducao" prot="public">reproducao</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="reproducao_8hpp_1a09ecca53f2cd1b8d1c566bedb245e141" prot="public" static="no">
+        <name>UNICODE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="2" column="10" bodyfile="git hub/Projeto_Stream/reproducao.hpp" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="reproducao_8hpp_1a09ecca53f2cd1b8d1c566bedb245e141" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>UNICODE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;shellapi.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tlhelp32.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tchar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classreproducao" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classreproducao" kindref="compound">reproducao</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>posicaoAtual;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classreproducao_1a071bea54924ecdf53a194895d17ec176" kindref="member">reproducao</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classreproducao_1aaee16030e0f88b0a772478b53c434656" kindref="member">Executar</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>nomeArquivo,<sp/>std::string<sp/>nome_musica);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classreproducao_1af9fb3d0978cc6f89df82d4fa40319378" kindref="member">Parar_Executar</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classreproducao_1a947ed38d15af085a2cdbc03a6b549bd1" kindref="member">Pular_p_frente</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>nomeArquivo);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classreproducao_1a4d85cf5155a9ad55e398af4f6d7bd250" kindref="member">Pular_p_tras</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>nomeArquivo);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classreproducao_1a7f9a2b67d8db89be0d118063c93cb3b4" kindref="member">Encerrar</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classreproducao_1ae0cd84dcc0d7bf532151a77a53e9ae61" kindref="member">Retornar_nome</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>std::string&gt;<sp/>ler_arquivo_em_map(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>nomeArquivo);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>pressionar(WORD<sp/>keyCode);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>soltar(WORD<sp/>keyCode);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>_musica_escolhida;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="git hub/Projeto_Stream/reproducao.hpp"/>
+  </compounddef>
+</doxygen>

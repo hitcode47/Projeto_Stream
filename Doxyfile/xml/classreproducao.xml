@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="classreproducao" kind="class" language="C++" prot="public">
+    <compoundname>reproducao</compoundname>
+    <includes refid="reproducao_8hpp" local="no">reproducao.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classreproducao_1ad7d70418826d148ab068672cfb8b1edf" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned reproducao::posicaoAtual</definition>
+        <argsstring></argsstring>
+        <name>posicaoAtual</name>
+        <qualifiedname>reproducao::posicaoAtual</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="17" column="14" bodyfile="git hub/Projeto_Stream/reproducao.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classreproducao_1a66bd58273924937e810f8c2accf14328" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string reproducao::_musica_escolhida</definition>
+        <argsstring></argsstring>
+        <name>_musica_escolhida</name>
+        <qualifiedname>reproducao::_musica_escolhida</qualifiedname>
+        <briefdescription>
+<para>A música escolhida para reprodução. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="58" column="17" bodyfile="git hub/Projeto_Stream/reproducao.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classreproducao_1a071bea54924ecdf53a194895d17ec176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>reproducao::reproducao</definition>
+        <argsstring>()</argsstring>
+        <name>reproducao</name>
+        <qualifiedname>reproducao::reproducao</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="20" column="5" bodyfile="git hub/Projeto_Stream/reproducao.cpp" bodystart="3" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classreproducao_1aaee16030e0f88b0a772478b53c434656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reproducao::Executar</definition>
+        <argsstring>(const std::string &amp;nomeArquivo, std::string nome_musica)</argsstring>
+        <name>Executar</name>
+        <qualifiedname>reproducao::Executar</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>nomeArquivo</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>nome_musica</declname>
+        </param>
+        <briefdescription>
+<para>Inicia a reprodução de uma música. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomeArquivo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&quot;Musica_Exemplo.txt&quot; onde há o map das músicas e links. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nome_musica</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome da música a ser reproduzida. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="25" column="10" bodyfile="git hub/Projeto_Stream/reproducao.cpp" bodystart="8" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classreproducao_1af9fb3d0978cc6f89df82d4fa40319378" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reproducao::Parar_Executar</definition>
+        <argsstring>()</argsstring>
+        <name>Parar_Executar</name>
+        <qualifiedname>reproducao::Parar_Executar</qualifiedname>
+        <briefdescription>
+<para>Interrompe a música em execução. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="27" column="10" bodyfile="git hub/Projeto_Stream/reproducao.cpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classreproducao_1a947ed38d15af085a2cdbc03a6b549bd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reproducao::Pular_p_frente</definition>
+        <argsstring>(const std::string &amp;nomeArquivo)</argsstring>
+        <name>Pular_p_frente</name>
+        <qualifiedname>reproducao::Pular_p_frente</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>nomeArquivo</declname>
+        </param>
+        <briefdescription>
+<para>Pula a música atual para a próxima. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomeArquivo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arquivo &quot;Musica_Exemplo.txt&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="31" column="10" bodyfile="git hub/Projeto_Stream/reproducao.cpp" bodystart="50" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classreproducao_1a4d85cf5155a9ad55e398af4f6d7bd250" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reproducao::Pular_p_tras</definition>
+        <argsstring>(const std::string &amp;nomeArquivo)</argsstring>
+        <name>Pular_p_tras</name>
+        <qualifiedname>reproducao::Pular_p_tras</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>nomeArquivo</declname>
+        </param>
+        <briefdescription>
+<para>Pula a música atual para a anterior. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomeArquivo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arquivo &quot;Musica_Exemplo.txt&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="35" column="10" bodyfile="git hub/Projeto_Stream/reproducao.cpp" bodystart="90" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classreproducao_1a7f9a2b67d8db89be0d118063c93cb3b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reproducao::Encerrar</definition>
+        <argsstring>()</argsstring>
+        <name>Encerrar</name>
+        <qualifiedname>reproducao::Encerrar</qualifiedname>
+        <briefdescription>
+<para>Encerra a repodução. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="37" column="10" bodyfile="git hub/Projeto_Stream/reproducao.cpp" bodystart="206" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classreproducao_1ae0cd84dcc0d7bf532151a77a53e9ae61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string reproducao::Retornar_nome</definition>
+        <argsstring>()</argsstring>
+        <name>Retornar_nome</name>
+        <qualifiedname>reproducao::Retornar_nome</qualifiedname>
+        <briefdescription>
+<para>Retorna o nome da música em reprodução. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Nome da música escolhida. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="41" column="17" bodyfile="git hub/Projeto_Stream/reproducao.cpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classreproducao_1a60ef1719d2cd68da08ee09dee031b4e8" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; reproducao::ler_arquivo_em_map</definition>
+        <argsstring>(const std::string &amp;nomeArquivo)</argsstring>
+        <name>ler_arquivo_em_map</name>
+        <qualifiedname>reproducao::ler_arquivo_em_map</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>nomeArquivo</declname>
+        </param>
+        <briefdescription>
+<para>Efetua a leitura do &quot;Musica_Exemplo.txt&quot; e armazena o conteúdo em um map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomeArquivo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>&quot;Musica_Exemplo.txt&quot;. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Map contendo as informações do arquivo. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="48" column="21" bodyfile="git hub/Projeto_Stream/reproducao.cpp" bodystart="130" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classreproducao_1a64c43820a6a040bc250f7dbaf578049c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reproducao::pressionar</definition>
+        <argsstring>(WORD keyCode)</argsstring>
+        <name>pressionar</name>
+        <qualifiedname>reproducao::pressionar</qualifiedname>
+        <param>
+          <type>WORD</type>
+          <declname>keyCode</declname>
+        </param>
+        <briefdescription>
+<para>Pressiona uma tecla do teclado. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Código da tecla a ser pressionada. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="52" column="17" bodyfile="git hub/Projeto_Stream/reproducao.cpp" bodystart="212" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classreproducao_1a076003431850dc5390e771e0cd2eefce" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void reproducao::soltar</definition>
+        <argsstring>(WORD keyCode)</argsstring>
+        <name>soltar</name>
+        <qualifiedname>reproducao::soltar</qualifiedname>
+        <param>
+          <type>WORD</type>
+          <declname>keyCode</declname>
+        </param>
+        <briefdescription>
+<para>Solta uma tecla do teclado. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Código da tecla a ser solta. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/reproducao.hpp" line="56" column="17" bodyfile="git hub/Projeto_Stream/reproducao.cpp" bodystart="224" bodyend="234"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe responsável pela reprodução das músicas. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="git hub/Projeto_Stream/reproducao.hpp" line="14" column="1" bodyfile="git hub/Projeto_Stream/reproducao.hpp" bodystart="15" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classreproducao_1a66bd58273924937e810f8c2accf14328" prot="private" virt="non-virtual"><scope>reproducao</scope><name>_musica_escolhida</name></member>
+      <member refid="classreproducao_1a7f9a2b67d8db89be0d118063c93cb3b4" prot="public" virt="non-virtual"><scope>reproducao</scope><name>Encerrar</name></member>
+      <member refid="classreproducao_1aaee16030e0f88b0a772478b53c434656" prot="public" virt="non-virtual"><scope>reproducao</scope><name>Executar</name></member>
+      <member refid="classreproducao_1a60ef1719d2cd68da08ee09dee031b4e8" prot="private" virt="non-virtual"><scope>reproducao</scope><name>ler_arquivo_em_map</name></member>
+      <member refid="classreproducao_1af9fb3d0978cc6f89df82d4fa40319378" prot="public" virt="non-virtual"><scope>reproducao</scope><name>Parar_Executar</name></member>
+      <member refid="classreproducao_1ad7d70418826d148ab068672cfb8b1edf" prot="private" virt="non-virtual"><scope>reproducao</scope><name>posicaoAtual</name></member>
+      <member refid="classreproducao_1a64c43820a6a040bc250f7dbaf578049c" prot="private" virt="non-virtual"><scope>reproducao</scope><name>pressionar</name></member>
+      <member refid="classreproducao_1a947ed38d15af085a2cdbc03a6b549bd1" prot="public" virt="non-virtual"><scope>reproducao</scope><name>Pular_p_frente</name></member>
+      <member refid="classreproducao_1a4d85cf5155a9ad55e398af4f6d7bd250" prot="public" virt="non-virtual"><scope>reproducao</scope><name>Pular_p_tras</name></member>
+      <member refid="classreproducao_1a071bea54924ecdf53a194895d17ec176" prot="public" virt="non-virtual"><scope>reproducao</scope><name>reproducao</name></member>
+      <member refid="classreproducao_1ae0cd84dcc0d7bf532151a77a53e9ae61" prot="public" virt="non-virtual"><scope>reproducao</scope><name>Retornar_nome</name></member>
+      <member refid="classreproducao_1a076003431850dc5390e771e0cd2eefce" prot="private" virt="non-virtual"><scope>reproducao</scope><name>soltar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

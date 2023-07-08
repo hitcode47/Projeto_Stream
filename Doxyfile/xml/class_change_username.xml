@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="class_change_username" kind="class" language="C++" prot="public">
+    <compoundname>ChangeUsername</compoundname>
+    <includes refid="cadastrousuario_8hpp" local="no">cadastrousuario.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_change_username_1a2006043982d8a994b2cedcad2e23d492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangeUsername::change_username</definition>
+        <argsstring>()</argsstring>
+        <name>change_username</name>
+        <qualifiedname>ChangeUsername::change_username</qualifiedname>
+        <briefdescription>
+<para>Altera o nome de usuário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Solicita o nome de usuário e senha atuais, verifica se as credenciais estão corretas, solicita o novo nome de usuário e atualiza as informações no arquivo &quot;usuariosenha.txt&quot;. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="51" column="10" bodyfile="git hub/Projeto_Stream/cadastrousuario.cpp" bodystart="178" bodyend="240"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="43" column="1" bodyfile="git hub/Projeto_Stream/cadastrousuario.hpp" bodystart="43" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_change_username_1a2006043982d8a994b2cedcad2e23d492" prot="public" virt="non-virtual"><scope>ChangeUsername</scope><name>change_username</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

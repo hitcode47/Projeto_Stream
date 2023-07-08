@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="musicas_8hpp" kind="file" language="C++">
+    <compoundname>musicas.hpp</compoundname>
+    <includes refid="reproducao_8hpp" local="yes">reproducao.hpp</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">map</includes>
+    <includes local="no">sstream</includes>
+    <includedby refid="main_8cpp" local="yes">git hub/Projeto_Stream/main.cpp</includedby>
+    <includedby refid="musicas_8cpp" local="yes">git hub/Projeto_Stream/musicas.cpp</includedby>
+    <includedby refid="testes_8cpp" local="yes">git hub/Projeto_Stream/testes.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>git hub/Projeto_Stream/musicas.hpp</label>
+        <link refid="musicas_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>reproducao.hpp</label>
+        <link refid="reproducao_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>cstdlib</label>
+      </node>
+      <node id="4">
+        <label>fstream</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="8">
+        <label>map</label>
+      </node>
+      <node id="7">
+        <label>shellapi.h</label>
+      </node>
+      <node id="12">
+        <label>sstream</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>tchar.h</label>
+      </node>
+      <node id="9">
+        <label>tlhelp32.h</label>
+      </node>
+      <node id="6">
+        <label>windows.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>git hub/Projeto_Stream/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="3">
+        <label>git hub/Projeto_Stream/musicas.cpp</label>
+        <link refid="musicas_8cpp"/>
+      </node>
+      <node id="1">
+        <label>git hub/Projeto_Stream/musicas.hpp</label>
+        <link refid="musicas_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>git hub/Projeto_Stream/testes.cpp</label>
+        <link refid="testes_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_musica" prot="public">Musica</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="reproducao_8hpp" kindref="compound">reproducao.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_musica" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_musica" kindref="compound">Musica</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{<sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_musica_1a435c4de75bd638108bf9caae58000e18" kindref="member">Musica</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_musica_1aa9f049c6de0b714781d6a58746c0a483" kindref="member">adicionar_musica</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>nomeArquivo);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_musica_1a45c2255639d6e445618f23214cc60d5a" kindref="member">Remove_musica</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>nomeArquivo);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>Tratamento_de_Palavras(std::string<sp/>musica_ou_artista);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;std::string,<sp/>std::string&gt;<sp/>lerArquivoParaMap(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>nomeArquivo);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>salvarMapEmArquivo(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>nomeArquivo,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;std::string,<sp/>std::string&gt;&amp;<sp/>mapa);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="git hub/Projeto_Stream/musicas.hpp"/>
+  </compounddef>
+</doxygen>

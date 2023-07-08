@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compound refid="class_change_username" kind="class"><name>ChangeUsername</name>
+    <member refid="class_change_username_1a2006043982d8a994b2cedcad2e23d492" kind="function"><name>change_username</name></member>
+  </compound>
+  <compound refid="class_comentario" kind="class"><name>Comentario</name>
+    <member refid="class_comentario_1ab4bf7099b5139e0b64dca0c02b86d7f1" kind="variable"><name>_comentarios</name></member>
+    <member refid="class_comentario_1a0b7f18c6857650798a45f9f28da702bc" kind="function"><name>Fazer_comentario</name></member>
+    <member refid="class_comentario_1a88f1f7ebdae3ad2d25f98596037aa07f" kind="function"><name>Ler_comentario</name></member>
+  </compound>
+  <compound refid="class_curtida" kind="class"><name>Curtida</name>
+    <member refid="class_curtida_1a58e33db541d5983c207631fc81881dfc" kind="variable"><name>Contl</name></member>
+    <member refid="class_curtida_1a459445bcc907d41c7f8666ccabc346cb" kind="variable"><name>Contd</name></member>
+    <member refid="class_curtida_1af1dd8d47dce341ffbbb53d8b2e1fd585" kind="function"><name>like</name></member>
+    <member refid="class_curtida_1a51723bda67eb4956fb5cf924b3d02063" kind="function"><name>dislike</name></member>
+    <member refid="class_curtida_1a0fc3ba6710709bc5e9f80a2fba5a10e2" kind="function"><name>ver_quatidade_curtias</name></member>
+    <member refid="class_curtida_1ab0cdefcbfb8a14f7c46b83e6119e6863" kind="function"><name>verificacao_curtidas</name></member>
+    <member refid="class_curtida_1a7bc36b04684cb7c078348f524fde99a1" kind="function"><name>removerLinha</name></member>
+  </compound>
+  <compound refid="class_delete_account" kind="class"><name>DeleteAccount</name>
+    <member refid="class_delete_account_1aa4c89e3914bd3b1c59a4257413fab657" kind="function"><name>delete_account</name></member>
+    <member refid="class_delete_account_1a34175a67039f4190f1772dd5a0b6978b" kind="function"><name>verificar_existencia_usuario</name></member>
+    <member refid="class_delete_account_1a453ad11c617448a61f76a60f9f736e45" kind="function"><name>verificar_credenciais</name></member>
+    <member refid="class_delete_account_1a848b8334641bb9807ca7b9c145b9b791" kind="function"><name>delete_account</name></member>
+  </compound>
+  <compound refid="class_iniciar" kind="class"><name>Iniciar</name>
+    <member refid="class_iniciar_1aad4107d70522c62415c72669e5649be3" kind="function"><name>exibirlogo</name></member>
+    <member refid="class_iniciar_1a3e24da672516bbf7e768f31b7f5f3a5e" kind="function"><name>menu</name></member>
+  </compound>
+  <compound refid="class_login" kind="class"><name>Login</name>
+    <member refid="class_login_1ae856799289bc6468b02fd3bf3b405e18" kind="variable"><name>_nomedeusuario</name></member>
+    <member refid="class_login_1a71d1150a58c73cfa5b863b0a82818718" kind="function"><name>login</name></member>
+    <member refid="class_login_1ad6d38208d7831f005b8d346d52c63802" kind="function"><name>getternomedeusuario</name></member>
+  </compound>
+  <compound refid="class_musica" kind="class"><name>Musica</name>
+    <member refid="class_musica_1a435c4de75bd638108bf9caae58000e18" kind="function"><name>Musica</name></member>
+    <member refid="class_musica_1aa9f049c6de0b714781d6a58746c0a483" kind="function"><name>adicionar_musica</name></member>
+    <member refid="class_musica_1a45c2255639d6e445618f23214cc60d5a" kind="function"><name>Remove_musica</name></member>
+    <member refid="class_musica_1ae5ed8616ec75dd96716b75d661396e4d" kind="function"><name>Tratamento_de_Palavras</name></member>
+    <member refid="class_musica_1a9b11eb30a7143409049e210c07a70b72" kind="function"><name>lerArquivoParaMap</name></member>
+    <member refid="class_musica_1ad462132c374cd13bca6ae8487de8b82c" kind="function"><name>salvarMapEmArquivo</name></member>
+  </compound>
+  <compound refid="class_pesquisa_1_1_pesquisar" kind="class"><name>Pesquisa::Pesquisar</name>
+    <member refid="class_pesquisa_1_1_pesquisar_1a96b934100cd35b891db0cc3de09c06d7" kind="variable"><name>repro</name></member>
+    <member refid="class_pesquisa_1_1_pesquisar_1a8deedfa085e7fc6702857a5eed780209" kind="variable"><name>_palavra</name></member>
+    <member refid="class_pesquisa_1_1_pesquisar_1a72e7089c707df3335534b0019ab9e5a1" kind="variable"><name>_resultados</name></member>
+    <member refid="class_pesquisa_1_1_pesquisar_1a9a65ea37ea27c765317f79ffb0c91f48" kind="variable"><name>_encontrado</name></member>
+    <member refid="class_pesquisa_1_1_pesquisar_1a9627ff443b8d6f3ffcd27c1f0fc0b889" kind="variable"><name>_musica_escolhida</name></member>
+    <member refid="class_pesquisa_1_1_pesquisar_1a440232b7ca974d4c2e43279d3b51ae10" kind="function"><name>Pesquisar</name></member>
+    <member refid="class_pesquisa_1_1_pesquisar_1a5d038ab98b2a2d9f46f24ffde23f99bb" kind="function"><name>Encontrar</name></member>
+    <member refid="class_pesquisa_1_1_pesquisar_1ac9f4b1e87f28464821f1558114b1aa50" kind="function"><name>confirma_Busca</name></member>
+    <member refid="class_pesquisa_1_1_pesquisar_1ad23b58cb66645e13b874c08d3f628aab" kind="function"><name>Retorno_Pesquisa</name></member>
+  </compound>
+  <compound refid="classreproducao" kind="class"><name>reproducao</name>
+    <member refid="classreproducao_1ad7d70418826d148ab068672cfb8b1edf" kind="variable"><name>posicaoAtual</name></member>
+    <member refid="classreproducao_1a66bd58273924937e810f8c2accf14328" kind="variable"><name>_musica_escolhida</name></member>
+    <member refid="classreproducao_1a071bea54924ecdf53a194895d17ec176" kind="function"><name>reproducao</name></member>
+    <member refid="classreproducao_1aaee16030e0f88b0a772478b53c434656" kind="function"><name>Executar</name></member>
+    <member refid="classreproducao_1af9fb3d0978cc6f89df82d4fa40319378" kind="function"><name>Parar_Executar</name></member>
+    <member refid="classreproducao_1a947ed38d15af085a2cdbc03a6b549bd1" kind="function"><name>Pular_p_frente</name></member>
+    <member refid="classreproducao_1a4d85cf5155a9ad55e398af4f6d7bd250" kind="function"><name>Pular_p_tras</name></member>
+    <member refid="classreproducao_1a7f9a2b67d8db89be0d118063c93cb3b4" kind="function"><name>Encerrar</name></member>
+    <member refid="classreproducao_1ae0cd84dcc0d7bf532151a77a53e9ae61" kind="function"><name>Retornar_nome</name></member>
+    <member refid="classreproducao_1a60ef1719d2cd68da08ee09dee031b4e8" kind="function"><name>ler_arquivo_em_map</name></member>
+    <member refid="classreproducao_1a64c43820a6a040bc250f7dbaf578049c" kind="function"><name>pressionar</name></member>
+    <member refid="classreproducao_1a076003431850dc5390e771e0cd2eefce" kind="function"><name>soltar</name></member>
+  </compound>
+  <compound refid="class_signup" kind="class"><name>Signup</name>
+    <member refid="class_signup_1a273422b1f2b92ae4e4b2a93fb201fddb" kind="function"><name>sign_up</name></member>
+  </compound>
+  <compound refid="namespace_pesquisa" kind="namespace"><name>Pesquisa</name>
+  </compound>
+  <compound refid="cadastrousuario_8cpp" kind="file"><name>cadastrousuario.cpp</name>
+    <member refid="cadastrousuario_8cpp_1a8ff1f7ac434763c463e5e6dec529bd81" kind="function"><name>hashSenha</name></member>
+  </compound>
+  <compound refid="cadastrousuario_8hpp" kind="file"><name>cadastrousuario.hpp</name>
+    <member refid="cadastrousuario_8hpp_1a8ff1f7ac434763c463e5e6dec529bd81" kind="function"><name>hashSenha</name></member>
+  </compound>
+  <compound refid="feedback_8cpp" kind="file"><name>feedback.cpp</name>
+  </compound>
+  <compound refid="feedback_8hpp" kind="file"><name>feedback.hpp</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="musicas_8cpp" kind="file"><name>musicas.cpp</name>
+  </compound>
+  <compound refid="musicas_8hpp" kind="file"><name>musicas.hpp</name>
+  </compound>
+  <compound refid="pesquisa_8cpp" kind="file"><name>pesquisa.cpp</name>
+  </compound>
+  <compound refid="pesquisa_8hpp" kind="file"><name>pesquisa.hpp</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="reproducao_8cpp" kind="file"><name>reproducao.cpp</name>
+    <member refid="reproducao_8cpp_1a7bcda3b264b8ac8a8a7e71a5996c958a" kind="function"><name>EnumWindowsCallback</name></member>
+  </compound>
+  <compound refid="reproducao_8hpp" kind="file"><name>reproducao.hpp</name>
+    <member refid="reproducao_8hpp_1a09ecca53f2cd1b8d1c566bedb245e141" kind="define"><name>UNICODE</name></member>
+  </compound>
+  <compound refid="testes_8cpp" kind="file"><name>testes.cpp</name>
+    <member refid="testes_8cpp_1a623b8690a262536536a43eab2d7df03d" kind="define"><name>DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN</name></member>
+    <member refid="testes_8cpp_1a96a57a991ba19cec37c8dd8aafa44189" kind="function"><name>TEST_CASE</name></member>
+    <member refid="testes_8cpp_1ab7e6c16442b5475bbce74b03bacd4c23" kind="function"><name>TEST_CASE</name></member>
+    <member refid="testes_8cpp_1ac3c8bd99f13ba2ffc6131524ed2d832a" kind="function"><name>TEST_CASE</name></member>
+    <member refid="testes_8cpp_1a7a0cfa3a1018c769de753ead3b43e1b1" kind="function"><name>TEST_CASE</name></member>
+    <member refid="testes_8cpp_1a1d770ebc732b000ccdcd5bbad0096b83" kind="function"><name>TEST_CASE</name></member>
+    <member refid="testes_8cpp_1a0de65abbfc9295e291d5c5893bb205e5" kind="function"><name>TEST_CASE</name></member>
+    <member refid="testes_8cpp_1acab2ff21683bb5885e8cb5caf05a0c5f" kind="function"><name>TEST_CASE</name></member>
+    <member refid="testes_8cpp_1a47bc4ed173eec49e2d55a44b70dd3b20" kind="function"><name>TEST_CASE</name></member>
+    <member refid="testes_8cpp_1add6811efa9430990c8d48b4890495547" kind="function"><name>TEST_CASE</name></member>
+  </compound>
+  <compound refid="md_git_01hub_2_projeto___stream_2_r_e_a_d_m_e" kind="page"><name>md_git_01hub_2_projeto___stream_2_r_e_a_d_m_e</name>
+  </compound>
+  <compound refid="dir_795ed213a2cbb31f36aa6d409f82afbc" kind="dir"><name>git hub</name>
+  </compound>
+  <compound refid="dir_5e88be7fbec0c3e3233eabf6ff4651fb" kind="dir"><name>git hub/Projeto_Stream</name>
+  </compound>
+</doxygenindex>

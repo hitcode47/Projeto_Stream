@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="class_login" kind="class" language="C++" prot="public">
+    <compoundname>Login</compoundname>
+    <includes refid="cadastrousuario_8hpp" local="no">cadastrousuario.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_login_1ae856799289bc6468b02fd3bf3b405e18" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Login::_nomedeusuario</definition>
+        <argsstring></argsstring>
+        <name>_nomedeusuario</name>
+        <qualifiedname>Login::_nomedeusuario</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="29" column="16" bodyfile="git hub/Projeto_Stream/cadastrousuario.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_login_1a71d1150a58c73cfa5b863b0a82818718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Login::login</definition>
+        <argsstring>()</argsstring>
+        <name>login</name>
+        <qualifiedname>Login::login</qualifiedname>
+        <briefdescription>
+<para>Realiza o login de um usuário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Solicita o nome de usuário e a senha, lê as informações do arquivo &quot;usuariosenha.txt&quot; e verifica se as credenciais estão certas. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="25" column="9" bodyfile="git hub/Projeto_Stream/cadastrousuario.cpp" bodystart="22" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_login_1ad6d38208d7831f005b8d346d52c63802" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Login::getternomedeusuario</definition>
+        <argsstring>()</argsstring>
+        <name>getternomedeusuario</name>
+        <qualifiedname>Login::getternomedeusuario</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="26" column="16" bodyfile="git hub/Projeto_Stream/cadastrousuario.cpp" bodystart="361" bodyend="363"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="18" column="1" bodyfile="git hub/Projeto_Stream/cadastrousuario.hpp" bodystart="18" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_login_1ae856799289bc6468b02fd3bf3b405e18" prot="private" virt="non-virtual"><scope>Login</scope><name>_nomedeusuario</name></member>
+      <member refid="class_login_1ad6d38208d7831f005b8d346d52c63802" prot="public" virt="non-virtual"><scope>Login</scope><name>getternomedeusuario</name></member>
+      <member refid="class_login_1a71d1150a58c73cfa5b863b0a82818718" prot="public" virt="non-virtual"><scope>Login</scope><name>login</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

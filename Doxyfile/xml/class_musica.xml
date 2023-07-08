@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="class_musica" kind="class" language="C++" prot="public">
+    <compoundname>Musica</compoundname>
+    <includes refid="musicas_8hpp" local="no">musicas.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_musica_1a435c4de75bd638108bf9caae58000e18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Musica::Musica</definition>
+        <argsstring>()</argsstring>
+        <name>Musica</name>
+        <qualifiedname>Musica::Musica</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/musicas.hpp" line="10" column="5" bodyfile="git hub/Projeto_Stream/musicas.cpp" bodystart="4" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_musica_1aa9f049c6de0b714781d6a58746c0a483" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Musica::adicionar_musica</definition>
+        <argsstring>(const std::string &amp;nomeArquivo)</argsstring>
+        <name>adicionar_musica</name>
+        <qualifiedname>Musica::adicionar_musica</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>nomeArquivo</declname>
+        </param>
+        <briefdescription>
+<para>Adiciona uma música ao sitema. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>É solicitado ao usuário o nome do artista, bem como o link da música a ser inserida. É realizado o tratamento das palavras nos nomes e, por fim, o arquivo &quot;Musica_Exemplo.txt&quot; é atualizado. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomeArquivo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do arquivo da música. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/musicas.hpp" line="17" column="10" bodyfile="git hub/Projeto_Stream/musicas.cpp" bodystart="23" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_musica_1a45c2255639d6e445618f23214cc60d5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Musica::Remove_musica</definition>
+        <argsstring>(const std::string &amp;nomeArquivo)</argsstring>
+        <name>Remove_musica</name>
+        <qualifiedname>Musica::Remove_musica</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>nomeArquivo</declname>
+        </param>
+        <briefdescription>
+<para>Remove uma música do arquivo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>É solicitado ao usuário o nome do artista e da música a ser removida e assim uma busca no arquivo &quot;Musica_Exemplo.txt&quot; é iniciada. Caso encontrada, a música é excluída e o arquivo atualizado.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomeArquivo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do arquivo da música. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/musicas.hpp" line="25" column="10" bodyfile="git hub/Projeto_Stream/musicas.cpp" bodystart="58" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_musica_1ae5ed8616ec75dd96716b75d661396e4d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Musica::Tratamento_de_Palavras</definition>
+        <argsstring>(std::string musica_ou_artista)</argsstring>
+        <name>Tratamento_de_Palavras</name>
+        <qualifiedname>Musica::Tratamento_de_Palavras</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>musica_ou_artista</declname>
+        </param>
+        <briefdescription>
+<para>É realizado o tratamento das palavras de uma música ou artista. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A primeira letra da string é transformada em maiúscula e as demais em minúsculas.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>musica_ou_artista</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>O nome da música ou artista a ser tratado. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A palavra tratada. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/musicas.hpp" line="35" column="17" bodyfile="git hub/Projeto_Stream/musicas.cpp" bodystart="8" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_musica_1a9b11eb30a7143409049e210c07a70b72" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt; std::string, std::string &gt; Musica::lerArquivoParaMap</definition>
+        <argsstring>(const std::string &amp;nomeArquivo)</argsstring>
+        <name>lerArquivoParaMap</name>
+        <qualifiedname>Musica::lerArquivoParaMap</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>nomeArquivo</declname>
+        </param>
+        <briefdescription>
+<para>Lê os dados do arquivo e retorna um map de músicas. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>O arquivo &quot;Musica_Exemplo.txt&quot; possui os dados das músicas no formato &quot;musica, link&quot;, de modo que cada linha representa uma canção diferente. Nesse sentido o nome da música é a chave e o link seu valor.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nomeArquivo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nome do arquivo a ser lido. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Um map contendo os dados das músicas. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/musicas.hpp" line="44" column="14" bodyfile="git hub/Projeto_Stream/musicas.cpp" bodystart="81" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_musica_1ad462132c374cd13bca6ae8487de8b82c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Musica::salvarMapEmArquivo</definition>
+        <argsstring>(const std::string &amp;nomeArquivo, const std::map&lt; std::string, std::string &gt; &amp;mapa)</argsstring>
+        <name>salvarMapEmArquivo</name>
+        <qualifiedname>Musica::salvarMapEmArquivo</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>nomeArquivo</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>mapa</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/musicas.hpp" line="45" column="10" bodyfile="git hub/Projeto_Stream/musicas.cpp" bodystart="104" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe responsável pelo gerenciamento das músicas. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="git hub/Projeto_Stream/musicas.hpp" line="7" column="1" bodyfile="git hub/Projeto_Stream/musicas.hpp" bodystart="8" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_musica_1aa9f049c6de0b714781d6a58746c0a483" prot="public" virt="non-virtual"><scope>Musica</scope><name>adicionar_musica</name></member>
+      <member refid="class_musica_1a9b11eb30a7143409049e210c07a70b72" prot="private" virt="non-virtual"><scope>Musica</scope><name>lerArquivoParaMap</name></member>
+      <member refid="class_musica_1a435c4de75bd638108bf9caae58000e18" prot="public" virt="non-virtual"><scope>Musica</scope><name>Musica</name></member>
+      <member refid="class_musica_1a45c2255639d6e445618f23214cc60d5a" prot="public" virt="non-virtual"><scope>Musica</scope><name>Remove_musica</name></member>
+      <member refid="class_musica_1ad462132c374cd13bca6ae8487de8b82c" prot="private" virt="non-virtual"><scope>Musica</scope><name>salvarMapEmArquivo</name></member>
+      <member refid="class_musica_1ae5ed8616ec75dd96716b75d661396e4d" prot="private" virt="non-virtual"><scope>Musica</scope><name>Tratamento_de_Palavras</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="dir_5e88be7fbec0c3e3233eabf6ff4651fb" kind="dir">
+    <compoundname>git hub/Projeto_Stream</compoundname>
+    <innerfile refid="cadastrousuario_8cpp">cadastrousuario.cpp</innerfile>
+    <innerfile refid="cadastrousuario_8hpp">cadastrousuario.hpp</innerfile>
+    <innerfile refid="feedback_8cpp">feedback.cpp</innerfile>
+    <innerfile refid="feedback_8hpp">feedback.hpp</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="musicas_8cpp">musicas.cpp</innerfile>
+    <innerfile refid="musicas_8hpp">musicas.hpp</innerfile>
+    <innerfile refid="pesquisa_8cpp">pesquisa.cpp</innerfile>
+    <innerfile refid="pesquisa_8hpp">pesquisa.hpp</innerfile>
+    <innerfile refid="reproducao_8cpp">reproducao.cpp</innerfile>
+    <innerfile refid="reproducao_8hpp">reproducao.hpp</innerfile>
+    <innerfile refid="testes_8cpp">testes.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="git hub/Projeto_Stream/"/>
+  </compounddef>
+</doxygen>

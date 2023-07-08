@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="dir_795ed213a2cbb31f36aa6d409f82afbc" kind="dir">
+    <compoundname>git hub</compoundname>
+    <innerdir refid="dir_5e88be7fbec0c3e3233eabf6ff4651fb">git hub/Projeto_Stream</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="git hub/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="namespace_pesquisa" kind="namespace" language="C++">
+    <compoundname>Pesquisa</compoundname>
+    <innerclass refid="class_pesquisa_1_1_pesquisar" prot="public">Pesquisa::Pesquisar</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="git hub/Projeto_Stream/pesquisa.hpp" line="13" column="1"/>
+  </compounddef>
+</doxygen>

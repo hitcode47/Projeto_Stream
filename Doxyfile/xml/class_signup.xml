@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="pt-BR">
+  <compounddef id="class_signup" kind="class" language="C++" prot="public">
+    <compoundname>Signup</compoundname>
+    <includes refid="cadastrousuario_8hpp" local="no">cadastrousuario.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_signup_1a273422b1f2b92ae4e4b2a93fb201fddb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Signup::sign_up</definition>
+        <argsstring>()</argsstring>
+        <name>sign_up</name>
+        <qualifiedname>Signup::sign_up</qualifiedname>
+        <briefdescription>
+<para>Cadastra uma nova conta de usuário. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Solicita um nome de usuário e uma senha, verifica se o usuário já existe no arquivo &quot;usuariosenha.txt&quot; e, em seguida, armazena as informações no próprio arquivo, caso sejam válidas. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="40" column="10" bodyfile="git hub/Projeto_Stream/cadastrousuario.cpp" bodystart="83" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="git hub/Projeto_Stream/cadastrousuario.hpp" line="32" column="1" bodyfile="git hub/Projeto_Stream/cadastrousuario.hpp" bodystart="32" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_signup_1a273422b1f2b92ae4e4b2a93fb201fddb" prot="public" virt="non-virtual"><scope>Signup</scope><name>sign_up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
