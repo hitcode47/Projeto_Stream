@@ -299,4 +299,12 @@ TEST_CASE("Teste da classe reproducao") {
         player.Pular_p_tras(nomeArquivo);
         
     }
+    SUBCASE("Teste do método pausar") {
+
+        Sleep(5000);
+        player.Parar_Executar();
+        
+    }
+
 }
+
