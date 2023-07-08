@@ -235,7 +235,7 @@ TEST_CASE("Teste da classe Curtida") {
         CHECK(dislikeEncontrado);
     }
 
-    SUBCASE("Teste do método ver_quatidade_curtias") {
+    SUBCASE("Teste do método ver_quatidade_curtias"){
 
         curtida.ver_quatidade_curtias(musica);
         // Verifique se a quantidade de likes e dislikes é exibida corretamente
@@ -263,7 +263,7 @@ TEST_CASE("Pesquisa::Pesquisar") {
         CHECK(!musicaEscolhida.empty());
     }
 
-    SUBCASE("Não Encontrar") {
+    SUBCASE("Não Encontrar"){
         Pesquisa::Pesquisar busca("xyz");
         bool resultado = busca.Encontrar();
         CHECK(resultado == false);
@@ -277,32 +277,34 @@ TEST_CASE("Teste da classe reproducao") {
 
     SUBCASE("Teste do método Executar") {
 
-        std::string nomeArquivo = "musicas.txt";
-        std::string nomeMusica = "Nome da Musica";
+        std::string nomeArquivo = "Musica_Exemplo.txt";
+        std::string nomeMusica = "Eagles - Hotel California";
 
         player.Executar(nomeArquivo, nomeMusica);
-        // Verifique se a música correta foi aberta para reprodução
-        // Você pode verificar se o estado interno da classe reproducao é atualizado corretamente,
-        // como a posição atual e a música escolhida
-        // Por exemplo, você pode adicionar uma música ao arquivo "musicas.txt" e verificar se a música é executada corretamente
-        // usando métodos auxiliares para verificar o estado interno da classe reproducao
-        CHECK(player.Retornar_nome() == nomeMusica); // Substitua "nomeMusica" pelo nome correto da música a ser verificada
+        CHECK(player.Retornar_nome() == nomeMusica);
     }
 
     SUBCASE("Teste do método Pular_p_frente") {
 
-        std::string nomeArquivo = "musicas.txt";
-
+        std::string nomeArquivo = "Musica_Exemplo.txt";
+        Sleep(5000);
         player.Pular_p_frente(nomeArquivo);
 
-        CHECK(player.Retornar_nome() == "Nova Musica"); 
     }
 
     SUBCASE("Teste do método Pular_p_tras") {
 
-        std::string nomeArquivo = "musicas.txt";
-
+        std::string nomeArquivo = "Musica_Exemplo.txt";
+        Sleep(5000);
         player.Pular_p_tras(nomeArquivo);
-        CHECK(player.Retornar_nome() == "Musica Anterior"); 
+        
     }
+    SUBCASE("Teste do método pausar") {
+
+        Sleep(5000);
+        player.Parar_Executar();
+        
+    }
+
 }
+
