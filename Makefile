@@ -19,8 +19,8 @@ pesquisa.o: pesquisa.cpp pesquisa.hpp
 main.o: main.cpp cadastrousuario.hpp feedback.hpp musicas.hpp reproducao.hpp pesquisa.hpp
 	g++ -c main.cpp
 
-teste.o: cadastrousuario.cpp feedback.cpp musicas.cpp pesquisa.cpp reproducao.cpp main.cpp testes.cpp
-	g++ cadastrousuario.cpp feedback.cpp musicas.cpp pesquisa.cpp reproducao.cpp main.cpp testes.cpp -o teste
+teste.o: testes.cpp
+	g++ testes.cpp -o teste
 
 run_teste:
 	./teste
