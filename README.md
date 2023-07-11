@@ -86,9 +86,39 @@ User Stories:
 
        * Excluir músicas na playlist; 
 
-       * Nomear a playlist;
+       * Nomear a playlist; 
+
+       
+
+        
+
+- Como o usuário quer ter uma ideia de quais músicas estão sendo mais escutas no momento, quero construir uma lista que compile as 10 músicas mais escultadas em um período de 24 horas, para que seja possível desfrutar dos top-hits em conjunto com outras pessoas; 
 
   
+
+       * A música deverá ter um contador de visualizações por acesso; 
+
+       * À cada 24:00 horas, o programa deve atualizar com relação à quantidade de visualizações. 
+
+       * A música deve possuir uma relação/exibição da quantidade de acessos por tempo, para ver o engajamento; 
+
+        
+
+        
+
+- Como o usuário deseja postar suas próprias músicas, quero que seja possível inserir e excluir músicas da plataforma, para criar oportunidades com a finalidade de que as pessoas mostrem seus talentos na área musical. 
+
+  
+
+       * Espaço destinado para postar as músicas desejadas; 
+
+       * Possuir uma opção para deixar a música pública ou privada; 
+
+       * Mostrar uma mensagem na tela caso a música tenha sido postada com sucesso; 
+
+       * Ao selecionar uma música, sendo sua, ter uma opção para apagá-la; 
+
+    
 
 - Como o usuário deseja pesquisar por músicas, quero criar uma barra de pesquisa, para que seja possível achar rapidamente o título procurado. 
 
@@ -112,7 +142,9 @@ User Stories:
 
        * Contar os números de “dislikes”; 
 
-       * Criar caixas de diálogos;  
+       * Criar caixas de diálogos; 
+
+       * Curtir ou descurtir comentários; 
 
   
 
@@ -146,19 +178,10 @@ User Stories:
 
  * Classes Obtitas:
 
-<<<<<<< HEAD
-       * Usuário;
-       * Música;
-       * Playlist;
-       * Curtida;
-       * Comentario;
-       * Cadastro;
-=======
        * Login;
        * SingUp;
        * ChangeUsername;
        * DeleteAccount;
        * Iniciar;
->>>>>>> origin/master
 
 
