@@ -22,6 +22,9 @@ main.o: main.cpp cadastrousuario.hpp feedback.hpp musicas.hpp reproducao.hpp pes
 teste.o: cadastrousuario.cpp feedback.cpp musicas.cpp pesquisa.cpp reproducao.cpp main.cpp testes.cpp
 	g++ -o cadastrousuario.cpp feedback.cpp musicas.cpp pesquisa.cpp reproducao.cpp main.cpp testes.cpp
 
+run_teste:
+	./testes.cpp
+
 clean:
 	del *.o
 
