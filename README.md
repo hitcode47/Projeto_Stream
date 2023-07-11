@@ -14,11 +14,25 @@ Documentação Aplicativo Pancadão:
 
 *OBSERVAÇÕES*
 
-* Ao rodar o programa, recomenda-se fechar todas as guias consideradas importantes do seu navegador. Tal erro é facilmente solucionado, porém, por conta de um calendário curto,
- o grupo optou por não modificar o programa;
+* Para fazer a compilação, será necessário seguir os seguintes passos:
+       - Estar utilizando o Windows como sistema operacional;
+       - Baixar o programa MinGW e associá-lo ao Path (Tutoriais de instalação são facilmente encontrados);
+       - Usar um terminal de compilação (VsCode, por exemplo) ou a própria Prompt de comando;
+       - Estar no diretório no momento de compilação;
+       - Executar os comandos:
+              * mingw32-make (Criará os arquivos objetos);
+              * mingw32-make run (Executará os arquivos objetos)
+                     Nesta etapa, o usuário terá acesso às funcionalidades do código;
+              * mingw32-make clean (Limpará os arquivos objetos)
+                     Esta etapa é opcional e não influenciará na experiência do código;
+       - Para executar o teste:
+              * mingw32-make teste.o (Criará o arquivo objeto de teste);
+              * mingw32-make run_teste (Executará o arquivo objeto de teste);
+
 * Um documento teste foi implementado no programa, porém não foi possível conciliá-lo ao código. Embora a construção lógica esteja conforme o esperado, uma grande dificuldade
   de implementação foi encontrado. Recomenda-se rodar o programa desconsiderando o DocTest e analisar somente a lógica formulada;
-
+* Ao rodar o programa, recomenda-se fechar todas as guias consideradas importantes do seu navegador. Tal erro é facilmente solucionado, porém, por conta de um calendário curto,
+ o grupo optou por não modificar o programa;
 
 A música é uma das principais ferramentas de expressão que está presente na vida de muitas pessoas. Nessse sentido, o grupo empenhou-se em desenvolver um aplicativo de música
 chamado "Pancadão". Dessa forma, buscamos construir um programa simples com uma interface intuitiva e sugestiva para qualquer tipo de usuário. Assim, o aplicativo permite que 
