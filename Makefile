@@ -20,10 +20,10 @@ main.o: main.cpp cadastrousuario.hpp feedback.hpp musicas.hpp reproducao.hpp pes
 	g++ -c main.cpp
 
 teste.o: cadastrousuario.cpp feedback.cpp musicas.cpp pesquisa.cpp reproducao.cpp main.cpp testes.cpp
-	g++ -o cadastrousuario.cpp feedback.cpp musicas.cpp pesquisa.cpp reproducao.cpp main.cpp testes.cpp
+	g++ cadastrousuario.cpp feedback.cpp musicas.cpp pesquisa.cpp reproducao.cpp main.cpp testes.cpp -o teste
 
 run_teste:
-	./testes.cpp
+	./teste
 
 clean:
 	del *.o
