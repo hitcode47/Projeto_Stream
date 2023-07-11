@@ -145,7 +145,6 @@ Shawn Mendes - If I Can't Have You,https://www.youtube.com/watch?v=oTJ-oqwxdZY
 Rihanna - Work e Drake,https://www.youtube.com/watch?v=HL1UzIK-flA
 Dua Lipa - Physical,https://www.youtube.com/watch?v=JdRH3w92Tzo
 Billie Eilish - bury a friend,https://www.youtube.com/watch?v=HUHC9tYz8ik
-Bruno Mars - 24K Magic,https://www.youtube.com/watch?v=UqyT8IEBkvY
 Ariana Grande - God is a woman,https://www.youtube.com/watch?v=kHLHSlExFis
 Taylor Swift - Bad Blood e Kendrick Lamar,https://www.youtube.com/watch?v=QcIy9NiNbmo
 Ed Sheeran - Sing,https://www.youtube.com/watch?v=tlYcUqEPN58
@@ -194,4 +193,3 @@ Red Hot Chili Peppers - Californication, https://www.youtube.com/watch?v=YlUKcNN
 Red Hot Chili Peppers - Scar Tissue, https://www.youtube.com/watch?v=mzJj5-lubeM
 Red Hot Chili Peppers - Dani California, https://www.youtube.com/watch?v=Sb5aq5HcS1A
 Red Hot Chili Peppers - By the Way, https://www.youtube.com/watch?v=JnfyjwChuNU
-e
